@@ -1,0 +1,7 @@
+*.[oa]
+*~
+*.log
+*.DS_Store
+log
+tmp
+public/uploads

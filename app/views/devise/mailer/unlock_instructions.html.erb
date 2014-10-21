@@ -1,0 +1,7 @@
+<p>Ciao <%= @resource.email %>!</p>
+
+<p>Il tuo account e' stato bloccato in seguito ad una serie di autenticazioni fallite.</p>
+
+<p>Clicca sul link in basso per sbloccare il tuo account:</p>
+
+<p><%= link_to 'Sblocca account', unlock_url(@resource, unlock_token: @token) %></p>

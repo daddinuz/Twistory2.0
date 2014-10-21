@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  database: twistory_db
+  pool: 5
+  timeout: 5000
+  username: twistory_user
+  password: 1914
+
+test:
+  adapter: mysql2
+  database: twistory_db
+  pool: 5
+  timeout: 5000
+  username: twistory_user
+  password: 1914
+
+production:
+  adapter: mysql2
+  database: twistory_db
+  pool: 5
+  timeout: 5000
+  username: twistory_user
+  password: 1914 

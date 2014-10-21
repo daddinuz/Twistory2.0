@@ -1,0 +1,62 @@
+
+    <title>Accedi</title>   
+  </head>
+  
+  <body>
+    
+    <table border="0" class="header">
+      <tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+        </th>
+        <th id="spacer"><!--inserire la barra di ricerca--></th>
+        <th id="buttons">
+          <a href="<%= @current_host %>">Home</a>
+          <a href="<%= new_user_session_path %>" id="activeButton">Accedi</a>
+          <a href="<%= new_user_registration_path %>">Iscriviti</a>
+        </th>
+      </tr>
+    </table>
+	    
+    <div class="container">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    
+	    <div class="loginForm">
+	      <div class="homeTitle">
+	        Accedi
+	      </div>
+        
+        <% if notice %>
+          <p align="center"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p align="center"><%= alert %></p>
+        <% end %>
+        	      
+		    <ul>  
+		      <li>
+		      <%= f.email_field :email, autofocus: "true", :class => "field", :placeholder => " Indirizzo e-mail" %>
+		      </li>
+		      <li>
+		      <%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
+		      </li>
+		      <li>
+		        <p align="center">
+		          <% if devise_mapping.rememberable? %>
+                <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
+              <% end %>
+		        </p>
+          </li>
+		    </ul>
+
+		    <div class="footer">
+		      <p><%= f.submit "Accedi", :class => "button" %></p>
+		      <p style="font-size: 11px; text-decoration: underline;"><%= link_to "Dimenticato la password?", new_password_path(resource_name) %></p>
+		    </div>
+		  </div>
+                
+    <% end %>  
+    </div>    
+  </body>
+	
+</html>

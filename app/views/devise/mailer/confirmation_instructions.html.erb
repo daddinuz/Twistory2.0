@@ -1,0 +1,6 @@
+<p>Benvenuto su La Grande Guerra!</p>
+<p>Ci è giunta una richiesta di iscrizione da questo indirizzo e-mail: <%= @email %></p>
+<p>Se hai effettuato tu la richiesta, puoi confermare la tua iscrizione attraverso il seguente link:</p>
+<p><%= link_to 'Conferma account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+

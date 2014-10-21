@@ -1,0 +1,104 @@
+
+    <title>Modifica Profilo</title>
+  <head>
+  
+  <body>
+    
+    <table border="0" class="header">
+      <tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+        </th>
+        <th id="spacer"><!--inserire la barra di ricerca--></th>
+        <th id="buttons">
+          <a href="<%= @current_host %>" name="Hlink">Home</a>
+          <a href="<%= @current_host %>/profile" name="Hlink">Profilo</a>
+          <a href="<%= edit_user_registration_path %>" id="activeButton" name="Hlink">Impostazioni</a>
+          <%= link_to 'Esci', destroy_user_session_path, method: :delete %>
+        </th>
+      </tr>
+    </table>
+    
+    <div class="container">
+    
+      <div class="groundSheet">
+        <div class="homeTitle">
+          Modifica Profilo
+        </div>
+        
+        <% if current_user.profile_image.present? %>
+          <div id="<%= current_user.id %>" onclick="Expand_Image(<%= current_user.id %>)" class="feedImage">
+            <%= image_tag(current_user.profile_image_url) %>
+          </div>
+        <% end %>
+      
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+                    
+          <div id="fields" class="blueNotesSheet">
+            <table border="0" width="100%">
+              <tr>
+                <th>Cambia nome Pubblico:</th>
+                <th>Cambia e-mail:</th>
+              </tr>
+              <tr>
+                <th><%= f.text_field :user_name, autofocus: true, :class => "field" %></th>
+                <th><%= f.email_field :email, :class => "field" %></th>
+              </tr>
+              <tr>
+                <td colspan="2" height="10px"></td>
+              </tr>
+              <tr>
+                <th>Cambia password:</th>
+                <th>Conferma password:</th>
+              </tr>
+              <tr>
+                <th><%= f.password_field :password, autocomplete: "off", :class => "field" %></th>
+                <th><%= f.password_field :password_confirmation, autocomplete: "off", :class => "field" %></th>
+              </tr>
+              <tr>
+                <td colspan="2" height="12px"></td>
+              </tr>
+              <tr>
+                <th colspan="2">Cambia immagine del profilo:</th>
+              </tr>
+              <tr>
+                <th colspan="2"><%= f.file_field :profile_image %></th>
+              </tr>
+              <tr>
+                <td colspan="2" height="15px"></td>
+              </tr>
+              <tr>
+                <th colspan="2"><div class="button" onclick="checkingChanges();">Procedi</div></th>
+              </tr>
+              <tr>
+                <td colspan="2" height="15px"></td>
+              </tr>
+              <tr>
+                <th colspan="2" style="font-size: 10px;"><u><%= link_to "Elimina il mio account", registration_path(resource_name), data: { confirm: "Sei sicuro?" }, method: :delete %></u></th>         
+              </tr>
+            </table>
+          </div>
+          
+            <p>        
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div>Al momento stiamo aspettando la conferma per: <%= resource.unconfirmed_email %></div>
+              <% end %>
+            </p>
+            
+            <div id="confirmChanges" style="display: none;">
+              <ul align="center" style="font-weight: bold;">  
+                <li>Inserisci la tua password per confermare i cambiamenti</li>
+                <li style="margin: 0 15%;"><%= f.password_field :current_password, autocomplete: "off" , :class => "field", :placeholder => " Password" %></li>
+                <li><input type="submit" value="Conferma" class="button" onclick="checkingChanges();"/></li>
+              </ul>
+              <div class="bubble" onclick="checkingChanges();">Indietro</div>
+            </div>
+                                                        
+      </div>
+      <% end %>
+                
+    </div>
+  </body>
+
+</html>

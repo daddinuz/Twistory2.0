@@ -1,0 +1,35 @@
+<%= form_for(@feed) do |f| %>
+     
+<%= feed_error_messages! %>
+
+<ul id="mainTextBoxContainer">
+
+  <li>      
+    <%= f.text_area :feed_text, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
+  </li>
+  <li> 
+    <table width="100%" style="color: green; font-weight: normal">
+    <tr>
+      <td id="charCounterIta" align="left"></td>
+      <td id="charCounterEng" align="right"></td>
+    </tr>
+    </table>
+  </li>
+  <li>      
+      <%= f.text_area :feed_text_english, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterEng");', :placeholder => "Scrivi qui la versione inglese del feed ..." %>
+  </li>
+  <li>
+    Inserisci la data di pubblicazione:</br>
+    <%= f.datetime_select :date, :minute_step => 15 %>
+  </li>
+  <li>
+    Inserisci un'immagine:</br>
+    <%= f.file_field :feed_image %>
+  </li>
+  <li>
+    <input type="submit" value="Conferma" class="button"/>
+  </li>
+  
+</ul>
+  
+<% end %>

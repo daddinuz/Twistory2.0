@@ -1,0 +1,187 @@
+
+    <title>La Grande Guerra</title>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53020835-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>  
+
+  <body>
+    
+    <table border="0" class="header">
+      <tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+        </th>
+        <th id="spacer"></th>
+        <th id="buttons">
+          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
+          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
+          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
+          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
+          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
+        </th>
+      </tr>
+    </table>
+        
+    <div class="container">
+         
+      <div class="groundSheet">
+        <div class="homeTitle">
+          Home
+        </div>
+                
+        <div class="homeTextRx">
+          <p align="center"><i>
+            Quando un popolo non ha più senso vitale del suo passato si spegne.<br> 
+            La vitalità creatrice è fatta di una riserva di passato.<br> 
+            Si diventa creatori anche noi, quando si ha un passato.<br> 
+            La giovinezza dei popoli è una ricca vecchiaia!
+          </p></i> 
+          <p align="center">-cit Cesare Pavese</p>
+          <p>
+            100 anni fa aveva inizio una delle più grandi tragedie della Storia.<br> 
+            Allo stesso tempo iniziava il processo che portò alla completa liberazione dell'Italia dalle potenze straniere, 
+            e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.<br><br>
+            Siamo ragazzi di 16-18 anni: vogliamo raccontare quegli anni, giorno per giorno, 
+            facendo leva sulle nostre competenze di sviluppo informatico.<br> 
+            In una situazione non felice per i giovani Italiani di oggi, abbiamo voluto creare una piattaforma tecnologica moderna 
+            che ricordi le storie che portarono i nostri coetanei di allora ad affrontare e superare contro ogni aspettativa 
+            un momento di crisi ben più grave.
+          </p>
+          <p align="center">
+            Se volete collaborare (come storici o informatici) e/o avete documenti, foto, lettere che volete condividere, siete i benvenuti. 
+            <br><br>
+            Contattateci a:<br>
+            <a href="mailto:info@ragazzidel99.it"><u>info@ragazzidel99.it</u></a>
+            <br><br>
+            Oppure seguiteci sul nostro canale Twitter:<br> 
+            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>https://twitter.com/lagrandeguerra</u></a>
+          </p>
+        </div>    
+      </div>
+            
+      <div class="groundSheet">
+        <div class="homeTitle" id="tech">
+          Tecnologia
+        </div>
+      
+        <div class="homeTextLx"  align="center">
+          <p>
+            Linux Ubuntu 14.04,
+            Apache 2.4,
+            Ruby 2.0,
+            Rails 4.0,
+            MySQL 5.5,
+            HTML5
+          </p>
+          <p>
+            Server su Amazon Web Services (AWS)
+          </p>
+          <p>
+            Visita i repository git: 
+          </p>
+          <p>
+            <a href="https://github.com/scoccia/Twistory" target="_blank"><u>https://github.com/scoccia/Twistory</u></a><br>
+            <a href="https://github.com/davide-di-carlo/Twistory" target="_blank"><u>https://github.com/davide-di-carlo/Twistory</u></a>
+          </p>
+        </div>
+      </div>
+      
+      <div class="groundSheet">
+        <div class="homeTitle" id="about">
+          Chi Siamo
+        </div>
+      
+        <div class="homeImageLx" style="background-image: url(<%= asset_path 'vincenzo.jpg' %>);"></div>
+        <div class="homeHeadLx">
+          Vincenzo Di Nicola
+        </div>
+        <div class="homeGradeLx">
+          <b>Coordinatore</b><br> 
+          Teramo (TE)<br>
+          Classe 1979<br>
+	        <iframe src="http://ghbtns.com/github-btn.html?user=vdinicola&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
+  	      <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=dinicola&show_count=false" allowtransparency="true" frameborder="0" scrolling="0"  width="350" height="25"></iframe>
+        </div>
+        
+        <div class="homeImageRx" style="background-image: url(<%= asset_path 'dadda_dc.jpg' %>);"></div>
+        <div class="homeHeadRx">
+          Davide Di Carlo
+        </div>
+        <div class="homeGradeRx">
+          <b>Sviluppatore</b><br> 
+          Teramo (TE)<br>
+          Classe 1997<br>
+          <iframe src="http://ghbtns.com/github-btn.html?user=davide-di-carlo&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
+          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Davide_Di_Carlo&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>  
+        </div>
+      
+        <div class="homeImageLx" style="background-image: url(<%= asset_path 'dadda_b.jpg' %>);"></div>
+        <div class="homeHeadLx">
+          Davide Barbieri
+        </div>
+        <div class="homeGradeLx">
+          <b>Sviluppatore</b><br> 
+          Teramo (TE)<br>
+          Classe 1997<br>
+	        <iframe src="http://ghbtns.com/github-btn.html?user=daddabarba&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
+          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Davidozzo97&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>      
+        </div>
+        
+        <div class="homeImageRx" style="background-image: url(<%= asset_path 'federico.jpg' %>);"></div>
+        <div class="homeHeadRx">
+          Federico Pomponii
+        </div>
+        <div class="homeGradeRx">
+          <b>Sviluppatore</b><br>
+          Teramo (TE)<br>
+          Classe 1997<br>
+	        <iframe src="http://ghbtns.com/github-btn.html?user=Federico-Pomponii&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
+          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Fede_pomponii&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>      
+        </div> 
+          
+        <div class="homeImageLx" style="background-image: url(<%= asset_path 'simone.jpg' %>);"></div>
+        <div class="homeHeadLx">
+          Simone Coccia
+        </div>
+        <div class="homeGradeLx">
+          <b>Sviluppatore</b><br>
+          Civitella del Tronto (TE)<br>
+          Classe 1995<br>
+	        <iframe src="http://ghbtns.com/github-btn.html?user=scoccia&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>
+        </div>
+      
+        <div class="homeImageRx" style="background-image: url(<%= asset_path 'marco.jpg' %>);"></div>
+        <div class="homeHeadRx">
+          Marco Mazzoni
+        </div>
+        <div class="homeGradeRx">
+          <b>Sviluppatore</b><br> 
+          Teramo (TE)<br>
+          Classe 1995<br>
+          <iframe src="http://ghbtns.com/github-btn.html?user=MarcoMazzoni&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
+	        <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=MarcoMazzoni9&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>
+        </div>
+      </div>
+
+      <div class="groundSheet" align="center">
+        <span style="font-size: 10px;">
+          <b>Ringraziamo:</b><br>
+          Ivan Berryman per la concessione dello sfondo di Francesco Baracca<br>
+          L'archivio digitale de "La Stampa" e la  Biblioteca Provinciale "Melchiorre Dèlfico" - (TE) Abruzzo<br>
+          2014 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
+        </span>
+      </div>
+
+    </div>
+  </body>
+  
+</html>
+

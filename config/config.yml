@@ -1,0 +1,47 @@
+email:
+  development:
+    address: 	smtp.gmail.com
+    port: 	587
+    domain: 	gmail.com
+    user_name: 	twittwar95@gmail.com
+    password: 	caporetto
+  production:
+    address: 	
+    port: 	
+    domain: 	
+    user_name: 	
+    password: 	
+
+
+devise:
+  development:
+    mailer_sender: 	twittwar95@gmail.com
+  production:
+    mailer_sender: 	info@ragazzidel99.it
+
+
+twitter:
+  development:
+    channel:		 LSETwistory
+    consumer_key: 	 2kxyua2AU8XimCx70bOPUg
+    consumer_secret: 	 hZQ5vgQTMeZL9GiXWCaCdAji59CcrkJdsDzw1OYYEZs
+    access_token: 	 2422291368-f53dCUtUoHOt6ROHaKQ944899wixZvElyp9qv94
+    access_token_secret: OIFnMcailGAl2TcInFqpk8TF1a3cwIPS5goF9zEuaeidw
+  production:
+    channel:		 lagrandeguerra
+    consumer_key: 	 
+    consumer_secret: 	 
+    access_token: 	 
+    access_token_secret: 
+  production_english:
+    channel:		 ww1fromitaly
+    consumer_key: 	 
+    consumer_secret: 	 
+    access_token: 	 
+    access_token_secret: 
+
+
+google:
+  production:
+    application_name:
+    key:
