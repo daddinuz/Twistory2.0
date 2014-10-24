@@ -4,19 +4,25 @@
 
 <ul id="mainTextBoxContainer">
 
-  <li>      
-    <%= f.text_area :feed_text, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
-  </li>
-  <li> 
-    <table width="100%" style="color: green; font-weight: normal">
-    <tr>
-      <td id="charCounterIta" align="left"></td>
-      <td id="charCounterEng" align="right"></td>
+  <li>
+    <table>
+    <tr>    
+      <td>
+        <%= f.text_area :feed_text, :class => "textBox", :onclick => 'textCounter(this, "charCounterIta");', :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
+      </td>
+      <td id="charCounterIta" align="center" style="display: none;"></td>  
     </tr>
     </table>
   </li>
-  <li>      
-      <%= f.text_area :feed_text_english, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterEng");', :placeholder => "Scrivi qui la versione inglese del feed ..." %>
+  <li>
+    <table>
+    <tr>
+      <td id="charCounterEng" align="center" style="display: none;"></td>      
+      <td>
+        <%= f.text_area :feed_text_english, :class => "textBox", :onclick => 'textCounter(this, "charCounterEng");', :onkeyup => 'textCounter(this, "charCounterEng");', :placeholder => "Scrivi qui la versione inglese del feed ..." %>
+      </td>
+    </tr>
+    </table>      
   </li>
   <li>
     Inserisci la data di pubblicazione:</br>
