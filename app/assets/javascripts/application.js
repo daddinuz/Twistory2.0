@@ -22,6 +22,8 @@ function textCounter(element, counterBox)
   var counter = document.getElementById(counterBox); 
   var remaining = maxChar - element.value.length;
   
+  counter.style.display="";
+  
   if (remaining >= 0) {
     counter.style.color="green";
   } else {

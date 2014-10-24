@@ -47,7 +47,7 @@ class FeedsController < ApplicationController
     if @feed.user_id != current_user.id
       error_message 
     elsif @feed.has_been_published == true
-      flash[:notice] = "Non puoi modificare feeds gia\' pubblicati"
+      flash[:notice] = "Non puoi modificare feeds già pubblicati"
       render "show"
     end
 
@@ -80,27 +80,33 @@ class FeedsController < ApplicationController
     if Rails.env.production?
       feed_text_english = translate_feed(@feed.feed_text) 
       
-      if feed_text_english.present? 
-        if feed_image.present? and feed_text_english.size > 101
+      if !(feed_text_english.blank?) 
+        if feed_image.blank?
+          if feed_text_english.size > 124
+            feed_text_english = feed_text_english.slice(0, 121)
+            feed_text_english += '...'
+            flash[:notice] = 'Il feed inglese è stato abbreviato perchè superava il limite di caratteri'
+          end
+        elsif feed_text_english.size > 101
           feed_text_english = feed_text_english.slice(0, 98)
           feed_text_english += '...'
-          flash[:notice] = 'Il feed inglese e\' stato abbreviato perchè superava il limite di caratteri'
-        elsif feed_text_english.size > 124
-          feed_text_english = feed_text_english.slice(0, 121)
-          feed_text_english += '...'
-          flash[:notice] = 'Il feed inglese e\' stato abbreviato perchè superava il limite di caratteri'
-        end
+          flash[:notice] = 'Il feed inglese è stato abbreviato perchè superava il limite di caratteri'
+        else
+          flash[:notice] = 'Entrambi i feeds sono stati aggiornati con successo'
+        end       
       end
              
       @feed.feed_text_english = feed_text_english
+    else
+      @feed.feed_text_english = 'Hi there! Write here the english traslation'
     end
     
     respond_to do |format|
       if @feed.save
-        if feed_text_english.present?
-          flash[:notice] = 'Entrambe le versioni del feed sono state create con successo'
+        if feed_text_english.blank?
+          flash[:notice] = 'La versione Italiana del feed è stata creata con successo'
         else
-          flash[:notice] = 'La versione Italiana del feed e\' stata creata con successo'
+          flash[:notice] = 'Entrambe le versioni del feed sono state create con successo'
         end
         format.html { render action: 'edit' }
       else
@@ -124,20 +130,22 @@ class FeedsController < ApplicationController
     	    # TODO: have a better solution (see create action)
     	    @feed.date = @feed.date - 2.hour
     	    
-    	    if @feed.feed_text_english.present? 
-            if @feed.feed_image.present? and @feed.feed_text_english.size > 101
+    	    if @feed.feed_text_english.blank?                        
+            flash[:notice] = 'Il feed Italiano è stato aggiornato con successo'  
+          else
+            if @feed.feed_image.blank?
+              if @feed.feed_text_english.size > 124
+                @feed.feed_text_english = @feed.feed_text_english.slice(0, 121)
+                @feed.feed_text_english += '...'
+                flash[:notice] = 'Il feed inglese è stato abbreviato perchè superava il limite di caratteri'
+              end
+            elsif @feed.feed_text_english.size > 101
               @feed.feed_text_english = @feed.feed_text_english.slice(0, 98)
               @feed.feed_text_english += '...'
-              flash[:notice] = 'Il feed inglese e\' stato abbreviato perchè superava il limite di caratteri'
-            elsif @feed.feed_text_english.size > 124
-              @feed.feed_text_english = @feed.feed_text_english.slice(0, 121)
-              @feed.feed_text_english += '...'
-              flash[:notice] = 'Il feed inglese e\' stato abbreviato perchè superava il limite di caratteri'
+              flash[:notice] = 'Il feed inglese è stato abbreviato perchè superava il limite di caratteri'
             else
               flash[:notice] = 'Entrambi i feeds sono stati aggiornati con successo'
-            end              
-          else
-            flash[:notice] = 'Il feed e\' stato aggiornato con successo'
+            end 
           end
           
           @feed.save
