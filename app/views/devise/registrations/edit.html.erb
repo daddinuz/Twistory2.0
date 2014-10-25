@@ -87,11 +87,19 @@
             </p>
             
             <div id="confirmChanges" style="display: none;">
-              <ul align="center" style="font-weight: bold;">  
-                <li>Inserisci la tua password per confermare i cambiamenti</li>
-                <li style="margin: 0 15%;"><%= f.password_field :current_password, autocomplete: "off" , :class => "field", :placeholder => " Password" %></li>
-                <li><input type="submit" value="Conferma" class="button" onclick="checkingChanges();"/></li>
-              </ul>
+              <div class="blueNotesSheet">
+                <table border="0" width="100%">
+                  <tr>
+                    <th>Inserisci la tua password per confermare i cambiamenti</th>
+                  </tr>
+                  <tr>  
+                    <th style="padding: 0.5% 22.5% 1.5% 22.5%;"><%= f.password_field :current_password, autocomplete: "off" , :class => "field", :placeholder => " Password" %></th>
+                  </tr>
+                  <tr>  
+                    <th style="padding: 1.5% 0;"><input type="submit" value="Conferma" class="button" onclick="checkingChanges();"/></th>
+                  </tr>
+                </table>
+              </div>
               <div class="bubble" onclick="checkingChanges();">Indietro</div>
             </div>
                                                         
