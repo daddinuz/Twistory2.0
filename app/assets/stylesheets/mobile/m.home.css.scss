@@ -8,10 +8,11 @@
 
   .homeTitle
   {
-    margin: 0 -4%;
+    margin: 0 -3.5%;
     padding: 0.5% 0;
                    
-    font: 2.5em Tahoma, Geneva, sans-serif;
+    font-size: 2.5em;
+    font-family: Tahoma, Geneva, sans-serif;
     font-weight: bold;
     text-align: center;
     word-wrap: break-word;
@@ -26,11 +27,12 @@
   .homeTextRx
   {
     margin-top: 2%;
-    margin-left: 4%;
-    margin-right: -4%;
+    margin-left: 3.5%;
+    margin-right: -3.5%;
     padding: 1% 2%;
                 
-    font: 1.2em Arial, Courier, sans-serif;
+    font-size: 1.2em;
+    font-family: Arial, Courier, sans-serif;
     font-weight: bold;
     word-wrap: break-word;
       
@@ -44,11 +46,12 @@
   .homeTextLx
   {
     margin-top: 2%;
-    margin-left: -4%;
-    margin-right: 4%;
+    margin-left: -3.5%;
+    margin-right: 3.5%;
     padding: 1% 2%;
                 
-    font: 1.2em Arial, Courier, sans-serif;
+    font-size: 1.2em;
+    font-family: Arial, Courier, sans-serif;
     font-weight: bold;
     word-wrap: break-word;
       
@@ -106,7 +109,8 @@
            
     background-color: #8BCCDF;
     
-    font: 1.5em Tahoma, Geneva, sans-serif;   
+    font-size: 1.5em;
+    font-family: Tahoma, Geneva, sans-serif;   
     /*border: 1px solid red; /* debug red */ 
   }
 
@@ -124,7 +128,8 @@
            
     background-color: #8BCCDF;
     
-    font: 1.5em Tahoma, Geneva, sans-serif;
+    font-size: 1.5em;
+    font-family: Tahoma, Geneva, sans-serif;
       
     /*border: 1px solid red; /* debug red */ 
   }
@@ -135,7 +140,8 @@
     margin-bottom: 1%;
     margin-left: 60%;
     
-    font: 1.2em Tahoma, Geneva, sans-serif;
+    font-size: 1.2em;
+    font-family: Tahoma, Geneva, sans-serif;
     text-align: left;
                
     /*border: 1px solid red; /* debug red */ 
@@ -147,7 +153,8 @@
     margin-bottom: 1%;
     margin-left: 2%;
     
-    font: 1.2em Tahoma, Geneva, sans-serif;
+    font-size: 1.2em;
+    font-family: Tahoma, Geneva, sans-serif;
     text-align: left;
                
     /*border: 1px solid red; /* debug red */ 

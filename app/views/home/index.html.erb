@@ -13,23 +13,22 @@
   </head>  
 
   <body>
+  
+    <div id="menu">
+      <div id="logo">
+        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+      </div>
+      <div id="buttons">
+        <ul>
+          <li><a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a></li>
+          <li><a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a></li>
+          <li><a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a></li>
+          <li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
+          <li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
+        </ul>
+      </div>
+    </div>
     
-    <table border="0" class="header">
-      <tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-        </th>
-        <th id="spacer"></th>
-        <th id="buttons">
-          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
-          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
-          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
-          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
-        </th>
-      </tr>
-    </table>
-        
     <div class="container">
          
       <div class="groundSheet">

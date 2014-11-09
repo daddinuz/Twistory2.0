@@ -73,6 +73,7 @@ function cleanLink()
     cont[i].style.color='rgba(0, 0, 0, 0.5)';
     cont[i].style.border='none';
     cont[i].style.backgroundColor='#feffff';
+    cont[i].style.padding='0';
   }
 }
 
@@ -83,7 +84,8 @@ function switchLink (element)
   element.style.color='white';
   element.style.border='1px solid rgba(0, 80, 100, 0.5)';
   element.style.borderRadius='5px';
-  element.style.backgroundColor='rgba(105, 180, 200, 0.75)';        
+  element.style.backgroundColor='rgba(105, 180, 200, 0.75)';    
+  element.style.padding='1%';    
 } 
 
 function checkingChanges()
