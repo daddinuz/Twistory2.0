@@ -3,12 +3,22 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
 
   protect_from_forgery with: :exception
+  before_action :prepare_for_mobile
   before_action :take_current_host
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :check_permission_level
 
-  protected
-
+  private
+  
+  def mobile_device?  
+    request.user_agent =~ /Mobile|webOS/  
+  end  
+  helper_method :mobile_device?
+  
+  def prepare_for_mobile  
+    session[:mobile_param] = params[:mobile] if params[:mobile]  
+  end
+  
   def take_current_host
     # @current_host = "http://" + request.host
     if Rails.env.production?

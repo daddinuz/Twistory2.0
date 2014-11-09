@@ -4,25 +4,24 @@
   
   <body>
   
-    <table border="0" class="header">
-      <tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-        </th>
-        <th id="spacer"><!--inserire la barra di ricerca--></th>
-        <th id="buttons">
-          <a href="<%= @current_host %>" id="activeButton" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/profile" name="Hlink">Profilo</a>
-          <a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a>
-          <%= link_to 'Esci', destroy_user_session_path, method: :delete %>
-        </th>
-      </tr>
-    </table>
+    <div id="menu">
+      <div id="logo">
+        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+      </div>
+      <div id="buttons">
+        <ul>
+          <li><a href="<%= @current_host %>" id="activeButton" name="Hlink">Home</a></li>
+          <li><a href="<%= @current_host %>/profile" name="Hlink">Profilo</a></li>
+          <li><a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a></li>
+          <li><%= link_to 'Esci', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
     
     <div class="container">
       
       <div class="groundSheet">
-        <div class="homeTitle">
+        <div class="homeTitle" style="margin-bottom: 2%;">
           Visualizza Feed:
         </div>
       
@@ -32,9 +31,7 @@
         <% if alert %>
           <p align="center"><%= alert %></p>
         <% end %>
-      </div>
-		
-      <div class="groundSheet">
+      
         <% read_usr = User.find(@feed.user_id) %>
       
         <% if read_usr.profile_image.present? %>

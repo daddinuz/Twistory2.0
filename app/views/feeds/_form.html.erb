@@ -14,7 +14,7 @@
   <div id="dateTimeBox">
     <li>
       Inserisci la data di pubblicazione:</br>
-      <%= f.datetime_select :date, :minute_step => 15 %>
+      <%= f.datetime_select :date, :discard_minute => true %>
     </li>
     <li>
       Inserisci un'immagine:</br>

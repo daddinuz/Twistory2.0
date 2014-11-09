@@ -5,17 +5,25 @@
   <head>
     
     <%= favicon_link_tag "/favicon.ico" %>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    
-    <style type="text/css"> 
-      body .container 
-      {
-        background-image: url(<%= asset_path 'background.jpg' %>);
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-    </style>
+     
+   <% if mobile_device? %>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+            
+    <link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
+   <% else %>
+    <link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
+   <% end %>
+   
+   <link data-turbolinks-track="true" href="/assets/scaffolds.css.scss" media="all" rel="stylesheet" />
+   
+   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   
 <%= yield %>
