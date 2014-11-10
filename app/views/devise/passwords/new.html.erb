@@ -4,19 +4,18 @@
 
   <body>
   
-    <table border="0" class="header">
-      <tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-        </th>
-        <th id="spacer"><!--inserire la barra di ricerca--></th>
-        <th id="buttons">
-          <a href="<%= @current_host %>">Home</a>
-          <a href="<%= new_user_session_path %>" id="activeButton">Accedi</a>
-          <a href="<%= new_user_registration_path %>">Iscriviti</a>
-        </th>
-      </tr>
-    </table>
+    <div id="menu">
+      <div id="logo">
+        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
+      </div>
+      <div id="buttons">
+        <ul>
+          <li><a href="<%= @current_host %>" name="Hlink">Home</a></li>
+          <li><a href="<%= new_user_session_path %>" id="activeButton">Accedi</a></li>
+          <li><a href="<%= new_user_registration_path %>">Iscriviti</a></li>
+        </ul>
+      </div>
+    </div>
     
     <div class="container">
       
@@ -29,18 +28,18 @@
 
           <%= devise_error_messages! %>
           
-          <ul align="center" style="font-weight: bold;">
-            <li>
+          <div align="center" class="blueNotesSheet" style="font-weight: bold;">
+            <p>
               Invieremo un e-mail all'indirizzo che ci fornirai
               che ti permettera' di recuperare la password.
-            </li> 
-            <li>
+            </p>
+            <p>
               <%= f.email_field :email, autofocus: true, :class => "field", :style => "width: 45%;", :placeholder => "E-mail" %>
-            </li>
-            <li>
+            </p>
+            <p>
               <%= f.submit "Invia e-mail", :class => "button" %>
-            </li>
-          </ul>
+            </p>
+          </div>
           
           <%= link_to 'Indietro', :back, :class => "bubble" %>
         <% end %>
