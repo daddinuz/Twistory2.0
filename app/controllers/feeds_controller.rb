@@ -42,7 +42,7 @@ class FeedsController < ApplicationController
 
     # Show CET/CEST time to the user starting from the UTC time in the Database
     # TODO: have a better solution (see create action)
-    @feed.date = @feed.date + 2.hour 
+    @feed.date = @feed.date + 1.hour 
     
     if @feed.user_id != current_user.id
       error_message 
@@ -74,7 +74,7 @@ class FeedsController < ApplicationController
     # This will have be be modified with a 1 hour subtraction when daylight saving time changes
     # TODO: have a better solution
 
-    @feed.date = @feed.date - 2.hour 	
+    @feed.date = @feed.date - 1.hour 	
 
     # Translate from the original Italian text to English via Google Translate APIs in production mode
     if Rails.env.production?
@@ -128,7 +128,7 @@ class FeedsController < ApplicationController
 
           # Convert the CET/CEST time (inserted by the user) in UTC time (expected by the Database)
     	    # TODO: have a better solution (see create action)
-    	    @feed.date = @feed.date - 2.hour
+    	    @feed.date = @feed.date - 1.hour
     	    
     	    if @feed.feed_text_english.blank?                        
             flash[:notice] = 'Il feed Italiano è stato aggiornato con successo'  
