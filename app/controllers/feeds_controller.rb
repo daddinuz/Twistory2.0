@@ -81,7 +81,7 @@ class FeedsController < ApplicationController
       feed_text_english = translate_feed(@feed.feed_text) 
       
       if !(feed_text_english.blank?) 
-        if feed_image.blank?
+        if @feed.feed_image.blank?
           if feed_text_english.size > 124
             feed_text_english = feed_text_english.slice(0, 121)
             feed_text_english += '...'
