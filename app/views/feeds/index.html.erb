@@ -36,7 +36,8 @@
         <%= render 'form' %>
     </div>
         
-    <% if !@feeds.present? %>
+    <% @FeedsNotPublished = @feeds.where("has_been_published = ?", '0') %>
+    <% if @FeedsNotPublished.blank? %>    
     <div class="groundSheet">
       <div class="homeTitle"> 
         Benvenuto
@@ -51,7 +52,7 @@
       </div>
     </div>
     <% else %>
-      <% @feeds.reverse_each do |feed| %>
+      <% @FeedsNotPublished.reverse_each do |feed| %>
       <% read_usr = User.find(feed.user_id) %>
 
       <div class="groundSheet">
