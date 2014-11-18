@@ -39,10 +39,12 @@
 		      <li>
 		      <%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
 		      </li>
-		      <li align="center">
-		        <% if devise_mapping.rememberable? %>
-              <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
-            <% end %>
+		      <li>
+		        <div align="center">
+		          <% if devise_mapping.rememberable? %>
+                <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
+              <% end %>
+            </div>
           </li>
 		    </ul>
 		    
