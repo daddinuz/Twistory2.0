@@ -2,40 +2,47 @@
      
 <%= feed_error_messages! %>
 
-<ul id="mainTextBoxContainer">
+<div id="mainTextBoxContainer">
 
-  <li>
-    <table>
+  <table>
     <tr>    
-      <td>
-        <%= f.text_area :feed_text, :class => "textBox", :onclick => 'textCounter(this, "charCounterIta");', :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
-      </td>
-      <td id="charCounterIta" align="center" style="display: none;"></td>  
+      <th colspan="2">
+        <%= f.text_area :feed_text, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
+      </th>  
     </tr>
-    </table>
-  </li>
-  <li>
-    <table>
+    
     <tr>
-      <td id="charCounterEng" align="center" style="display: none;"></td>      
-      <td>
-        <%= f.text_area :feed_text_english, :class => "textBox", :onclick => 'textCounter(this, "charCounterEng");', :onkeyup => 'textCounter(this, "charCounterEng");', :placeholder => "Scrivi qui la versione inglese del feed ..." %>
-      </td>
+      <th id="charCounterIta" align="left" width="50%"></th>
+      <th id="charCounterEng" align="right" width="50%"></th>
     </tr>
-    </table>      
-  </li>
-  <li>
-    <p>Inserisci la data e l'ora di pubblicazione:</p>
-    <%= f.datetime_select :date, :discard_minute => true %>
-  </li>
-  <li>
-    <p>Inserisci un'immagine:</p>
-    <%= f.file_field :feed_image %>
-  </li>
-  <li>
-    <input type="submit" value="Conferma" class="button"/>
-  </li>
+    
+    <tr>      
+      <th colspan="2">
+        <%= f.text_area :feed_text_english, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterEng");', :placeholder => "Scrivi qui la versione inglese del feed ..." %>
+      </th>
+    </tr>
+         
+    <tr>  
+      <th colspan="2">Data e ora di pubblicazione:</th>
+    </tr>
+    
+    <tr>
+      <th colspan="2"><%= f.datetime_select :date, :discard_minute => true %></th>
+    </tr>
+    
+    <tr>
+      <th colspan="2">Inserisci un'immagine:</th>
+    </tr>
+    
+    <tr>
+      <th colspan="2"><%= f.file_field :feed_image %></th>
+    </tr>
   
-</ul>
+    <tr>
+      <th colspan="2"><input type="submit" value="Conferma" class="button"/></th>
+    </tr>
+  </table> 
+  
+</div>
   
 <% end %>

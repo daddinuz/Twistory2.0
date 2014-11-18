@@ -33,21 +33,6 @@ function textCounter(element, counterBox)
   counter.innerHTML = maxChar - element.value.length;
 }
 
-function show_hide()
-{
-    var dateTimeBox = document.getElementById("dateTimeBox");
-    var mainTextBoxContainer = document.getElementById("mainTextBoxContainer");
-    
-    if (dateTimeBox.style.display == 'block')
-    {
-      dateTimeBox.style.display = 'none';
-    }
-    else
-    {
-      dateTimeBox.style.display = 'block';
-    }
-}
-
 function Expand_Image(id)
 {   
   var newheight = "38em"; // Warning: be sure that style.css height is different to newheight 

@@ -14,20 +14,19 @@
 
   <body>
   
-    <div id="menu">
-      <div id="logo">
-        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-      </div>
-      <div id="buttons">
-        <ul>
-          <li><a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a></li>
-          <li><a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a></li>
-          <li><a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a></li>
-          <li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-          <li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-        </ul>
-      </div>
-    </div>
+    <table id="menu">
+      </tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"></a>
+        </th>
+        <th align="right">
+          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
+          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
+          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
+          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
+          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
+      </tr>
+    </table>
     
     <div class="container">
          
@@ -57,11 +56,12 @@
           <p align="center">
             Se volete collaborare (come storici o informatici) e/o avete documenti, foto, lettere che volete condividere, siete i benvenuti. 
             <br><br>
-            Contattateci a:<br>
+            Contattateci a:<br><br>
             <a href="mailto:info@ragazzidel99.it"><u>info@ragazzidel99.it</u></a>
             <br><br>
-            Oppure seguiteci sul nostro canale Twitter:<br> 
-            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>https://twitter.com/lagrandeguerra</u></a>
+            Oppure seguiteci sui nostri canali:<br><br>
+            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>Twitter: La Grande Guerra</u></a><br> 
+            <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617" target="_blank"><u>Facebook: La Grande Guerra in tempo reale</u></a>
           </p>
         </div>    
       </div>
@@ -84,11 +84,10 @@
             Server su Amazon Web Services (AWS)
           </p>
           <p>
-            Visita i repository git: 
+            Visita il repository git: 
           </p>
           <p>
-            <a href="https://github.com/scoccia/Twistory" target="_blank"><u>https://github.com/scoccia/Twistory</u></a><br>
-            <a href="https://github.com/davide-di-carlo/Twistory" target="_blank"><u>https://github.com/davide-di-carlo/Twistory</u></a>
+            <a href="https://github.com/davide-di-carlo/Twistory2.0" target="_blank"><u>https://github.com/davide-di-carlo/Twistory2.0</u></a>
           </p>
         </div>
       </div>
@@ -173,8 +172,13 @@
       <div class="groundSheet" align="center">
         <span style="font-size: 10px;">
           <b>Ringraziamo:</b><br>
+        </span>
+        <span style="font-size: 9px;">
           Ivan Berryman per la concessione dello sfondo di Francesco Baracca<br>
-          L'archivio digitale de "La Stampa" e la  Biblioteca Provinciale "Melchiorre Dèlfico" - (TE) Abruzzo<br>
+          La Biblioteca Provinciale "Melchiorre Dèlfico" e l'archivio digitale de "La Stampa"<br>
+          Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
+        </span>
+        <span style="font-size: 10px;">
           2014 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
         </span>
       </div>

@@ -4,20 +4,20 @@
   
   <body>
     
-    <div id="menu">
-      <div id="logo">
-        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-      </div>
-      <div id="buttons">
-        <ul>
-          <li><a href="<%= @current_host %>" name="Hlink">Home</a></li>
-          <li><a href="<%= @current_host %>/profile" name="Hlink">Profilo</a></li>
-          <li><a href="<%= edit_user_registration_path %>" id="activeButton" name="Hlink">Impostazioni</a></li>
-          <li><%= link_to 'Esci', destroy_user_session_path, method: :delete %></li>
-        </ul>
-      </div>
-    </div>
-    
+    <table id="menu">
+      </tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"></a>
+        </th>
+        <th align="right">
+          <a href="<%= @current_host %>" name="Hlink">Home</a>
+          <a href="<%= @current_host %>/profile" name="Hlink">Profilo</a>
+          <a href="<%= edit_user_registration_path %>" id="activeButton" name="Hlink">Impostazioni</a>
+          <%= link_to 'Esci', destroy_user_session_path, method: :delete %>
+        </th>
+      </tr>
+    </table>
+        
     <div class="container">
     
       <div class="groundSheet">
@@ -37,18 +37,18 @@
           <div id="fields" class="blueNotesSheet">
             <table border="0" width="100%">
               <tr>
-                <th>Cambia nome Pubblico:</th>
-                <th>Cambia e-mail:</th>
+                <th>Nome Pubblico:</th>
+                <th>E-mail:</th>
               </tr>
               <tr>
                 <th><%= f.text_field :user_name, autofocus: true, :class => "field" %></th>
                 <th><%= f.email_field :email, :class => "field" %></th>
               </tr>
               <tr>
-                <td colspan="2" height="10px"></td>
+                <td colspan="2" height="45px"></td>
               </tr>
               <tr>
-                <th>Cambia password:</th>
+                <th>Password:</th>
                 <th>Conferma password:</th>
               </tr>
               <tr>
@@ -56,7 +56,7 @@
                 <th><%= f.password_field :password_confirmation, autocomplete: "off", :class => "field" %></th>
               </tr>
               <tr>
-                <td colspan="2" height="12px"></td>
+                <td colspan="2" height="45px"></td>
               </tr>
               <tr>
                 <th colspan="2">Cambia immagine del profilo:</th>
@@ -65,16 +65,16 @@
                 <th colspan="2"><%= f.file_field :profile_image %></th>
               </tr>
               <tr>
-                <td colspan="2" height="15px"></td>
+                <td colspan="2" height="40px"></td>
               </tr>
               <tr>
                 <th colspan="2"><div class="button" onclick="checkingChanges();">Procedi</div></th>
               </tr>
               <tr>
-                <td colspan="2" height="15px"></td>
+                <td colspan="2" height="20px"></td>
               </tr>
               <tr>
-                <th colspan="2" style="font-size: 10px;"><u><%= link_to "Elimina il mio account", registration_path(resource_name), data: { confirm: "Sei sicuro?" }, method: :delete %></u></th>         
+                <th colspan="2"><u><%= link_to "Elimina il mio account", registration_path(resource_name), data: { confirm: "Sei sicuro?" }, method: :delete %></u></th>         
               </tr>
             </table>
           </div>
@@ -89,10 +89,10 @@
               <div class="blueNotesSheet">
                 <table border="0" width="100%">
                   <tr>
-                    <th>Inserisci la tua password per confermare i cambiamenti</th>
+                    <th>Conferma i cambiamenti</th>
                   </tr>
                   <tr>  
-                    <th style="padding: 0.5% 22.5% 1.5% 22.5%;"><%= f.password_field :current_password, autocomplete: "off" , :class => "field", :placeholder => " Password" %></th>
+                    <th style="padding: 0.5% 20% 1.5% 20%;"><%= f.password_field :current_password, autocomplete: "off" , :class => "field", :placeholder => " Password" %></th>
                   </tr>
                   <tr>  
                     <th style="padding: 1.5% 0;"><input type="submit" value="Conferma" class="button" onclick="checkingChanges();"/></th>
