@@ -1,7 +1,7 @@
 <%= form_for(@feed) do |f| %>
      
 <%= feed_error_messages! %>
-      
+
 <div id="mainTextBoxContainer">
 
   <table>
@@ -27,7 +27,7 @@
     </tr>
     
     <tr>
-      <th colspan="2"><%= f.file_field :feed_image %></th>
+      <th colspan="2"><%= f.file_field :feed_image, :onchange => 'checkForImages(this)' %></th>
     </tr>
     
     <tr>
