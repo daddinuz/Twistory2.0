@@ -49,9 +49,9 @@
                 
             <div class="postDate">
               <% if feed.has_been_published == true %>
-                Pubblicato in data: <%= feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
+                Pubblicato in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
               <% else %>
-                Da pubblicare in data: <%= feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
+                Da pubblicare in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
               <% end %>
             </div>
                 
