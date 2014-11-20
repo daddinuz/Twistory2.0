@@ -40,7 +40,7 @@
     
     #mainTextBoxContainer select
     {
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: white;
       
       border: 1px solid rgba(0, 50, 80, 0.5);
@@ -50,17 +50,17 @@
     
     .textBox
     { 
-      width: 98%;
+      width: 92%;
       height: 69px;
       margin: 0 0 0 0; 
-      padding: 2% 1%;
+      padding: 2%;
                     
       /*border: 1px solid red; /* debug red */
     }
        
     #feed_feed_image
     {
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: white;
       
       width: 60%;
@@ -134,7 +134,7 @@
       border-bottom-left-radius: 4px;
            
       background-color: rgba(130, 165, 180, 1);
-      font-size: 1.5em;
+      font-size: 1.35em;
       font-weight: bold;
       
       /*border: 1px solid red; /* debug red */ 
@@ -146,7 +146,7 @@
       margin-left: 1%;
       margin-bottom: 1%;
       
-      font-size: 0.65em;
+      font-size: 0.7em;
                 
       /*border: 1px solid red; /* debug red */ 
     }
@@ -191,8 +191,7 @@
       
       display: inline-block;    
       background-color: rgba(130, 165, 180, 1);
-      
-      font-size: 0.9em;       
+            
       font-weight: bold;
       text-align: center;
       

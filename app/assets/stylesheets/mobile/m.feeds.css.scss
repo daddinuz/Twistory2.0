@@ -34,16 +34,15 @@
     {
       margin: 0 0;
       padding: 1% 0; 
-      
-      font-size: 1.4em;  
+       
       
       /*border: 1px solid red; /* debug red */ 
     }
     
     #mainTextBoxContainer select
-    {
+    {            
+      font-size: 1.45em;
       color: white;
-      font-size: 1.3em;
             
       border: 1px solid rgba(0, 50, 80, 0.5);
       border-radius: 5px;
@@ -57,17 +56,17 @@
       margin: 0.5% 0 0 0; 
       padding: 1% 2.5%;
       
-      font-size: 1.2em; 
-      
+      font-size: 1.2em;
+            
       /*border: 1px solid red; /* debug red */
     }
     
     #feed_feed_image
-    {
-      color: white;
+    {     
+      width: 75%;
       
-      font-size: 1.1em;
-      width: 85%;
+      font-size: 1.45em;
+      color: white;
       
       border: 1px solid rgba(0, 50, 80, 0.5);
       border-radius: 5px;
@@ -76,10 +75,10 @@
     
     #user_profile_image
     {
-      color: white;
+      width: 75%;
       
-      font-size: 1.5em;
-      width: 80%;
+      font-size: 1.45em;
+      color: white;
       
       border: 1px solid rgba(0, 50, 80, 0.5);
       border-radius: 5px;
@@ -151,9 +150,8 @@
       border-bottom-left-radius: 4px;
            
       background-color: rgba(130, 165, 180, 1);
-      font-size: 1.6em;
       font-weight: bold;
-      
+      font-size: 1.4em;
       /*border: 1px solid red; /* debug red */ 
     }
     
@@ -162,9 +160,7 @@
       margin-top: 0.5%;
       margin-left: 1%;
       margin-bottom: 1%;
-      
-      font-size: 0.3em;
-                            
+                                  
       /*border: 1px solid red; /* debug red */ 
     }
        
@@ -174,7 +170,8 @@
       margin-left: 12%;
       margin-right: -2.5%;
       padding: 1% 2%;
-                
+      
+      font-size: 1.3em;          
       word-wrap: break-word;
       
       background-color: #8BCCDF;
@@ -191,7 +188,8 @@
       margin-left: -2.5%;
       margin-right: 12%;
       padding: 1% 2%;
-                    
+      
+      font-size: 1.3em;              
       word-wrap: break-word;
       
       background-color: #8BCCDF;
@@ -210,8 +208,8 @@
       
       display: inline-block;    
       background-color: rgba(130, 165, 180, 1);
-             
-      font-size: 1.1em;            
+      
+      font-size: 1.2em;                   
       font-weight: bold;
       text-align: center;
       
