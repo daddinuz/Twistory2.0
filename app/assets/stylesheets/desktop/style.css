@@ -1,3 +1,85 @@
+/*barra LINK*/
+
+.barra #link
+{
+  position:relative;
+  float:right;
+  right:0%;
+  padding:2.2em 0em 0 0;
+  opacity: 1;
+  font-size:1.6em;
+  color:#696666;
+}
+
+#link a
+{
+  text-decoration:none;
+  color:#696666;
+}
+
+#link ul
+{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+
+#link li
+{
+  float:left;
+  padding:0em 1em 0em 1em;
+}
+
+#link a:hover
+{
+  text-decoration:underline;
+  color:#698888;
+}
+
+#link a:active
+{
+  text-decoration:underline;
+  color:#D5DBD6;
+}
+
+/*barra*/
+.barra
+{
+  font-size:10px;
+  height:12%;
+  display:inline-block;
+  background:#fff;
+  width:100%;
+}
+
+
+.barra img
+{
+  margin:1em 5em 0.6em 0.6em;
+  float:right;
+  max-width:6.4em;
+}
+
+.no-pointer
+{
+  pointer-events: none;
+}
+
+
+.barra h2
+{
+  float:left;
+  position:relative;
+  margin-left:1em;
+  margin-right:auto;
+  font-size:3em;
+  font-weight:300;
+  color: #000;
+  font-family:'Open Sans', sans-serif;
+}
+
+
+
   #menu   
   {
     position: fixed;
