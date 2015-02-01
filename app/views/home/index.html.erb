@@ -10,172 +10,214 @@
       ga('create', 'UA-53020835-1', 'auto');
       ga('send', 'pageview');
     </script>
-  </head>  
 
+    <link data-turbolinks-track="true" href="/assets/normalize.css" media="all" rel="stylesheet" />
+    <link data-turbolinks-track="true" href="/assets/index_style.css" media="all" rel="stylesheet" />
+    <!--<%= javascript_include_tag 'jquerycode.min.js'%>-->
+    <link data-turbolinks-track="true" href="/assets/normalize.css">
+
+    <script> 
+      $(document).ready(function(){
+
+      	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 1200, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+        
+        $('.bxslider').bxSlider({
+          mode: 'fade',
+          speed: 1000    
+        });
+
+        $("#navicon").click(function(){
+          var right =  parseInt($("#link").css('right'))/10;
+          if(right == 0){
+            $("#link").animate({   
+              right:'1%',
+              opacity: '1.00'
+            },1000);
+          }
+          else{
+            $("#link").animate({   
+              right:'0%',
+              opacity: '0'
+            },1000);
+          }
+        });
+        
+       $("#arrow").click(function(){
+          $("#content1").animate({
+               opacity: '0'
+             },2000);
+
+          $("#content1").attr("disabled", "disabled").off('click');
+
+          $("#content2").animate({  
+               left:'5%',
+               opacity: '1'
+             },2000);
+       });
+     }); 
+   </script>
+
+  <style>
+    body
+    {
+      background-color:#fff;
+      background-image:none;  
+    }   
+  </style>  
+ 
+  </head>
   <body>
-  
-    <table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
-          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
-          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
-          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
-      </tr>
-    </table>
-    
-    <div class="container">
-         
-      <div class="groundSheet">
-        <div class="homeTitle">
-          Home
+    <!--barra-->
+    <div id="home" class="barra">
+        <img alt="link" id="navicon" src="assets/home.png">
+        <div id="link">
+          <ul>
+            <li><a href="#home">Home</a></li> 
+            <li><a href="#team">Chi siamo</a></li>
+            <li><a href="#tech">Tecnologia</a></li>
+            <li><a href="<%= new_user_session_path %>">Accedi</a></li>
+            <li><a href="<%= new_user_registration_path %>">Iscriviti</a></li>
+          </ul>
         </div>
-                
-        <div class="homeTextRx">
-          <p align="center">
-            <i>
-              Quando un popolo non ha più senso vitale del suo passato si spegne.<br> 
-              La vitalità creatrice è fatta di una riserva di passato.<br> 
-              Si diventa creatori anche noi, quando si ha un passato.<br> 
-              La giovinezza dei popoli è una ricca vecchiaia!
-            </i>
-          </p>
-          <p align="center">-cit Cesare Pavese</p>
-          <p align="center">
-            100 anni fa aveva inizio una delle più grandi tragedie della Storia.<br> 
-            Allo stesso tempo iniziava il processo che portò alla completa liberazione dell'Italia dalle potenze straniere, 
-            e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.<br><br>
-            Siamo ragazzi di 16-18 anni: vogliamo raccontare quegli anni, giorno per giorno, 
-            facendo leva sulle nostre competenze di sviluppo informatico.<br> 
-            In una situazione non felice per i giovani Italiani di oggi, abbiamo voluto creare una piattaforma tecnologica moderna 
-            che ricordi le storie che portarono i nostri coetanei di allora ad affrontare e superare contro ogni aspettativa 
-            un momento di crisi ben più grave.
-          </p>
-          <p align="center">
-            Se volete collaborare come storici o informatici e/o avete documenti, foto, lettere che volete condividere, siete i benvenuti. 
-            <br><br>
-            Contattateci a:<br><br>
-            <a href="mailto:info@ragazzidel99.it"><u>info@ragazzidel99.it</u></a>
-            <br><br>
-            Oppure seguiteci sui nostri canali
-            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>Twitter</u></a> 
-            o
-            <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617" target="_blank"><u>Facebook</u></a>
-          </p>
-        </div>    
-      </div>
-            
-      <div class="groundSheet">
-        <div class="homeTitle" id="tech">
-          Tecnologia
-        </div>
-      
-        <div class="homeTextLx"  align="center">
-          <p>
-            Linux Ubuntu 14.04,
-            Apache 2.4,
-            Ruby 2.0,
-            Rails 4.0,
-            MySQL 5.5,
-            HTML5
-          </p>
-          <p>
-            Server su Amazon Web Services (AWS)
-          </p>
-          <p>
-            Visita il repository git: 
-          </p>
-          <p>
-            <a href="https://github.com/davide-di-carlo/Twistory2.0" target="_blank"><u>Twistory2.0</u></a>
-          </p>
-        </div>
-      </div>
-      
-      <div class="groundSheet">
-        <div class="homeTitle" id="about">
-          Chi Siamo
-        </div>
-           
-        <div class="homeImageLx" style="background-image: url(<%= asset_path 'vincenzo.jpg' %>);"></div>
-        <div class="homeHeadLx">
-          Vincenzo Di Nicola
-        </div>
-        <div class="homeGradeLx">
-          <b>Coordinatore</b><br> 
-          Teramo (TE)<br>
-          Classe 1979<br>
-	      </div>
-        
-        <div class="homeImageRx" style="background-image: url(<%= asset_path 'dadda_dc.jpg' %>);"></div>
-        <div class="homeHeadRx">
-          Davide Di Carlo
-        </div>
-        <div class="homeGradeRx">
-          <b>Sviluppatore</b><br> 
-          Teramo (TE)<br>
-          Classe 1997<br>
-        </div>
-      
-        <div class="homeImageLx" style="background-image: url(<%= asset_path 'dadda_b.jpg' %>);"></div>
-        <div class="homeHeadLx">
-          Davide Barbieri
-        </div>
-        <div class="homeGradeLx">
-          <b>Sviluppatore</b><br> 
-          Teramo (TE)<br>
-          Classe 1997<br>
-        </div>
-        
-        <div class="homeImageRx" style="background-image: url(<%= asset_path 'federico.jpg' %>);"></div>
-        <div class="homeHeadRx">
-          Federico Pomponii
-        </div>
-        <div class="homeGradeRx">
-          <b>Sviluppatore</b><br>
-          Teramo (TE)<br>
-          Classe 1997<br>
-        </div> 
-          
-        <div class="homeImageLx" style="background-image: url(<%= asset_path 'marco_mat.jpg' %>);"></div>
-        <div class="homeHeadLx">
-          Marco Matani
-        </div>
-        <div class="homeGradeLx">
-          <b>Scrittore</b><br>
-          Teramo (TE)<br>
-          Classe 1995<br>
-        </div>
-      
-        <div class="homeImageRx" style="background-image: url(<%= asset_path 'davide_dg.jpg' %>);"></div>
-        <div class="homeHeadRx">
-          Davide Di Giacinto
-        </div>
-        <div class="homeGradeRx">
-          <b>Scrittore</b><br> 
-          Teramo (TE)<br>
-          Classe 1995<br>
-        </div>
-      </div>
-
-      <div class="groundSheet" align="center">
-        <span style="font-size: 10px;">
-          <b>Ringraziamo:</b><br>
-        </span>
-        <span style="font-size: 9px;">
-          Ivan Berryman per la concessione dello sfondo di Francesco Baracca<br>
-          La Biblioteca Provinciale "Melchiorre Dèlfico" e l'archivio digitale de "La Stampa"<br>
-          Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
-        </span>
-        <span style="font-size: 10px;">
-          2014 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
-        </span>
-      </div>
-
+        <h2>LA GRANDE GUERRA</h2>
     </div>
+    
+    <!-- CITAZIONE/I CENTRALE/I-->
+    <div class="central">
+      <div class="csizer">
+        <div id="content1">
+          <div id="first">
+            <p>Quando un popolo non ha piu' senso vitale del suo passato si spegne.
+              La vitalita' creatrice e' fatta di una riserva di passato.
+              Si diventa creatori anche noi, quando si ha un passato.
+              La giovinezza dei popoli e' una ricca vecchiaia!</p>
+              <h3  style="text-align:right;">-cit Cesare Pavese</h3>
+          </div>
+          
+          <div id="second">
+            <p>Le battaglie si vincono e si perdono con identico cuore. Io faccio rullare i tamburi per tutti i morti, Per essi faccio squillare  le trombe in tono alto e lieto, Vivan coloro che caddero, viva chi perde in mare i propri vascelli. Vivan coloro che affondano con essi. Vivan tutti i generali sconfitti e tutti gli eroi schiacciati e gli innumerevoli eroi sconosciuti, uguali ai piu' grandi e conosciuti eroi</p>
+            <h3 style="text-align:left; ">-cit Walt Whitman</h3>
+          </div>
+          <img alt="arrow" src="assets/arrow-minimal.png" onload="aggiungi(this);" class="center" id="arrow">
+          <p id="scopri" class="center">(Clicca per visualizzare le ultime notizie)</p>
+        </div>
+      
+      
+      <!--INIZIO SLIDE FEED -->
+        <div id="content2">
+          <ul class="bxslider">
+            <li><p>La Turchia perde interesse sulla Mesopotamia e riversa tutte le sue forze sul fronte egiziano. Schierati 240 mila uomini.</p><h2>-Federico Pomponii</h2></li>
+            <li><p>Rimprovero alla spesa in campo militare da parte di Tedesco: "6 miliardi e 893 milioni spesi in 12 anni"</p><h2>-Vincenzo Di Nicola</h2></li>
+            <li><p>Milano: sono appena state comunicate, dal sindaco Caldaia, le dimissioni del consigliere comunale Benito Mussolini.</p> <h2>#lagrandeguerra</h2></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- VARIE INFORMAZIONI-->
+    <div id="tech" class="about" style="height:100%;">
+      <div class="tecnologia">
+        <img alt="techonogy" id="technoimg" src="assets/technology.png"/>
+        <img id="technotext" src="assets/technology-text.png"/>
+      </div>
+    
+      <div class="italy">
+        
+        <img alt="story" id="italytext" src="assets/storia-text.png"/>
+        <img alt="story" id="italyimg" src="assets/storia.png"/>
+      </div> 
+     
+      <div class="italy-2">
+        <img alt="story" id="italyimg2" src="assets/storia-2.png"/>
+        <img alt="story" id="italytext2" src="assets/storia-2-text.png"/>
+      </div>    
+    </div>
+
+    <!-- CHI SIAMO SECTION -->
+
+    <div class="who">
+      <h3>The Team</h3>
+        <div style="padding-left:7em;margin-left:8em">
+          <div class="member">
+            <img alt="Vincenzo Di Nicola" src="assets/pic3.jpg">
+            <h2>Vincenzo Di Nicola</h2>
+            <h4>Coordinatore</h4>
+            <p>Teramo (TE) <br>Classe 1979</p>  
+          </div>
+      
+          <div class="member">
+            <img alt="Davide di carlo" src="assets/pic2.jpg">
+            <h2>Davide Di Carlo</h2>
+            <h4>Sviluppatore</h4>
+            <p>Teramo(TE)<br>Classe 1997</p>  
+          </div>
+  
+          <div class="member">
+            <img alt="Federico Pomponii" src="assets/pomponii.jpg">
+            <h2>Federico Pomponii</h2>
+            <h4>Sviluppatore</h4>
+            <p>Teramo(TE)<br>Classe 1997</p>  
+          </div>
+  
+          <div class="member">
+            <img alt="Davide Barbieri" src="assets/pic1.jpg">
+            <h2>Davide Barbieri</h2>
+            <h4>Sviluppatore</h4>
+            <p>Teramo(TE)<br>Classe 1997</p>  
+          </div>
+
+		  <div class="member">
+            <img alt="Marco Mazzoni" src="assets/pic4.jpg">
+            <h2>Marco Mazzoni</h2>
+            <h4>Sviluppatore</h4>
+            <p>Teramo(TE)<br>Classe 1995</p>  
+          </div>
+
+          <div class="member" id="team">
+            <img alt="Simone Coccia" src="assets/coccia.jpg">
+            <h2>Simone Coccia</h2>
+            <h4>Sviluppatore</h4>
+            <p>Teramo(TE)<br>Classe 1995</p>  
+          </div>
+        </div>
+    </div>
+
+    <!-- OLD NAVIGATION BAR -->
+    <!--<div class="navigation">
+      <ul>
+        <a href="#home">
+          <li>
+            <img alt="home" src="images/Home-icon.png"/>Home
+          </li>
+        </a>
+        <a href="#about">
+          <li>
+            <img alt="home" src="images/about.png"/>Tecnologia
+          </li>
+        </a>
+        <a href="#who">  
+          <li>
+            <img alt="home" src="images/chisiamo.png"/>Chi siamo
+          </li>
+        </a>
+        <li>
+          <img src="images/sign-in.png"/>Sign in
+        </li>
+      </ul>
+    </div>-->
   </body>
   
 </html>

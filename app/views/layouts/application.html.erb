@@ -25,12 +25,69 @@
    <% end %>
       
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  
+    <!-- bxSlider JQUERY file -->    
+    <%= javascript_include_tag 'jquery.bxslider.min.js'%>
+    <!-- bxSlider CSS file -->
+    <%= stylesheet_link_tag 'jquery.bxslider.css' %>
     <style>
       body
       {
         background-image: url(/assets/background.jpg);
       }
     </style>
+
+
+    <script> 
+      $(document).ready(function(){
+
+      	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 1200, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+        
+        $('.bxslider').bxSlider({
+          mode: 'fade',
+          speed: 1000    
+        });
+
+        $("#navicon").click(function(){
+          var right =  parseInt($("#link").css('right'))/10;
+          if(right == 0){
+            $("#link").animate({   
+              right:'1%',
+              opacity: '1.00'
+            },1000);
+          }
+          else{
+            $("#link").animate({   
+              right:'0%',
+              opacity: '0'
+            },1000);
+          }
+        });
+        
+       $("#arrow").click(function(){
+          $("#content1").animate({
+               opacity: '0'
+             },2000);
+
+          $("#content1").attr("disabled", "disabled").off('click');
+
+          $("#content2").animate({  
+               left:'5%',
+               opacity: '1'
+             },2000);
+       });
+     }); 
+   </script>
    
 <%= yield %>
