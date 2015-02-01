@@ -14,20 +14,19 @@
 
   <body>
   
-    <div id="menu">
-      <div id="logo">
-        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-      </div>
-      <div id="buttons">
-        <ul>
-          <li><a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a></li>
-          <li><a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a></li>
-          <li><a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a></li>
-          <li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-          <li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-        </ul>
-      </div>
-    </div>
+    <table id="menu">
+      </tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"></a>
+        </th>
+        <th align="right">
+          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
+          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
+          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
+          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
+          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
+      </tr>
+    </table>
     
     <div class="container">
          
@@ -37,14 +36,16 @@
         </div>
                 
         <div class="homeTextRx">
-          <p align="center"><i>
-            Quando un popolo non ha più senso vitale del suo passato si spegne.<br> 
-            La vitalità creatrice è fatta di una riserva di passato.<br> 
-            Si diventa creatori anche noi, quando si ha un passato.<br> 
-            La giovinezza dei popoli è una ricca vecchiaia!
-          </p></i> 
+          <p align="center">
+            <i>
+              Quando un popolo non ha più senso vitale del suo passato si spegne.<br> 
+              La vitalità creatrice è fatta di una riserva di passato.<br> 
+              Si diventa creatori anche noi, quando si ha un passato.<br> 
+              La giovinezza dei popoli è una ricca vecchiaia!
+            </i>
+          </p>
           <p align="center">-cit Cesare Pavese</p>
-          <p>
+          <p align="center">
             100 anni fa aveva inizio una delle più grandi tragedie della Storia.<br> 
             Allo stesso tempo iniziava il processo che portò alla completa liberazione dell'Italia dalle potenze straniere, 
             e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.<br><br>
@@ -55,13 +56,15 @@
             un momento di crisi ben più grave.
           </p>
           <p align="center">
-            Se volete collaborare (come storici o informatici) e/o avete documenti, foto, lettere che volete condividere, siete i benvenuti. 
+            Se volete collaborare come storici o informatici e/o avete documenti, foto, lettere che volete condividere, siete i benvenuti. 
             <br><br>
-            Contattateci a:<br>
+            Contattateci a:<br><br>
             <a href="mailto:info@ragazzidel99.it"><u>info@ragazzidel99.it</u></a>
             <br><br>
-            Oppure seguiteci sul nostro canale Twitter:<br> 
-            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>https://twitter.com/lagrandeguerra</u></a>
+            Oppure seguiteci sui nostri canali
+            <a href="https://twitter.com/lagrandeguerra" target="_blank"><u>Twitter</u></a> 
+            o
+            <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617" target="_blank"><u>Facebook</u></a>
           </p>
         </div>    
       </div>
@@ -84,11 +87,10 @@
             Server su Amazon Web Services (AWS)
           </p>
           <p>
-            Visita i repository git: 
+            Visita il repository git: 
           </p>
           <p>
-            <a href="https://github.com/scoccia/Twistory" target="_blank"><u>https://github.com/scoccia/Twistory</u></a><br>
-            <a href="https://github.com/davide-di-carlo/Twistory" target="_blank"><u>https://github.com/davide-di-carlo/Twistory</u></a>
+            <a href="https://github.com/davide-di-carlo/Twistory2.0" target="_blank"><u>Twistory2.0</u></a>
           </p>
         </div>
       </div>
@@ -106,9 +108,7 @@
           <b>Coordinatore</b><br> 
           Teramo (TE)<br>
           Classe 1979<br>
-	        <iframe src="http://ghbtns.com/github-btn.html?user=vdinicola&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
-  	      <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=dinicola&show_count=false" allowtransparency="true" frameborder="0" scrolling="0"  width="350" height="25"></iframe>
-        </div>
+	      </div>
         
         <div class="homeImageRx" style="background-image: url(<%= asset_path 'dadda_dc.jpg' %>);"></div>
         <div class="homeHeadRx">
@@ -118,8 +118,6 @@
           <b>Sviluppatore</b><br> 
           Teramo (TE)<br>
           Classe 1997<br>
-          <iframe src="http://ghbtns.com/github-btn.html?user=davide-di-carlo&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
-          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Davide_Di_Carlo&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>  
         </div>
       
         <div class="homeImageLx" style="background-image: url(<%= asset_path 'dadda_b.jpg' %>);"></div>
@@ -130,8 +128,6 @@
           <b>Sviluppatore</b><br> 
           Teramo (TE)<br>
           Classe 1997<br>
-	        <iframe src="http://ghbtns.com/github-btn.html?user=daddabarba&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
-          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Davidozzo97&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>      
         </div>
         
         <div class="homeImageRx" style="background-image: url(<%= asset_path 'federico.jpg' %>);"></div>
@@ -142,39 +138,39 @@
           <b>Sviluppatore</b><br>
           Teramo (TE)<br>
           Classe 1997<br>
-	        <iframe src="http://ghbtns.com/github-btn.html?user=Federico-Pomponii&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
-          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=Fede_pomponii&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>      
         </div> 
           
-        <div class="homeImageLx" style="background-image: url(<%= asset_path 'simone.jpg' %>);"></div>
+        <div class="homeImageLx" style="background-image: url(<%= asset_path 'marco_mat.jpg' %>);"></div>
         <div class="homeHeadLx">
-          Simone Coccia
+          Marco Matani
         </div>
         <div class="homeGradeLx">
-          <b>Sviluppatore</b><br>
-          Civitella del Tronto (TE)<br>
-          Classe 1995<br>
-	        <iframe src="http://ghbtns.com/github-btn.html?user=scoccia&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>
-        </div>
-      
-        <div class="homeImageRx" style="background-image: url(<%= asset_path 'marco.jpg' %>);"></div>
-        <div class="homeHeadRx">
-          Marco Mazzoni
-        </div>
-        <div class="homeGradeRx">
-          <b>Sviluppatore</b><br> 
+          <b>Scrittore</b><br>
           Teramo (TE)<br>
           Classe 1995<br>
-          <iframe src="http://ghbtns.com/github-btn.html?user=MarcoMazzoni&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe><br>
-	        <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=MarcoMazzoni9&show_count=false" allowtransparency="true" frameborder="0" scrolling="0" width="350" height="25"></iframe>
+        </div>
+      
+        <div class="homeImageRx" style="background-image: url(<%= asset_path 'davide_dg.jpg' %>);"></div>
+        <div class="homeHeadRx">
+          Davide Di Giacinto
+        </div>
+        <div class="homeGradeRx">
+          <b>Scrittore</b><br> 
+          Teramo (TE)<br>
+          Classe 1995<br>
         </div>
       </div>
 
       <div class="groundSheet" align="center">
         <span style="font-size: 10px;">
           <b>Ringraziamo:</b><br>
+        </span>
+        <span style="font-size: 9px;">
           Ivan Berryman per la concessione dello sfondo di Francesco Baracca<br>
-          L'archivio digitale de "La Stampa" e la  Biblioteca Provinciale "Melchiorre Dèlfico" - (TE) Abruzzo<br>
+          La Biblioteca Provinciale "Melchiorre Dèlfico" e l'archivio digitale de "La Stampa"<br>
+          Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
+        </span>
+        <span style="font-size: 10px;">
           2014 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
         </span>
       </div>

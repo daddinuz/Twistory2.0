@@ -4,19 +4,19 @@
   
   <body>
     
-    <div id="menu">
-      <div id="logo">
-        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-      </div>
-      <div id="buttons">
-        <ul>
-          <li><a href="<%= @current_host %>" name="Hlink">Home</a></li>
-          <li><a href="<%= new_user_session_path %>" id="activeButton">Accedi</a></li>
-          <li><a href="<%= new_user_registration_path %>">Iscriviti</a></li>
-        </ul>
-      </div>
-    </div>
-	    
+    <table id="menu">
+      </tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"></a>
+        </th>
+        <th align="right">
+          <a href="<%= @current_host %>" name="Hlink">Home</a>
+          <a href="<%= new_user_session_path %>" id="activeButton">Accedi</a>
+          <a href="<%= new_user_registration_path %>">Iscriviti</a>
+        </th>
+      </tr>
+    </table>
+    
     <div class="container">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     
@@ -26,10 +26,10 @@
 	      </div>
         
         <% if notice %>
-          <p align="center"><%= notice %></p>
+          <div align="center" style="margin: 1% 0 0.5% 0;"><%= notice %></div>
         <% end %>
         <% if alert %>
-          <p align="center"><%= alert %></p>
+          <div align="center" style="margin: 1% 0 0.5% 0;"><%= alert %></div>
         <% end %>
         	      
 		    <ul>  
@@ -39,18 +39,17 @@
 		      <li>
 		      <%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
 		      </li>
-		      <li>
-		        <p align="center">
-		          <% if devise_mapping.rememberable? %>
-                <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
-              <% end %>
-		        </p>
-          </li>
 		    </ul>
-
+		    
+		    <p align="center">
+		      <% if devise_mapping.rememberable? %>
+            <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
+          <% end %>
+        </p>
+		    
 		    <div class="footer">
-		      <p><%= f.submit "Accedi", :class => "button" %></p>
-		      <p style="font-size: 11px; text-decoration: underline;"><%= link_to "Dimenticato la password?", new_password_path(resource_name) %></p>
+		      <div><%= f.submit "Accedi", :class => "button" %></div>
+		      <p style="text-decoration: underline;"><%= link_to "Dimenticato la password?", new_password_path(resource_name) %></p>
 		    </div>
 		  </div>
                 

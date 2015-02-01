@@ -1,30 +1,40 @@
 <%= form_for(@feed) do |f| %>
      
 <%= feed_error_messages! %>
-      
-<ul id="mainTextBoxContainer">
 
-  <li>      
-    <%= f.text_area :feed_text, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterIta");', :onclick => 'show_hide();', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
-  </li>
-  <li id="charCounterIta" style="text-align: right;">
-    124
-  </li>
+<div id="mainTextBoxContainer">
+
+  <table>
+    <tr>
+      <th>      
+        <%= f.text_area :feed_text, :class => "textBox", :onkeyup => 'textCounter(this, "charCounterIta");', :placeholder => "Scrivi qui il testo del tuo feed ..." %>
+      </th>
+    </tr>
+    <tr>
+      <th id="charCounterIta" style="text-align: right;"></th>
+    </tr>
   
-  <div id="dateTimeBox">
-    <li>
-      <p>Inserisci la data e l'ora di pubblicazione:</p>
-      <%= f.datetime_select :date, :discard_minute => true %>
-    </li>
-    <li>
-      <p>Inserisci un'immagine:</p>
-      <%= f.file_field :feed_image %>
-    </li>
-    <li>
-      <input type="submit" value="Conferma" class="button"/>
-    </li>
-  </div>
-  
-</ul>
+    <tr>  
+      <th colspan="2">Data e ora di pubblicazione:</th>
+    </tr>
+    
+    <tr>
+      <th colspan="2"><%= f.datetime_select :date, :minute_step => 15 %></th>
+    </tr>
+    
+    <tr>
+      <th colspan="2">Inserisci un'immagine:</th>
+    </tr>
+    
+    <tr>
+      <th colspan="2"><%= f.file_field :feed_image, :onchange => 'checkForImages(this)' %></th>
+    </tr>
+    
+    <tr>
+      <th colspan="2"><input type="submit" value="Conferma" class="button"/></th>
+    </tr>
+  </table> 
+
+</div>
 
 <% end %>

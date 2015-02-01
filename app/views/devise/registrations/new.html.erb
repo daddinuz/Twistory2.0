@@ -4,19 +4,19 @@
   
   <body>
   
-    <div id="menu">
-      <div id="logo">
-        <a href="<%= @current_host %>"><%= image_tag("logo.png") %></a>
-      </div>
-      <div id="buttons">
-        <ul>
-          <li><a href="<%= @current_host %>" name="Hlink">Home</a></li>
-          <li><a href="<%= new_user_session_path %>">Accedi</a></li>
-          <li><a href="<%= new_user_registration_path %>" id="activeButton">Iscriviti</a></li>
-        </ul>
-      </div>
-    </div>
-     
+    <table id="menu">
+      </tr>
+        <th id="logo">
+          <a href="<%= @current_host %>"></a>
+        </th>
+        <th align="right">
+          <a href="<%= @current_host %>" name="Hlink">Home</a>
+          <a href="<%= new_user_session_path %>">Accedi</a>
+          <a href="<%= new_user_registration_path %>" id="activeButton">Iscriviti</a>
+        </th>
+      </tr>
+    </table>
+    
     <div class="container">
 	  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 	  	    
@@ -50,10 +50,10 @@
 		    </ul>
 
 		    <div class="footer">
-		    	<p style="margin: 0 0 2.5% 0; padding: 0; font-weight: bold; font-size: 11px;">
-		    	  Procedendo invieremo una e-mail di conferma all'indirizzo fornito
-		    	</p>
 		      <%= f.submit "Procedi", :class => "button" %>
+		    	<p>
+		    	  <b>Ti invieremo una e-mail di conferma</b>
+		    	</p>
 		    </div>
       </div> 
          

@@ -15,37 +15,32 @@
 //= require turbolinks
 //= require_tree .
 
-var maxChar = 124;
+var maxChar=124;
+var flag=false;
 
+function checkForImages(element)
+{        
+  if ('files' in element && flag==false) 
+  {
+    maxChar = maxChar - 23;     
+    flag=true;
+  } 
+}
+  
 function textCounter(element, counterBox)
-{
-  var counter = document.getElementById(counterBox); 
+{    
+  if (counterBox=="charCounterEng") maxChar=126;
+  else maxChar=124;
+  
+  var counter = document.getElementById(counterBox);
   var remaining = maxChar - element.value.length;
   
   counter.style.display="";
   
-  if (remaining >= 0) {
-    counter.style.color="green";
-  } else {
-    counter.style.color="red";
-  }
+  if (remaining >= 0) counter.style.color="green";
+  else counter.style.color="red";
   
   counter.innerHTML = maxChar - element.value.length;
-}
-
-function show_hide()
-{
-    var dateTimeBox = document.getElementById("dateTimeBox");
-    var mainTextBoxContainer = document.getElementById("mainTextBoxContainer");
-    
-    if (dateTimeBox.style.display == 'block')
-    {
-      dateTimeBox.style.display = 'none';
-    }
-    else
-    {
-      dateTimeBox.style.display = 'block';
-    }
 }
 
 function Expand_Image(id)
