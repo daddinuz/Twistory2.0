@@ -27,11 +27,13 @@
       
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   
+    
+   
+<%= yield %>
+
     <style>
       body
       {
         background-image: url(/assets/background.jpg);
       }
     </style>
-   
-<%= yield %>

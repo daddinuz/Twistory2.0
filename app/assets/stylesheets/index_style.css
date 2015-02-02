@@ -43,6 +43,13 @@ body
 
 /*barra LINK*/
 
+a:link{text-decoration:none; color:#efefef;}
+a:before{text-decoration:none;}
+a:active{text-decoration:none; color:#698888;}
+a:hover{text-decoration:underline;}
+a:after{text-decoration:none;}
+
+
 .barra #link
 {
   position:relative;
@@ -54,10 +61,10 @@ body
   color:#696666;
 }
 
-#link a
+#link a 
 {
-  text-decoration:none;
-  color:#696666;
+  text-decoration:none; !important
+  color:#696666;!important
 }
 
 #link ul
@@ -73,16 +80,18 @@ body
   padding:0em 1em 0em 1em;
 }
 
+#link a{color:#696666 !important;}
+
 #link a:hover
 {
-  text-decoration:underline;
-  color:#698888;
+  text-decoration:underline !important;
+  color:#959695 !important;
 }
 
 #link a:active
 {
-  text-decoration:underline;
-  color:#D5DBD6;
+  text-decoration:underline !important; 
+  color:#D5DBD6 !important;
 }
 
 /*barra*/
@@ -123,7 +132,7 @@ body
 .central
 {
   width:100%;
-  height:90em;
+  height:70em;
   display:inline-block;
   background: #fff url("/assets/img154.jpg") no-repeat;
   background-size:100% 100%;
@@ -294,23 +303,25 @@ body
   padding:0em 0em 0em 0em;
   text-align:center;
   display:inline-block; 
+  background-color:#FAF8F7;
   width:100%;
+  border-top:1px solid #efefef;
 }
 
 .member
 {
-  width:28%;
+  width:20%;
   display:block;
   text-align:center;
   font-family: 'Open Sans', sans-serif;
-  margin:0 2.5em 0 0;
+  margin:0 4.5em 3.5em 0;
   float:left;
 }
 
 .member img
 {
-  width:16.5em;
-  height:16.5em;
+  width:14.5em;
+  height:14.5em;
   border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-o-border-radius: 50%;
@@ -319,9 +330,8 @@ body
 
 .who h3
 {
-  margin-top:-1em;
   font-size:3.8em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color:#696666;
 }
 
@@ -343,16 +353,56 @@ body
   color:#414A5A;
 }
  /* FINE CHI SIAMO */
+  
+
+
+
 
 
 .credits
 {
-  width:90%;
-  margin-left:auto;
-  margin-right:auto;
-  padding-top:15px;
-  font-size:1.2em;
-  padding-bottom:15px;
-  border-top:1px solid #afafaf;
+  width:100%;
+  background-color:#fff;
+  font-size:1em;
+  padding-bottom:4em;
+  color:#698888;
+  font-family: 'Ubuntu' , sans-serif;
+  border-top:1px solid #efefef;
 }
+
+#left_ftext
+{
+  display:inline-block;
+  width:25%;
+  position:relative;
+  margin:3em 0 1em 5%;
+  padding-right:4em;
+  text-align:left;
+  border-right:1px solid rgba(180,164,152,0.5);
+}
+
+#connect
+{
+  display:inline-block;
+  position:relative;
+  left:5%;
+  
+}
+
+#central_ftext
+{
+  color:#696666;
+  font-size:1.2em;
+  font-family: 'Open sans', sans-serif;
+}
+
+#connect img
+{
+  width:3.2em;
+  height:3.2em;
+}
+
+#connect img:hover{border-bottom:1px solid #698888;}
+
+#flogo {width:26.3em;height:15em; position:absolute; margin-top:-13em; right:10%;}
 

@@ -1,7 +1,6 @@
 
     <title>La Grande Guerra</title>
 
-    <meta name="viewport" content="initial-scale=0.3">
     
 
     <script>
@@ -13,53 +12,21 @@
       ga('create', 'UA-53020835-1', 'auto');
       ga('send', 'pageview');
     </script>
-
+    
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
    
     
   </head>  
 
   <body>
-    <script> 
-      $(document).ready(function(){
-      
-      	
-      		
-      
-      	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
 
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 1200, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	  });
-  }); 
-   </script> 
-    <!-- DICHIARAZIONE COLLEGAMENTI ESTERNI -->
+    <!-- LINK !!DON'T MOVE!! -->
     <link href="/assets/normalize.css" rel="stylesheet" />
-    <script src="/assets/jquerycode.min.js"></script>
-    <!-- bxSlider JQUERY file -->    
+    <script src="/assets/jquerycode.min.js"></script>  
     <script src="/assets/jquery.bxslider.min.js"></script>
-    <!-- bxSlider CSS file -->
+    <script src="/assets/jquery_index.min.js"></script>
     <link href="/assets/jquery.bxslider.css" rel="stylesheet" />
     <link href="/assets/index_style.css" rel="stylesheet" type="text/css">
-    <!--<table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" onclick="switchLink(this)" id="activeButton" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/#about" onclick="switchLink(this)" name="Hlink">Chi Siamo</a>
-          <a href="<%= @current_host %>/#tech" onclick="switchLink(this)" name="Hlink">Tecnologia</a>
-          <a href="<%= new_user_session_path %>" name="Hlink">Accedi</a>
-          <a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a>
-      </tr>
-    </table>-->
 
     <div>
     <!--NAV BAR-->
@@ -116,21 +83,17 @@
 
     <!-- INFORMATION-->
       <div class="tecnologia" id="about">
-        <!--<img alt="techonogy" id="technoimg" src="/assets/technology.png"/>-->
         <img id="technotext" src="/assets/technology-text.png"/>
       </div>
-    
+
       <div class="italy">
         <img alt="story" id="italytext" src="/assets/storia-text.png"/>
-        <!--<img alt="story" id="italyimg" src="/assets/storia.png"/>-->
       </div> 
      
       <div class="italy-2">
-        <!--<img alt="story" id="italyimg2" src="/assets/storia-2.png"/>-->
         <img alt="story" id="italytext2" src="/assets/storia-2-text.png"/>
       </div>
-    <hr style="width:80%;margin-left:auto;margin-right:auto;color:#afafaf;height:0em; opacity:0.7;"/>
-    <!-- CHI SIAMO SECTION -->
+    <!-- TEAM SECTION -->
 
     <div class="who">
       <h3>Chi Siamo</h3>
@@ -177,7 +140,7 @@
             <p>Teramo(TE)<br>Classe 1995</p>  
           </div>
 
-          <div style="margin-left:15%;"class="member" id="team">
+          <div class="member" id="team">
             <img alt="Simone Coccia" src="/assets/marco_mat.jpg">
             <h2>Marco Matani</h2>
             <h4>Sviluppatore</h4>
@@ -194,18 +157,28 @@
       
         
     </div>
+      
+      
 
-      <div class="credits" align="center">
-        <span style="font-size: 10px;">
-          <b>Ringraziamo:</b><br>
-        </span>
-        <span style="font-size: 9px;">
-          La Biblioteca Provinciale "Melchiorre Dèlfico" e l'archivio digitale de "La Stampa"<br>
-          Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
-        </span>
-        <span style="font-size: 10px;">
-          2015 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
-        </span>
+      <div class="credits">
+        <div>
+        <div id="left_ftext">
+            <b style="font-size: 1.2em; !">Ringraziamo:</b><br>
+            La Biblioteca Provinciale "Melchiorre Dèlfico" e l'archivio digitale de "La Stampa"<br>
+            Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
+        
+            2015 - Ragazzi del '99 - <a href="mailto:info@ragazzidel99.it">info@ragazzidel99.it</a>
+        </div>   
+        
+        <div id="connect">
+          <div id="central_ftext"><b>CONNECT</b></div>
+          <img src="/assets/Facebook-icon.png">
+          <img style="left:5%;" src="/assets/Twitter-icon.png">
+          <img src="/assets/github.png">
+        </div>      
+        </div>
+        <img id="flogo" src="/assets/ragazzidel99-logo.png">
+      
       </div>
 
     </div>
