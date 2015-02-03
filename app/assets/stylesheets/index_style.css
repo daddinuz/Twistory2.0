@@ -29,19 +29,18 @@ html
 
 body
 {
-  background: white url('') !important;
   height:100%;
   width:100%;
   font-size:1em;
   margin:0;
   padding:0;
-  font-family:'Open Sans', sans-serif;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 
 .navigation {display:none;}
 
-/*barra LINK*/
+/* BAR LINK*/
 
 a:link{text-decoration:none; color:#efefef;}
 a:before{text-decoration:none;}
@@ -94,7 +93,7 @@ a:after{text-decoration:none;}
   color:#D5DBD6 !important;
 }
 
-/*barra*/
+/* BAR */
 .barra
 {
   background:#fff;
@@ -127,7 +126,7 @@ a:after{text-decoration:none;}
   font-family:'Open Sans', sans-serif;
 }
 
-/* IMMAGINE CENTRALE */
+/* CENTRAL IMAGE */
 
 .central
 {
@@ -154,12 +153,11 @@ a:after{text-decoration:none;}
 
 .central #first
 {
-  margin-top:-2em;
-  left:6em;
+  margin-top: 1em;
+  left: 48%;
   opacity:1;
-  position:relative;
-  width:auto;
-  max-width:60%;
+  position: relative;
+  max-width: 50%;
 }
 
 #scopri
@@ -174,12 +172,12 @@ a:after{text-decoration:none;}
 
 .central #second
 {
-  padding:1em 0em 3em 0;
-  position:relative;  
-  left:35%;
-  opacity:1;
-  display:block;  
-  max-width:65%;
+  padding: 1em 1em;
+  position: relative;  
+  left: 0;
+  opacity: 1;
+  display: block;  
+  max-width: 48%;
 }
 
 #content1{padding-top:15em;position:relative;}
@@ -200,7 +198,7 @@ a:after{text-decoration:none;}
   text-align:center;
 }
 
-/* ULTIMI FEED */
+/* LATEST FEEDS */
 #content2
 {
   position:absolute;
@@ -228,8 +226,8 @@ a:after{text-decoration:none;}
   text-align:center;
 }
 
-/* INFORMAZIONI VARIE */
-/* TECNOLOGIA */
+/* INFORMATION */
+/* TECH */
 
 .tecnologia
 {
@@ -256,7 +254,7 @@ a:after{text-decoration:none;}
   padding-bottom:2em;
 }
 
-/* STORIA DEL SITO */
+/* STORY OF THE SITE */
 .italy
 {
   margin:0 0 7em 0;
@@ -352,11 +350,7 @@ a:after{text-decoration:none;}
   font-size:1.5em;
   color:#414A5A;
 }
- /* FINE CHI SIAMO */
-  
-
-
-
+ /* CHI SIAMO end */
 
 
 .credits
