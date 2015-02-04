@@ -8,7 +8,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, barra, hgroup, 
+figure, figcaption, footer, bar, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -51,7 +51,7 @@ a:hover{text-decoration:underline;}
 a:after{text-decoration:none;}
 
 
-.barra #link
+.bar #link
 {
   position:relative;
   float:right;
@@ -96,14 +96,14 @@ a:after{text-decoration:none;}
 }
 
 /* BAR */
-.barra
+.bar
 {
   background:#fff;
   width:100%;
 }
 
 
-.barra img
+.bar img
 {
   margin:1em 5em 0.6em 0.6em;
   float:right;
@@ -116,7 +116,7 @@ a:after{text-decoration:none;}
 }
 
 
-.barra h2
+.bar h2
 {
   float:left;
   position:relative;
@@ -162,7 +162,7 @@ a:after{text-decoration:none;}
   max-width: 50%;
 }
 
-#scopri
+#text6
 {
   opacity:1;
   position:relative;
@@ -182,7 +182,7 @@ a:after{text-decoration:none;}
   max-width: 48%;
 }
 
-#content1{padding-top:15em;position:relative;}
+#content1{padding-top:7em;position:relative;}
 
 #first p, h3
 {
@@ -256,7 +256,7 @@ a:after{text-decoration:none;}
   padding-bottom:2em;
 }
 
-/* STORY OF THE SITE */
+/* GENERAL INFORMATION */
 .italy
 {
   margin:0 0 7em 0;
@@ -296,7 +296,7 @@ a:after{text-decoration:none;}
   padding-top:0;
 }
 
-/* CHI SIAMO */
+/* TEAM */
 .who
 {
   margin-top:5em;

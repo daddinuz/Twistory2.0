@@ -9,9 +9,6 @@
 	  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
 	  <script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
 	  <script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-	  <script src="/assets/jquerycode.min.js"></script>  
-    <script src="/assets/jquery.bxslider.min.js"></script>
-    <script src="/assets/jquery_index.min.js"></script>
 	
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -23,13 +20,12 @@
       ga('send', 'pageview');
     </script>  
     
-  </head>  
-
+  </head>
   <body>
-  
+    
     <div>
     <!--NAV BAR-->
-    <div id="home" class="barra">
+    <div id="home" class="bar">
         <div id="link">
           <ul>
             <li><a href="<%= @current_host %>">Home</a></li> 
@@ -68,14 +64,14 @@
             </p>
             <h3 style="text-align:right;">-cit Walt Whitman</h3>
           </div> 
-          <img alt="arrow" src="/assets/arrow-minimal.png" onload="aggiungi(this);" class="center" id="arrow">
-          <p id="scopri" class="center">(Clicca per visualizzare le ultime notizie)</p>
+          <img alt="arrow" src="/assets/arrow-minimal.png" class="center" id="arrow">
+          <p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
         </div>
               
       
       <!--INIZIO SLIDE FEED -->
         <div id="content2">
-          <ul class="bxslider">
+          <ul class="feed_slider">
             <li><p>La Turchia perde interesse sulla Mesopotamia e riversa tutte le sue forze sul fronte egiziano. Schierati 240 mila uomini.</p><h2>-Federico Pomponii</h2></li>
             <li><p>Rimprovero alla spesa in campo militare da parte di Tedesco: "6 miliardi e 893 milioni spesi in 12 anni"</p><h2>-Vincenzo Di Nicola</h2></li>
             <li><p>Milano: sono appena state comunicate, dal sindaco Caldaia, le dimissioni del consigliere comunale Benito Mussolini.</p> <h2>-Davide Di Carlo</h2></li>
@@ -194,6 +190,8 @@
 
     </div>
   </body>
-  
+  <script src="/assets/jquerycode.min.js"></script>  
+    <script src="/assets/jquery.bxslider.min.js"></script>
+    <script src="/assets/jquery_index.min.js"></script
 </html>
 
