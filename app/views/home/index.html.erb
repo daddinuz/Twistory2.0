@@ -18,6 +18,13 @@
 
       ga('create', 'UA-53020835-1', 'auto');
       ga('send', 'pageview');
+
+      function unhover(element) {
+        element.setAttribute('src', '/assets/arrow-minimal.png');
+      }
+      function hover(element) {
+        element.setAttribute('src', '/assets/arrow_hover.png');
+      }
     </script>  
     
   </head>
@@ -64,7 +71,7 @@
             </p>
             <h3 style="text-align:right;">-cit Walt Whitman</h3>
           </div> 
-          <img alt="arrow" src="/assets/arrow-minimal.png" class="center" id="arrow">
+          <img alt="arrow" src="/assets/arrow-minimal.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
           <p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
         </div>
               

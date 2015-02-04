@@ -148,7 +148,8 @@ a:after{text-decoration:none;}
 .central img
 {
   opacity:1;
-  max-width:7em;
+  max-width:10em;
+  cursor:pointer;
   position:relative;
   display:block;
 }
