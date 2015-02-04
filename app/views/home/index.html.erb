@@ -76,12 +76,13 @@
         </div>
               
       
+      <% @LastFeeds = @feeds.last(3).reverse %>
       <!--INIZIO SLIDE FEED -->
         <div id="content2">
           <ul class="feed_slider">
-            <li><p>La Turchia perde interesse sulla Mesopotamia e riversa tutte le sue forze sul fronte egiziano. Schierati 240 mila uomini.</p><h2>-Federico Pomponii</h2></li>
-            <li><p>Rimprovero alla spesa in campo militare da parte di Tedesco: "6 miliardi e 893 milioni spesi in 12 anni"</p><h2>-Vincenzo Di Nicola</h2></li>
-            <li><p>Milano: sono appena state comunicate, dal sindaco Caldaia, le dimissioni del consigliere comunale Benito Mussolini.</p> <h2>-Davide Di Carlo</h2></li>
+            <li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><%= User.find(@LastFeeds[0].user_id).user_name %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
+            <li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><%= User.find(@LastFeeds[1].user_id).user_name %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
+            <li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><%= User.find(@LastFeeds[2].user_id).user_name %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
           </ul>
         </div>
       </div>
