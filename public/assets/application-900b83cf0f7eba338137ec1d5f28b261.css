@@ -1,0 +1,2149 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+
+
+
+ 
+
+*/
+
+
+/*-------------Start-text-area-section--------*/
+/* line 8, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#mainTextBoxContainer {
+  width: 80%;
+  margin: 2% 10% 0 10%;
+  padding: 1%;
+  background-color: rgba(120, 170, 200, 0.15);
+  border: 1px solid rgba(120, 170, 200, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 24, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#mainTextBoxContainer table {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#mainTextBoxContainer th {
+  margin: 0 0;
+  padding: 1% 0;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 42, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#mainTextBoxContainer select {
+  font-size: 1.2em;
+  color: white;
+  border: 1px solid rgba(0, 50, 80, 0.5);
+  border-radius: 5px;
+  background-color: rgba(125, 170, 180, 0.85);
+}
+
+/* line 52, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.textBox {
+  width: 92%;
+  height: 69px;
+  margin: 0 0 0 0;
+  padding: 2%;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 62, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#feed_feed_image {
+  font-size: 1.2em;
+  color: white;
+  width: 60%;
+  border: 1px solid rgba(0, 50, 80, 0.5);
+  border-radius: 5px;
+  background-color: rgba(125, 170, 180, 0.85);
+}
+
+/* line 74, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+#charCounterIta, #charCounterEng {
+  color: green;
+  font-weight: normal;
+}
+
+/*-------------End-text-area-section----------*/
+/*-------------Start-main/feed-section--------*/
+/* line 84, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.imageBox {
+  margin-left: -2.5%;
+  margin-top: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0 0;
+  border: 1px solid #99CCCC;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 99, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.imageBox img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 105, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.feedImage {
+  margin: 2% 5% 0 5%;
+  height: 180px;
+  border: 1px solid #99CCCC;
+  text-align: center;
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 117, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.feedImage img {
+  height: 100%;
+  max-width: 100%;
+}
+
+/* line 123, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.postHead {
+  margin-left: -2.5%;
+  margin-bottom: 0.5%;
+  padding: 1% 2%;
+  height: 5%;
+  width: 42%;
+  border: 1px solid rgba(80, 60, 100, 0.25);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #82a5b4;
+  font-size: 1.35em;
+  font-weight: bold;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 144, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.postDate {
+  margin-top: 0.5%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  font-size: 0.7em;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 155, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.postText {
+  margin-top: 2%;
+  margin-left: 12%;
+  margin-right: -2.5%;
+  padding: 1% 2%;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 171, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.engPostText {
+  margin-top: 2%;
+  margin-left: -2.5%;
+  margin-right: 12%;
+  padding: 1% 2%;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 187, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/feeds.css.scss */
+.bubble {
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 1.5% 1.5%;
+  display: inline-block;
+  background-color: #82a5b4;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid rgba(80, 50, 100, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+  /*border: 1px solid red; /* debug red */
+}
+
+/*-------------End-main/feed-section----------*/
+/* line 10, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeTitle {
+  margin: 0 -4%;
+  padding: 0.5% 0;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: #82a5b4;
+  border: 1px solid rgba(80, 60, 100, 0.25);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 28, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeTextRx {
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: -4%;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  font-family: Arial, Courier, sans-serif;
+  font-weight: bold;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 47, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeTextLx {
+  margin-top: 2%;
+  margin-left: -4%;
+  margin-right: 4%;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  font-family: Arial, Courier, sans-serif;
+  font-weight: bold;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 66, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeImageRx {
+  height: 100px;
+  width: 100px;
+  margin-top: 2%;
+  margin-left: 60%;
+  background-size: cover;
+  repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 82, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeImageLx {
+  height: 100px;
+  width: 100px;
+  margin-top: 2%;
+  margin-left: -4%;
+  background-size: cover;
+  repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 98, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeHeadRx {
+  max-width: 40%;
+  margin-left: 60%;
+  margin-right: -4%;
+  padding: 2%;
+  border: 1px solid rgba(80, 60, 100, 0.3);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #8BCCDF;
+  font-size: 1.2em;
+  font-family: Tahoma, Geneva, sans-serif;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 118, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeHeadLx {
+  max-width: 40%;
+  margin-left: -4%;
+  padding: 2%;
+  border: 1px solid rgba(80, 60, 100, 0.3);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #8BCCDF;
+  font-size: 1.2em;
+  font-family: Tahoma, Geneva, sans-serif;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 138, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeGradeRx {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-left: 60%;
+  font-size: 0.9em;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 151, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/home.css.scss */
+.homeGradeLx {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  font-size: 0.9em;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  /*border: 1px solid red; /* debug red */
+}
+/*** LOGIN FORM ***/
+/* line 5, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/login.css.scss */
+.loginForm {
+  width: 45%;
+  margin: 6% auto;
+  padding: 1% 0 0 0;
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 20, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/login.css.scss */
+.loginForm ul {
+  margin: 3% 15%;
+  padding: 3%;
+  background-color: rgba(150, 200, 230, 0.15);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/login.css.scss */
+.loginForm li {
+  margin: auto 15%;
+  padding: 0 0;
+}
+
+/* line 40, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/login.css.scss */
+.loginForm .field {
+  margin: 0.5%;
+  padding: 2.5%;
+  width: 100%;
+  border: 1px solid rgba(80, 80, 100, 0.4);
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 56, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/login.css.scss */
+.loginForm .footer {
+  padding: 2% 2%;
+  margin: 0 0;
+  background-color: rgba(150, 200, 230, 0.2);
+  border-top: 1px solid #fff;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+/*** END LOGIN FORM ***/
+/* line 2, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+body, html {
+  margin: 0 0;
+  padding: 0 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(50, 50, 50, 0.65);
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/* line 18, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+a:link {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 26, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+a:visited {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+a:hover {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 42, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+a:active {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 50, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 55, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 61, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+p {
+  font-size: 0.8em;
+}
+
+/* line 66, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+table {
+  font-size: 0.8em;
+}
+
+/* line 71, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 76, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+textarea {
+  resize: none;
+}
+
+/* line 81, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px 2px;
+  background-color: red;
+  display: inline;
+}
+
+/* line 87, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 95, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 1.2em;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 106, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/desktop/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 0.9em;
+  list-style: square;
+}
+  #menu   
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+      
+    font-size: 1.2em;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+      
+    background-color: #feffff; 
+  }
+  
+   #logo
+  {
+    width: 20%;
+    text-align: left;
+    
+    background-image: url(/assets/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #menu a
+  {
+    margin-right: 1%;
+  }
+  
+  #activeButton
+  {
+    color: white;
+    border: 1px solid rgba(0, 80, 100, 0.5);
+    border-radius: 5px;
+    background-color: rgba(105, 180, 200, 0.75);
+    padding: 1%;
+  }
+    
+/*** END HEADER ***/
+/*** MAIN CONTAINER ***/
+
+  .container
+  {
+    position: fixed;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    
+    margin: 0 0;
+    padding: 0 0;
+    
+    border-top: 1px solid rgba(80, 80, 100, 0.4);
+    
+    overflow-y: scroll;
+  }
+  
+  .groundSheet
+  {
+    margin: 0.55% 28%;
+    padding: 1% 0;
+            
+    background-color: #FEFFFF;
+    
+    border: 1px solid rgba(80, 80, 100, 0.40); 
+    border-radius: 3px;
+    /*border: 1px solid red; /* debug red */
+  }
+
+/*** END MAIN CONTAINER ***/
+
+  .button 
+  {
+    margin: 1% 0;
+    padding: 1.3% 3%;
+    display: inline-block;
+    
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    
+    border: 1px solid rgba(0, 50, 80, 0.5);
+    border-radius: 4px;
+    background-color: rgba(125, 170, 180, 1);
+    
+    box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+	  -moz-box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+	  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+    
+    cursor: pointer;
+  }
+  
+  .field
+  {
+    margin: 0.5%;
+    padding: 0.8%;
+    
+    width: 80%;
+    
+    border: 1px solid rgba(80, 80, 100, 0.40);    
+    border-radius: 3px; 
+    
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    
+    cursor: pointer;
+  }
+
+  .blueNotesSheet
+  {
+    margin: 2% 2%;
+  	padding: 1%;
+		  
+  	background-color: rgba(120, 170, 200, 0.15);
+  	border: 1px solid rgba(120, 170, 200, 0.2);
+  	border-radius: 5px;
+  }
+  
+    
+/*html, body, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, barra, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  font-family:'Open Sans', sans-serif;
+}
+*/
+
+img,p.center{margin-left:auto;margin-right:auto;}
+
+html
+{
+  font-size:62.5%;
+  height:100%;
+  width:100%;
+}
+
+body
+{
+  height:100%;
+  width:100%;
+  font-size:1em;
+  margin:0;
+  padding:0;
+  font-family:'Open Sans', sans-serif;
+}
+
+
+.navigation {display:none;}
+
+/*barra LINK*/
+
+.barra #link
+{
+  position:relative;
+  float:right;
+  right:0%;
+  padding:2.2em 0em 0 0;
+  opacity: 0;
+  font-size:1.6em;
+  color:#696666;
+}
+
+#link a
+{
+  text-decoration:none;
+  color:#696666;
+}
+
+#link ul
+{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+
+#link li
+{
+  float:left;
+  padding:0em 1em 0em 1em;
+}
+
+#link a:hover
+{
+  text-decoration:underline;
+  color:#698888;
+}
+
+#link a:active
+{
+  text-decoration:underline;
+  color:#D5DBD6;
+}
+
+/*barra*/
+.barra
+{
+  background:#fff;
+  width:100%;
+}
+
+
+.barra img
+{
+  margin:1em 5em 0.6em 0.6em;
+  float:right;
+  max-width:6.4em;
+}
+
+.no-pointer
+{
+  pointer-events: none;
+}
+
+
+.barra h2
+{
+  float:left;
+  position:relative;
+  margin-left:1em;
+  margin-right:auto;
+  font-size:3em;
+  font-weight:300;
+  color: #000;
+  font-family:'Open Sans', sans-serif;
+}
+
+/* IMMAGINE CENTRALE */
+
+.central
+{
+  width:100%;
+  height:90em;
+  display:inline-block;
+  background: #fff url("/assets/img154.jpg") no-repeat;
+  background-size:100% 100%;
+  
+}
+
+.csizer
+{
+  height:100%;
+}
+
+.central img
+{
+  opacity:1;
+  max-width:7em;
+  position:relative;
+  display:block;
+}
+
+.central #first
+{
+  padding-top:5em;
+  left:6em;
+  opacity:1;
+  position:relative;
+  width:auto;
+  max-width:60%;
+}
+
+#scopri
+{
+  opacity:1;
+  position:relative;
+  color:#fff;
+  font-size:1.2em;
+  text-align:center;
+  padding:1em 0 5em 0;
+}
+
+.central #second
+{
+  padding:1em 0em 3em 0;
+  position:relative;  
+  left:35%;
+  opacity:1;
+  display:block;  
+  max-width:65%;
+}
+
+#content1{padding-top:15em;position:relative;}
+
+#first p, h3
+{
+  color:#fff;
+  font-size:1.8em;
+  font-weight:100;
+  text-align:center;
+}
+
+#second p, h3
+{
+  color:#fff;
+  font-size:1.8em;
+  font-weight:100;
+  text-align:center;
+}
+
+/* ULTIMI FEED */
+#content2
+{
+  position:absolute;
+  float:left;
+  left:-125em;
+  opacity:0;
+  width:90%;
+  margin-top:-40em;
+}
+
+#content2 h2
+{
+  font-size:1.5em;
+  color:#fff;
+  text-align:right;
+  margin-right:10%;
+}
+
+#content2 p
+{
+  width:60%;
+  font-size:2em;
+  color:#fff;
+  margin: 0 auto 0 auto;
+  text-align:center;
+}
+
+/* INFORMAZIONI VARIE */
+/* TECNOLOGIA */
+
+.tecnologia
+{
+  background:url('/assets/technology.png') no-repeat left;
+  background-size:65% 100%;
+  margin:7em 0 7em 0;
+  width:100%; 
+  height:30em;
+}
+
+#technoimg
+{
+  width:65%;
+  height:100%;
+}
+
+#technotext
+{
+  position:relative;
+  height:90%;
+  float:right;
+  right:8%;
+  width:32%;
+  padding-bottom:2em;
+}
+
+/* STORIA DEL SITO */
+.italy
+{
+  margin:0 0 7em 0;
+  width:100%; 
+  height:30em;
+  background:url('/assets/storia.png') no-repeat right;
+  background-size:68% 100%;
+}
+
+#italytext
+{
+  position:relative;
+  height:95%;
+  width:33%;
+  left:4%;
+  margin-top:-0.5%;
+}
+
+.italy-2
+{
+  
+  background:url('/assets/storia-2.png') no-repeat left;
+  background-size:65% 100%;
+  margin:5em 0 7em 0;
+  width:100%; 
+  height:30em;
+}
+
+#italytext2
+{
+  
+  float:right;
+  position:relative;
+  right:4%;
+  width:36%;
+  height:95%;
+  padding-top:0;
+}
+
+/* CHI SIAMO */
+.who
+{
+  margin-top:5em;
+  padding:0em 0em 0em 0em;
+  text-align:center;
+  display:inline-block; 
+  width:100%;
+}
+
+.member
+{
+  width:28%;
+  display:block;
+  text-align:center;
+  font-family: 'Open Sans', sans-serif;
+  margin:0 2.5em 0 0;
+  float:left;
+}
+
+.member img
+{
+  width:16.5em;
+  height:16.5em;
+  border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+.who h3
+{
+  margin-top:-1em;
+  font-size:3.8em;
+  font-family: 'Open Sans', sans-serif;
+  color:#696666;
+}
+
+.member h2
+{
+  font-size:1.8em;
+  color:#2A91EB;
+}
+
+.member h4
+{
+  font-size: 1.5em;
+  color:#4E525D;
+}
+
+.member p
+{
+  font-size:1.5em;
+  color:#414A5A;
+}
+ /* FINE CHI SIAMO */
+
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(images/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+/*-------------Start-text-area-section--------*/
+/* line 8, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#mainTextBoxContainer {
+  width: 90%;
+  margin: 2% 5% 0 5%;
+  padding: 1% 0;
+  background-color: rgba(120, 170, 200, 0.15);
+  border: 1px solid rgba(120, 170, 200, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 24, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#mainTextBoxContainer table {
+  width: 96%;
+  margin: 0 2%;
+  padding: 0 0;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#mainTextBoxContainer th {
+  margin: 0 0;
+  padding: 1% 0;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 43, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#mainTextBoxContainer select {
+  font-size: 1.45em;
+  color: white;
+  border: 1px solid rgba(0, 50, 80, 0.5);
+  border-radius: 5px;
+  background-color: rgba(125, 170, 180, 0.85);
+}
+
+/* line 53, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.textBox {
+  width: 95%;
+  height: 165px;
+  margin: 0.5% 0 0 0;
+  padding: 1% 2.5%;
+  font-size: 1.2em;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 65, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#feed_feed_image {
+  width: 75%;
+  font-size: 1.45em;
+  color: white;
+  border: 1px solid rgba(0, 50, 80, 0.5);
+  border-radius: 5px;
+  background-color: rgba(125, 170, 180, 0.85);
+}
+
+/* line 77, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#user_profile_image {
+  width: 75%;
+  font-size: 1.45em;
+  color: white;
+  border: 1px solid rgba(0, 50, 80, 0.5);
+  border-radius: 5px;
+  background-color: rgba(125, 170, 180, 0.85);
+}
+
+/* line 89, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+#charCounterIta, #charCounterEng {
+  color: green;
+  /* border: 1px solid red; */
+}
+
+/*-------------End-text-area-section----------*/
+/*-------------Start-main/feed-section--------*/
+/* line 100, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.imageBox {
+  margin-left: -2.5%;
+  margin-top: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0 0;
+  border: 1px solid #99CCCC;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 115, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.imageBox img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 121, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.feedImage {
+  margin: 2% 5% 0 5%;
+  height: 180px;
+  border: 1px solid #99CCCC;
+  text-align: center;
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 133, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.feedImage img {
+  height: 100%;
+  max-width: 100%;
+}
+
+/* line 139, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.postHead {
+  margin-left: -2.5%;
+  margin-bottom: 0.5%;
+  padding: 1% 2%;
+  height: 5%;
+  width: 42%;
+  border: 1px solid rgba(80, 60, 100, 0.25);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #82a5b4;
+  font-weight: bold;
+  font-size: 1.4em;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 159, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.postDate {
+  margin-top: 0.5%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 168, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.postText {
+  margin-top: 2%;
+  margin-left: 12%;
+  margin-right: -2.5%;
+  padding: 1% 2%;
+  font-size: 1.3em;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 186, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.engPostText {
+  margin-top: 2%;
+  margin-left: -2.5%;
+  margin-right: 12%;
+  padding: 1% 2%;
+  font-size: 1.3em;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red;*/
+}
+
+/* line 204, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.feeds.css.scss */
+.bubble {
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 1.5% 1.5%;
+  display: inline-block;
+  background-color: #82a5b4;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid rgba(80, 50, 100, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+  /*border: 1px solid red; /* debug red */
+}
+
+/*-------------End-main/feed-section----------*/
+/* line 10, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeTitle {
+  margin: 0 -3.5%;
+  padding: 0.5% 0;
+  font-size: 1.8em;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: #82a5b4;
+  border: 1px solid rgba(80, 60, 100, 0.25);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 28, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeTextRx {
+  margin-top: 2%;
+  margin-left: 3.5%;
+  margin-right: -3.5%;
+  padding: 1% 2%;
+  font-family: 1.2em;
+  font-family: Arial, Courier, sans-serif;
+  font-weight: bold;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 47, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeTextLx {
+  margin-top: 2%;
+  margin-left: -3.5%;
+  margin-right: 3.5%;
+  padding: 1% 2%;
+  font-family: 1.2em;
+  font-family: Arial, Courier, sans-serif;
+  font-weight: bold;
+  word-wrap: break-word;
+  background-color: #8BCCDF;
+  border: 1px solid rgba(80, 50, 100, 0.2);
+  border-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 66, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeImageRx {
+  height: 100px;
+  width: 100px;
+  margin-top: 2%;
+  margin-left: 60%;
+  background-size: cover;
+  repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 82, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeImageLx {
+  height: 100px;
+  width: 100px;
+  margin-top: 2%;
+  margin-left: -4%;
+  background-size: cover;
+  repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 98, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeHeadRx {
+  max-width: 40%;
+  margin-left: 60%;
+  margin-right: -4%;
+  padding: 2%;
+  border: 1px solid rgba(80, 60, 100, 0.3);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #8BCCDF;
+  font-family: Tahoma, Geneva, sans-serif;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 117, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeHeadLx {
+  max-width: 40%;
+  margin-left: -4%;
+  padding: 2%;
+  border: 1px solid rgba(80, 60, 100, 0.3);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #8BCCDF;
+  font-family: Tahoma, Geneva, sans-serif;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 136, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeGradeRx {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-left: 60%;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  /*border: 1px solid red; /* debug red */
+}
+
+/* line 148, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.home.css.scss */
+.homeGradeLx {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  /*border: 1px solid red; /* debug red */
+}
+/*** LOGIN FORM ***/
+/* line 5, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.login.css.scss */
+.loginForm {
+  width: 90%;
+  margin: 2.5% auto;
+  padding: 1% 0 0 0;
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 20, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.login.css.scss */
+.loginForm ul {
+  margin: 3% 8%;
+  padding: 3%;
+  background-color: rgba(150, 200, 230, 0.15);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.login.css.scss */
+.loginForm li {
+  margin: 1% 12%;
+  padding: 0 0;
+}
+
+/* line 40, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.login.css.scss */
+.loginForm .field {
+  margin: 0.5%;
+  padding: 2.5%;
+  width: 94%;
+  border: 1px solid rgba(80, 80, 100, 0.4);
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 56, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.login.css.scss */
+.loginForm .footer {
+  padding: 2% 2%;
+  margin: 0 0;
+  background-color: rgba(150, 200, 230, 0.2);
+  border-top: 1px solid #fff;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+/*** END LOGIN FORM ***/
+/* line 2, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+body, html {
+  margin: 0 0;
+  padding: 0 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(50, 50, 50, 0.65);
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 1.4em;
+}
+
+/* line 18, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+a:link {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 26, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+a:visited {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 34, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+a:hover {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 42, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+a:active {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.65);
+  font-weight: bold;
+}
+
+/* line 50, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 55, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 61, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 66, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+textarea {
+  resize: none;
+}
+
+/* line 71, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+h2 {
+  font-size: 0.85em;
+}
+
+/* line 76, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+h4 {
+  font-size: 0.35em;
+}
+
+/* line 81, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px 2px;
+  background-color: red;
+  display: inline;
+}
+
+/* line 87, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 95, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 1.2em;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 106, /home/federico/Desktop/Progetti/Git/Twistory2.0/app/assets/stylesheets/mobile/m.scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 0.9em;
+  list-style: square;
+}
+   #menu   
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+      
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+      
+    background-color: #feffff; 
+  }
+  
+  #logo
+  {
+    width: 20%;
+    text-align: left;
+    
+    background-image: url(/assets/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #menu a
+  {
+    margin-right: 1%;
+  }
+  
+  #activeButton
+  {
+    color: white;
+    border: 1px solid rgba(0, 80, 100, 0.5);
+    border-radius: 5px;
+    background-color: rgba(105, 180, 200, 0.75);
+    padding: 0.5% 1%;
+  }
+/*** END HEADER ***/
+/*** MAIN CONTAINER ***/
+
+  .container
+  {
+    position: fixed;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 93%;
+    
+    margin: 0 0;
+    padding: 0 0;
+    
+    border-top: 1px solid rgba(80, 80, 100, 0.4);
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .groundSheet
+  {
+    margin: 0.8% 4%;
+    padding: 3% 0;
+            
+    background-color: #FEFFFF;
+    
+    border: 1px solid rgba(80, 80, 100, 0.40); 
+    border-radius: 3px;
+    /*border: 1px solid red; /* debug red */
+  }
+
+/*** END MAIN CONTAINER ***/
+
+  .button 
+  {
+    margin: 2% 0;
+    padding: 1% 2%;
+    display: inline-block;
+    
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    
+    border: 1px solid rgba(0, 50, 80, 0.5);
+    border-radius: 4px;
+    background-color: rgba(125, 170, 180, 1);
+    
+    box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+	  -moz-box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+	  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 20, 50, 0.35);
+    
+    cursor: pointer;
+  }
+  
+  .field
+  {
+    margin: 0.5%;
+    padding: 1%;
+    
+    width: 95%;
+    
+    border: 1px solid rgba(80, 80, 100, 0.40);    
+    border-radius: 3px; 
+    
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    
+    cursor: pointer;
+  }
+
+  .blueNotesSheet
+  {
+    margin: 2% 1.5%;
+  	padding: 0.5%;
+		  
+  	background-color: rgba(120, 170, 200, 0.15);
+  	border: 1px solid rgba(120, 170, 200, 0.2);
+  	border-radius: 5px;
+  }
+  
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}

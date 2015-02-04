@@ -1,5 +1,29 @@
     
     <title>La Grande Guerra</title>
+    
+    <style>body{background-image: url('/assets/background.jpg');}</style>
+    
+    <% if mobile_device? %>
+		<meta name="viewport" content="user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />        
+		<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
+   <% else %>
+		<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
+   <% end %>
+   
+  	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+	<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>    
   </head>  
 
   <body>
