@@ -1,205 +1,220 @@
 
-    <title>La Grande Guerra</title>
-    
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-    <link href="/assets/normalize.css" rel="stylesheet" />
-    <link href="/assets/jquery.bxslider.css" rel="stylesheet" />
-    <link href="/assets/index_style.css" rel="stylesheet" type="text/css">
-	
-	  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	  <script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	  <script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-	
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<title>La Grande Guerra</title>
 
-      ga('create', 'UA-53020835-1', 'auto');
-      ga('send', 'pageview');
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href="/assets/normalize.css" rel="stylesheet" />
+	<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
+	<link href="/assets/index_style.css" rel="stylesheet" type="text/css">
 
-      function unhover(element) {
-        element.setAttribute('src', '/assets/arrow-minimal.png');
-      }
-      function hover(element) {
-        element.setAttribute('src', '/assets/arrow_hover.png');
-      }
-    </script>  
-    
+	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+	
+	<script src="/assets/jquerycode.min.js"></script>  
+    <script src="/assets/jquery.bxslider.min.js"></script>
+    <script src="/assets/jquery_index.min.js"></script>
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-53020835-1', 'auto');
+		ga('send', 'pageview');
+
+		function unhover(element) {
+		element.setAttribute('src', '/assets/arrow-minimal.png');
+		}
+		function hover(element) {
+		element.setAttribute('src', '/assets/arrow_hover.png');
+		}
+	</script>  
   </head>
   <body>
     
-    <div>
-    <!--NAV BAR-->
-    <div id="home" class="bar">
-        <div id="link">
-          <ul>
-            <li><a href="<%= @current_host %>">Home</a></li> 
-            <li><a href="#team">Chi Siamo</a></li>
-            <li><a href="#about">Tecnologia</a></li>
-            <li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-            <li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-          </ul>
-        </div>
-        <h2>LA GRANDE GUERRA</h2>
-    </div>
+    <!-- START main div -->
+	<div>
+	
+		<!-- START bar -->
+		<div id="home" class="bar">
+			<div id="link">
+				<ul>
+					<li><a href="#team">Chi Siamo</a></li>
+					<li><a href="#about">Tecnologia</a></li>
+					<li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
+					<li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
+				</ul>
+			</div>
+			<h2>LA GRANDE GUERRA</h2>
+		</div>
+		<!-- END bar -->
     
-    <!-- CENTRAL -->
-    <div class="central">
-      <div class="csizer">
-        <div id="content1">
-          <div id="first">
-            <p>
-				Quando un popolo non ha più senso vitale del suo passato si spegne.<br>
-				La vitalità creatrice è fatta di una riserva di passato.<br>
-				Si diventa creatori anche noi, quando si ha un passato.<br>
-				La giovinezza dei popoli è una ricca vecchiaia!
-			</p>
-            <h3  style="text-align:right;">-cit Cesare Pavese</h3>
-          </div>
-          
-          <div id="second">
-            <p>
-		        Le battaglie si vincono e si perdono con identico cuore.<br>
-		        Io faccio rullare i tamburi per tutti i morti,<br>
-		        Per essi faccio squillare  le trombe in tono alto e lieto,<br>
-		        Vivan coloro che caddero, viva chi perde in mare i propri vascelli.<br> 
-		        Vivan coloro che affondano con essi.<br>
-		        Vivan tutti i generali sconfitti e tutti gli eroi schiacciati<br>e gli innumerevoli eroi sconosciuti,<br>
-		        uguali ai più grandi e conosciuti eroi
-            </p>
-            <h3 style="text-align:right;">-cit Walt Whitman</h3>
-          </div> 
-          <img alt="arrow" src="/assets/arrow-minimal.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
-          <p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
-        </div>
-              
-      
-      <% @LastFeeds = @feeds.last(3).reverse %>
-      <!--INIZIO SLIDE FEED -->
-        <div id="content2">
-          <ul class="feed_slider">
-            <li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><%= User.find(@LastFeeds[0].user_id).user_name %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
-            <li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><%= User.find(@LastFeeds[1].user_id).user_name %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
-            <li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><%= User.find(@LastFeeds[2].user_id).user_name %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
+		<!-- START central -->
+		<div class="central">
+			<div class="csizer">
+			
+				<!-- START content1 -->
+				<div id="content1">
+					<div id="first">
+						<p>
+							Quando un popolo non ha più senso vitale del suo passato si spegne.<br>
+							La vitalità creatrice è fatta di una riserva di passato.<br>
+							Si diventa creatori anche noi, quando si ha un passato.<br>
+							La giovinezza dei popoli è una ricca vecchiaia!
+						</p>
+            			<h3  style="text-align:right;">-cit Cesare Pavese</h3>
+          			</div>
+					<div id="second">
+						<p>
+							Le battaglie si vincono e si perdono con identico cuore.<br>
+							Io faccio rullare i tamburi per tutti i morti,<br>
+							Per essi faccio squillare  le trombe in tono alto e lieto,<br>
+							Vivan coloro che caddero, viva chi perde in mare i propri vascelli.<br> 
+							Vivan coloro che affondano con essi.<br>
+							Vivan tutti i generali sconfitti e tutti gli eroi schiacciati<br>e gli innumerevoli eroi sconosciuti,<br>
+							uguali ai più grandi e conosciuti eroi
+						</p>
+						<h3 style="text-align:right;">-cit Walt Whitman</h3>
+          			</div>
+					<img alt="arrow" src="/assets/arrow-minimal.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
+          			<p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
+        		</div>
+              	<!-- END content1 -->
+              	
+      			<!-- START content2 -->
+				<% @LastFeeds = @feeds.last(3).reverse %>
+				<div id="content2">
+					<ul class="feed_slider">
+						<% if !@LastFeeds[0].blank? %>
+						<li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><%= User.find(@LastFeeds[0].user_id).user_name %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
+						<% end %>
+						<% if !@LastFeeds[1].blank? %>
+						<li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><%= User.find(@LastFeeds[1].user_id).user_name %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
+						<% end %>
+						<% if !@LastFeeds[2].blank? %>
+						<li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><%= User.find(@LastFeeds[2].user_id).user_name %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
+						<% end %>
+					</ul>
+				</div>
+				<!-- END content2 -->
+				
+			</div>
+			<!-- END csizer -->
+		</div>
+		<!-- END central -->
 
-    <!-- INFORMATION-->
-      <div class="tecnologia" id="about">
-        <img id="technotext" src="/assets/technology-text.png"/>
-      </div>
+    	<!-- SECTION tecnologia -->
+		<div class="tecnologia" id="about">
+			<img id="technotext" src="/assets/technology-text.png"/>
+		</div>
 
-      <div class="italy">
-        <img alt="story" id="italytext" src="/assets/storia-text.png"/>
-      </div> 
+		<div class="italy">
+			<img alt="story" id="italytext" src="/assets/storia-text.png"/>
+		</div> 
      
-      <div class="italy-2">
-        <img alt="story" id="italytext2" src="/assets/storia-2-text.png"/>
-      </div>
-    <!-- TEAM SECTION -->
-
-    <div class="who" id="team">
-      <h3>Chi Siamo</h3>
-        <div style="padding-left:7em;margin-left:8em">
-          <div class="member">
-            <img alt="Vincenzo Di Nicola" src="/assets/vincenzo.jpg">
-            <h2>Vincenzo Di Nicola</h2>
-            <h4>Coordinatore</h4>
-            <p>Teramo (TE) <br>Classe 1979</p>  
-          </div>
+		<div class="italy-2">
+			<img alt="story" id="italytext2" src="/assets/storia-2-text.png"/>
+		</div>
+		<!-- END tecnologia -->
+		
+		<!-- SECTION chi siamo -->
+		<div class="who" id="team">
+			<h3>Chi Siamo</h3>
+			<div style="padding-left:7em;margin-left:8em">
+				
+				<div class="member">
+					<img alt="Vincenzo Di Nicola" src="/assets/vincenzo.jpg">
+					<h2>Vincenzo Di Nicola</h2>
+					<h4>Coordinatore</h4>
+					<p>Teramo (TE) <br>Classe 1979</p>  
+				</div>
       
-          <div class="member">
-            <img alt="Davide di carlo" src="/assets/dadda_dc.jpg">
-            <h2>Davide Di Carlo</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1997</p>  
-          </div>
+				<div class="member">
+					<img alt="Davide di carlo" src="/assets/dadda_dc.jpg">
+					<h2>Davide Di Carlo</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1997</p>  
+				</div>
   
-          <div class="member">
-            <img alt="Federico Pomponii" src="/assets/pomponii.jpg">
-            <h2>Federico Pomponii</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1997</p>  
-          </div>
+				<div class="member">
+					<img alt="Federico Pomponii" src="/assets/pomponii.jpg">
+					<h2>Federico Pomponii</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1997</p>  
+				</div>
   
-          <div class="member">
-            <img alt="Davide Barbieri" src="/assets/dadda_b.jpg">
-            <h2>Davide Barbieri</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1997</p>  
-          </div>
+				<div class="member">
+					<img alt="Davide Barbieri" src="/assets/dadda_b.jpg">
+					<h2>Davide Barbieri</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1997</p>  
+				</div>
 
-		  <div class="member">
-            <img alt="Marco Mazzoni" src="/assets/mazzoni.jpg">
-            <h2>Marco Mazzoni</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1995</p>  
-          </div>
+				<div class="member">
+					<img alt="Marco Mazzoni" src="/assets/mazzoni.jpg">
+					<h2>Marco Mazzoni</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1995</p>  
+				</div>
 
-          <div class="member">
-            <img alt="Simone Coccia" src="/assets/coccia.jpg">
-            <h2>Simone Coccia</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1995</p>  
-          </div>
+				<div class="member">
+					<img alt="Simone Coccia" src="/assets/coccia.jpg">
+					<h2>Simone Coccia</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1995</p>  
+				</div>
 
-          <div class="member">
-            <img alt="Simone Coccia" src="/assets/marco_mat.jpg">
-            <h2>Marco Matani</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1995</p>  
-          </div>
+				<div class="member">
+					<img alt="Simone Coccia" src="/assets/marco_mat.jpg">
+					<h2>Marco Matani</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1995</p>  
+				</div>
 
-          <div class="member">
-            <img alt="Simone Coccia" src="/assets/davide_dg.jpg">
-            <h2>Davide di Giacinto</h2>
-            <h4>Sviluppatore</h4>
-            <p>Teramo(TE)<br>Classe 1996</p>  
-          </div>
-        </div>
-      
+				<div class="member">
+					<img alt="Simone Coccia" src="/assets/davide_dg.jpg">
+					<h2>Davide di Giacinto</h2>
+					<h4>Sviluppatore</h4>
+					<p>Teramo(TE)<br>Classe 1996</p>  
+				</div>
+				
+			</div>
+		</div>
+		<!-- END chi siamo -->
+		
+		<!-- START credits -->
+		<div class="credits">
+			<div>
+				<div id="left_ftext">
+					<b style="font-size: 1.35em;">Ringraziamo:</b><br>
+					La Biblioteca Provinciale "Melchiorre Dèlfico"<br>
+					L'archivio digitale de "La Stampa"<br>
+					Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
+					2015 - Ragazzi del '99 <a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
+				</div>   
         
-    </div>
-      
-      
-
-      <div class="credits">
-        <div>
-        <div id="left_ftext">
-            <b style="font-size: 1.2em;">Ringraziamo:</b><br>
-            La Biblioteca Provinciale "Melchiorre Dèlfico"<br>L'archivio digitale de "La Stampa"<br>
-            Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
-        
-            2015 - Ragazzi del '99 <a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
-        </div>   
-        
-        <div id="connect">
-          <div id="central_ftext"><b>CONNECT</b></div>
-          <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
-            <img src="/assets/Facebook-icon.png">
-          </a>
-          <a href="https://twitter.com/lagrandeguerra">
-            <img style="left:5%;" src="/assets/Twitter-icon.png">
-          </a>
-          <a href="https://github.com/davide-di-carlo/Twistory2.0">
-            <img src="/assets/github.png">
-          </a>
-          <img src="/assets/Youtube-icon.png">
-        </div>      
-        </div>
-        <img id="flogo" src="/assets/ragazzidel99-logo.png">
-      
-      </div>
-
-    </div>
+				<div id="connect">
+					<div id="central_ftext"><b>CONNECT</b></div>
+					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
+						<img src="/assets/Facebook-icon.png">
+					</a>
+					<a href="https://twitter.com/lagrandeguerra">
+						<img style="left:5%;" src="/assets/Twitter-icon.png">
+					</a>
+					<a href="https://github.com/davide-di-carlo/Twistory2.0">
+						<img src="/assets/github.png">
+					</a>
+					<img src="/assets/Youtube-icon.png">
+				</div>      
+			</div>
+			<img id="flogo" src="/assets/ragazzidel99-logo.png">
+		</div>
+		<!-- END credits -->
+	
+	</div>
+  	<!-- END main div -->
+  	
   </body>
-  <script src="/assets/jquerycode.min.js"></script>  
-    <script src="/assets/jquery.bxslider.min.js"></script>
-    <script src="/assets/jquery_index.min.js"></script
 </html>
 
