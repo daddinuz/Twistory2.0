@@ -64,8 +64,8 @@ a:after{text-decoration:none;}
 
 #link a 
 {
-  text-decoration:none; !important
-  color:#696666;!important
+  text-decoration:none !important;
+  color:#696666 !important;
 }
 
 #link ul
@@ -135,7 +135,7 @@ a:after{text-decoration:none;}
   width:100%;
   height:70em;
   display:inline-block;
-  background: #fff url("/assets/img154.jpg") no-repeat;
+  background: #fff url(image-path("img154.jpg")) no-repeat;
   background-size:100% 100%;
   
 }
@@ -234,7 +234,7 @@ a:after{text-decoration:none;}
 
 .tecnologia
 {
-  background:url('/assets/technology.png') no-repeat left;
+  background:url(image-path("technology.png")) no-repeat left;
   background-size:65% 100%;
   margin:7em 0 7em 0;
   width:100%; 
@@ -263,7 +263,7 @@ a:after{text-decoration:none;}
   margin:0 0 7em 0;
   width:100%; 
   height:30em;
-  background:url('/assets/storia.png') no-repeat right;
+  background:url(image-path("storia.png")) no-repeat right;
   background-size:68% 100%;
 }
 
@@ -279,7 +279,7 @@ a:after{text-decoration:none;}
 .italy-2
 {
   
-  background:url('/assets/storia-2.png') no-repeat left;
+  background:url(image-path("storia-2.png")) no-repeat left;
   background-size:65% 100%;
   margin:5em 0 7em 0;
   width:100%; 

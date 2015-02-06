@@ -24,10 +24,10 @@
 		ga('send', 'pageview');
 
 		function unhover(element) {
-		element.setAttribute('src', '/assets/arrow-minimal.png');
+		element.setAttribute('src',  '<%= asset_path 'arrow-minimal.png' %>');
 		}
 		function hover(element) {
-		element.setAttribute('src', '/assets/arrow_hover.png');
+		element.setAttribute('src', '<%= asset_path 'arrow_hover.png' %>');
 		}
 	</script>  
   </head>
@@ -77,7 +77,7 @@
 						</p>
 						<h3 style="text-align:right;">-cit Walt Whitman</h3>
           			</div>
-					<img alt="arrow" src="/assets/arrow-minimal.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
+					<img alt="arrow" src="<%= asset_path 'arrow-minimal.png' %>" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
           			<p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
         		</div>
               	<!-- END content1 -->
@@ -106,15 +106,15 @@
 
     	<!-- SECTION tecnologia -->
 		<div class="tecnologia" id="about">
-			<img id="technotext" src="/assets/technology-text.png"/>
+			<img id="technotext" src="<%= asset_path 'technology-text.png' %>"/>
 		</div>
 
 		<div class="italy">
-			<img alt="story" id="italytext" src="/assets/storia-text.png"/>
+			<img alt="story" id="italytext" src="<%= asset_path 'storia-text.png' %>"/>
 		</div> 
      
 		<div class="italy-2">
-			<img alt="story" id="italytext2" src="/assets/storia-2-text.png"/>
+			<img alt="story" id="italytext2" src="<%= asset_path 'storia-2-text.png' %>"/>
 		</div>
 		<!-- END tecnologia -->
 		
@@ -124,56 +124,56 @@
 			<div style="padding-left:7em;margin-left:8em">
 				
 				<div class="member">
-					<img alt="Vincenzo Di Nicola" src="/assets/vincenzo.jpg">
+					<img alt="Vincenzo Di Nicola" src="<%= asset_path 'vincenzo.jpg' %>">
 					<h2>Vincenzo Di Nicola</h2>
 					<h4>Coordinatore</h4>
 					<p>Teramo (TE) <br>Classe 1979</p>  
 				</div>
       
 				<div class="member">
-					<img alt="Davide di carlo" src="/assets/dadda_dc.jpg">
+					<img alt="Davide di carlo" src="<%= asset_path 'dadda_dc.jpg' %>">
 					<h2>Davide Di Carlo</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1997</p>  
 				</div>
   
 				<div class="member">
-					<img alt="Federico Pomponii" src="/assets/pomponii.jpg">
+					<img alt="Federico Pomponii" src="<%= asset_path 'pomponii.jpg' %>">
 					<h2>Federico Pomponii</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1997</p>  
 				</div>
   
 				<div class="member">
-					<img alt="Davide Barbieri" src="/assets/dadda_b.jpg">
+					<img alt="Davide Barbieri" src="<%= asset_path 'dadda_b.jpg' %>">
 					<h2>Davide Barbieri</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1997</p>  
 				</div>
 
 				<div class="member">
-					<img alt="Marco Mazzoni" src="/assets/mazzoni.jpg">
+					<img alt="Marco Mazzoni" src="<%= asset_path 'mazzoni.jpg' %>">
 					<h2>Marco Mazzoni</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1995</p>  
 				</div>
 
 				<div class="member">
-					<img alt="Simone Coccia" src="/assets/coccia.jpg">
+					<img alt="Simone Coccia" src="<%= asset_path 'coccia.jpg' %>">
 					<h2>Simone Coccia</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1995</p>  
 				</div>
 
 				<div class="member">
-					<img alt="Simone Coccia" src="/assets/marco_mat.jpg">
+					<img alt="Simone Coccia" src="<%= asset_path 'marco_mat.jpg' %>">
 					<h2>Marco Matani</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1995</p>  
 				</div>
 
 				<div class="member">
-					<img alt="Simone Coccia" src="/assets/davide_dg.jpg">
+					<img alt="Simone Coccia" src="<%= asset_path 'davide_dg.jpg' %>">
 					<h2>Davide di Giacinto</h2>
 					<h4>Sviluppatore</h4>
 					<p>Teramo(TE)<br>Classe 1996</p>  
@@ -197,18 +197,18 @@
 				<div id="connect">
 					<div id="central_ftext"><b>CONNECT</b></div>
 					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
-						<img src="/assets/Facebook-icon.png">
+						<img src="<%= asset_path 'Facebook-icon.png' %>">
 					</a>
 					<a href="https://twitter.com/lagrandeguerra">
-						<img style="left:5%;" src="/assets/Twitter-icon.png">
+						<img style="left:5%;" src="<%= asset_path 'Twitter-icon.png' %>">  
 					</a>
 					<a href="https://github.com/davide-di-carlo/Twistory2.0">
-						<img src="/assets/github.png">
+						<img src="<%= asset_path 'github.png' %>">  
 					</a>
-					<img src="/assets/Youtube-icon.png">
+					<img src="<%= asset_path 'Youtube-icon.png' %>">  
 				</div>      
 			</div>
-			<img id="flogo" src="/assets/ragazzidel99-logo.png">
+			<img id="flogo" src="<%= asset_path 'ragazzidel99-logo.png' %>">  
 		</div>
 		<!-- END credits -->
 	
