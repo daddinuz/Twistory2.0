@@ -36,7 +36,14 @@ class ApplicationController < ActionController::Base
   def check_permission_level
     if user_signed_in?
       permission = User.where(id: current_user.id).take
-      if permission.permission_level != 0
+	
+      # permission_level legend:
+      #   0 : super user (can edit/delete feeds created by other users)
+      #  10 : normal user (can only edit/delete his/her own created feeds)
+      # 100 : non-authorized user (s/he registered on the portal, but s/he has
+      #       not been upgraded to permission_level 10 or 0, so cannot do anything)
+
+      if permission.permission_level > 10
         sign_out
         # "redirect_to" documentation
         # http://apidock.com/rails/ActionController/Base/redirect_to
