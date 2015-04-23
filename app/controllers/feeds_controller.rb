@@ -40,7 +40,7 @@ class FeedsController < ApplicationController
   # GET /feeds/1/edit
   def edit
     
-    if @feed.user_id != current_user.id
+    if (@feed.user_id != current_user.id) and (current_user.permission_level != 0)
       error_message 
     elsif @feed.has_been_published == true
       flash[:notice] = "Non puoi modificare feeds già pubblicati"
@@ -99,8 +99,9 @@ class FeedsController < ApplicationController
 
   # PATCH/PUT /feeds/1
   def update
-    if @feed.user_id == current_user.id
-            
+    if (@feed.user_id == current_user.id) or (current_user.permission_level == 0)
+      # Note: if the super user (permission_level 0) updates the feed, the feed user_id owner remains the original user_id      
+      
       respond_to do |format|
       
         if @feed.update(feed_params)
@@ -139,7 +140,7 @@ class FeedsController < ApplicationController
  
   # DELETE /feeds/1
   def destroy
-    if @feed.user_id == current_user.id
+    if (@feed.user_id == current_user.id) or (current_user.permission_level == 0)
       @feed.destroy
       respond_to do |format|
         format.html { redirect_to feeds_url }
