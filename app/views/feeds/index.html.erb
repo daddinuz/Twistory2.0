@@ -59,8 +59,8 @@
          
         <%= render 'form' %>
     </div>
-        
-    <% @FeedsNotPublished = @feeds.where("has_been_published = ?", '0') %>
+
+    <% @FeedsNotPublished = @feeds.where("has_been_published = ?", '0').order(:date) %>
     <% if @FeedsNotPublished.blank? %>    
     <div class="groundSheet">
       <div class="homeTitle"> 
