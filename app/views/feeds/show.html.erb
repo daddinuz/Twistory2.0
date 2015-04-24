@@ -93,7 +93,7 @@
         <% end %>
         
         <div class="bubble">
-          <% if @feed.user_id == current_user.id and @feed.has_been_published == false %>
+          <% if ((@feed.user_id == current_user.id or current_user.permission_level == 0) and @feed.has_been_published == false) %>
             <%= link_to 'Modifica', edit_feed_path(@feed) %> |
           <% end %>       
         

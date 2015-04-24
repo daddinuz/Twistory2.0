@@ -118,7 +118,7 @@
         <div class="bubble">
           <%= link_to 'Mostra', feed %>
         
-          <% if feed.user_id == current_user.id and feed.has_been_published == false %>
+         <% if ((feed.user_id == current_user.id or current_user.permission_level == 0) and feed.has_been_published == false) %>
             | <%= link_to 'Modifica', edit_feed_path(feed) %> |
             <%= link_to 'Elimina', feed, method: :delete, data: { confirm: 'Sei sicuro?' } %>
          <% end %>
