@@ -50,6 +50,7 @@ gem 'carrierwave'
 # gem for the Google Translate APIs
 gem 'google-api-client'
 
+gem "airbrake"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
