@@ -87,13 +87,13 @@
 				<div id="content2">
 					<ul class="feed_slider">
 						<% if !@LastFeeds[0].blank? %>
-						<li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><%= User.find(@LastFeeds[0].user_id).user_name %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
+						<li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[0].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
 						<% end %>
 						<% if !@LastFeeds[1].blank? %>
-						<li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><%= User.find(@LastFeeds[1].user_id).user_name %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
+						<li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[1].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
 						<% end %>
 						<% if !@LastFeeds[2].blank? %>
-						<li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><%= User.find(@LastFeeds[2].user_id).user_name %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
+						<li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[2].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
 						<% end %>
 					</ul>
 				</div>
