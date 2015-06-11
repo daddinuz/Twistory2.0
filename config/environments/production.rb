@@ -78,7 +78,6 @@ TwittwarApp::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings =
   {
     :address 	=> APP_CONFIG['email']['production']['address'],
@@ -92,12 +91,11 @@ TwittwarApp::Application.configure do
   }
 
   # ActionMailer Config
+  config.action_mailer.default_options = { :from => APP_CONFIG['email']['production']['user_name'] }
   config.action_mailer.default_url_options = { :host => 'www.ragazzidel99.it' }
+	config.action_mailer.delivery_method = :smtp
 
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
-
-
-
 end

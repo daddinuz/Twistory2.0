@@ -39,6 +39,7 @@ TwittwarApp::Application.configure do
   }
   
   # ActionMailer Config
+  config.action_mailer.default_options = { :from => APP_CONFIG['email']['development']['user_name'] }
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   
