@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   
   validate :checking_for_user_name
   validate :checking_for_image_size
+  after_create :send_email
  
   private
   
@@ -24,4 +25,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
+ 
+ def send_email
+ 	UserMailer.welcome_email.deliver
+ end
 end
