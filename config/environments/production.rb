@@ -93,7 +93,7 @@ TwittwarApp::Application.configure do
   # ActionMailer Config
   config.action_mailer.default_options = { :from => APP_CONFIG['email']['production']['user_name'] }
   config.action_mailer.default_url_options = { :host => 'www.ragazzidel99.it' }
-	config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
