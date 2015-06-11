@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<h2>
+			<%= @user.user_name %> si e' iscritto a <a href="http://www.ragazidel99.it">ragazzidel99.it</a>!
+		</h2>
+		<h4>
+			Ricorda che il suo account non e' ancora abilitato<br>
+			In basso sono riportate le credenziali dell'utente:<br><br>
+			User ID:		<%= @user.id %><br>
+			User name:	<%= @user.user_name %><br>
+			User email:	<%= @user.email %><br>
+		</h4>
+	</body>
+</html>
