@@ -12,4 +12,11 @@ class Mailer < ActionMailer::Base
 		end
 	end
 
+	def feeds_email
+		
+		if Rails.env.production?
+			mail(:to => 'info@ragazzidel99.it', :subject => "Non ci sono feeds da pubblicare.")
+		end
+	end
+
 end
