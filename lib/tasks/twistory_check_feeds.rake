@@ -5,7 +5,7 @@ require 'date'
   	task check_feeds: :environment do
 		
 		after_tomorrow = DateTime.now + 2
-		time = f.strftime('%Y-%m-%d %H:%M:%S')
+		time = after_tomorrow.strftime('%Y-%m-%d %H:%M:%S')
      		feeds = Feed.where("has_been_published = ? and date > ?", '0', time)
 
 			if feeds.count == 0
