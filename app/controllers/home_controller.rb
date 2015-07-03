@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def index
-  	@feeds = Feed.all
-  end
+	def index
+		@feeds = Feed.all
+	end
 end
