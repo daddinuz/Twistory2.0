@@ -73,7 +73,7 @@ Clone the Twistory repository hosted on GitHub.
 `sudo bundle exec rake assets:precompile RAILS_ENV=development`    
 
 **After creating feeds, you want to periodically push them to a specified Twitter account.**  
-####Run the following task manually or, preferably, periodically in a cron job  
+**Run the following task manually or, preferably, periodically in a cron job**  
 `sudo bundle exec rake twitter_connection:twitter_task`    
 
 ###You're done! Enjoy history in the making :)  
