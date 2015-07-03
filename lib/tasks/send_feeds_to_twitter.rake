@@ -13,10 +13,10 @@ namespace :send_feeds_to_twitter do
 		
 		if ctrl > 0
 			client = Twitter::REST::Client.new do |config|
-				config.consumer_key					= APP_CONFIG['twitter']['development']['consumer_key']
-				config.consumer_secret			= APP_CONFIG['twitter']['development']['consumer_secret']
-				config.access_token					= APP_CONFIG['twitter']['development']['access_token']
-				config.access_token_secret	= APP_CONFIG['twitter']['development']['access_token_secret']
+				config.consumer_key = APP_CONFIG['twitter']['development']['consumer_key']
+				config.consumer_secret = APP_CONFIG['twitter']['development']['consumer_secret']
+				config.access_token = APP_CONFIG['twitter']['development']['access_token']
+				config.access_token_secret = APP_CONFIG['twitter']['development']['access_token_secret']
 			end
 			
 			i = 0
@@ -46,23 +46,21 @@ namespace :send_feeds_to_twitter do
 							# If, by any chance, the twitter_response has issues, set the "has_been_published" attribute to a third undefined state
 							# TODO: we should also trigger an error email to info@ragazzidel99.it
 							
-														
 							###################################################################################
-						    # Sending the same feed to the Facebook channel.
-						    # Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
-  						    # approach is unreliable so we are now posting directly to Facebook.
-	  					    #facebook_consumer_key      = APP_CONFIG['facebook']['development']['access_token']
-						    facebook_app_secret        = APP_CONFIG['facebook']['development']['app_secret']
-						    facebook_page_token        = APP_CONFIG['facebook']['development']['page_token']
-						  
-						    #graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
-						    page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
-
-						    page_graph.put_connections("me", "feed", :message => feed_text)
- 						    #
- 						    ###################################################################################  
- 						    
- 						    
+							# Sending the same feed to the Facebook channel.
+							# Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
+							# approach is unreliable so we are now posting directly to Facebook.
+							#facebook_consumer_key      = APP_CONFIG['facebook']['development']['access_token']
+							facebook_app_secret        = APP_CONFIG['facebook']['development']['app_secret']
+							facebook_page_token        = APP_CONFIG['facebook']['development']['page_token']
+							
+							#graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
+							page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
+							
+							page_graph.put_connections("me", "feed", :message => feed_text)
+							#
+							###################################################################################  
+							
 						else
 							box[i].update_attribute(:has_been_published, -1)
 						end
@@ -83,23 +81,21 @@ namespace :send_feeds_to_twitter do
 							# If, by any chance, the twitter_response has issues, set the "has_been_published" attribute to a third undefined state
 							# TODO: we should also trigger an error email to info@ragazzidel99.it
 							
-							
 							###################################################################################
-						    # Sending the same feed to the Facebook channel.
-						    # Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
-  						    # approach is unreliable so we are now posting directly to Facebook.
-	  					    #facebook_consumer_key      = APP_CONFIG['facebook']['development']['access_token']
-						    facebook_app_secret        = APP_CONFIG['facebook']['development']['app_secret']
-						    facebook_page_token        = APP_CONFIG['facebook']['development']['page_token']
-						  
-						    #graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
-						    page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
-
-						    page_graph.put_picture(box[i].feed_image.path, {:message => feed_text}, "me")
- 						    #
- 						    ###################################################################################  
- 						    
- 						    
+							# Sending the same feed to the Facebook channel.
+							# Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
+							# approach is unreliable so we are now posting directly to Facebook.
+							#facebook_consumer_key      = APP_CONFIG['facebook']['development']['access_token']
+							facebook_app_secret        = APP_CONFIG['facebook']['development']['app_secret']
+							facebook_page_token        = APP_CONFIG['facebook']['development']['page_token']
+							
+							#graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
+							page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
+							
+							page_graph.put_picture(box[i].feed_image.path, {:message => feed_text}, "me")
+							#
+							###################################################################################  
+							
 						else
 							box[i].update_attribute(:has_been_published, -1)
 						end
@@ -133,10 +129,10 @@ namespace :send_feeds_to_twitter do
 		
 		if ctrl > 0
 			client = Twitter::REST::Client.new do |config|
-				config.consumer_key					= APP_CONFIG['twitter']['production_english']['consumer_key']
-				config.consumer_secret			= APP_CONFIG['twitter']['production_english']['consumer_secret']
-				config.access_token					= APP_CONFIG['twitter']['production_english']['access_token']
-				config.access_token_secret	= APP_CONFIG['twitter']['production_english']['access_token_secret']
+				config.consumer_key = APP_CONFIG['twitter']['production_english']['consumer_key']
+				config.consumer_secret = APP_CONFIG['twitter']['production_english']['consumer_secret']
+				config.access_token = APP_CONFIG['twitter']['production_english']['access_token']
+				config.access_token_secret = APP_CONFIG['twitter']['production_english']['access_token_secret']
 			end
 			
 			i = 0
