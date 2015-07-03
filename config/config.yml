@@ -1,10 +1,10 @@
 email:
   development:
-    address:  smtp.gmail.com
-    port:  587
-    domain:  gmail.com
-    user_name:  twittwar95@gmail.com
-    password:  piave1915
+    address: smtp.gmail.com
+    port: 587
+    domain: gmail.com
+    user_name: twittwar95@gmail.com
+    password: piave1915
   production:
     address:
     port:
@@ -14,25 +14,25 @@ email:
 
 devise:
   development:
-    mailer_sender:  twittwar95@gmail.com
+    mailer_sender: twittwar95@gmail.com
   production:
-    mailer_sender:  info@ragazzidel99.it
+    mailer_sender: info@ragazzidel99.it
 
 twitter:
   development:
-    channel:  LSETwistory
+    channel: LSETwistory
     consumer_key:
     consumer_secret:
     access_token:
     access_token_secret:
   production:
-    channel:  lagrandeguerra
+    channel: lagrandeguerra
     consumer_key:
     consumer_secret:
     access_token:
     access_token_secret:
   production_english:
-    channel:  ww1fromitaly
+    channel: ww1fromitaly
     consumer_key:
     consumer_secret:
     access_token:
@@ -42,3 +42,6 @@ google:
   production:
     application_name:
     key:
+
+airbrake:
+  api_key:
