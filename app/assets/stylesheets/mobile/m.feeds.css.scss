@@ -1,225 +1,220 @@
-// Place all the styles related to the feeds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /*-------------Start-text-area-section--------*/   
-    
-    #mainTextBoxContainer
-    {
-      width: 90%;
-  	  margin: 2% 5% 0 5%;
-  	  padding: 1% 0;
-		  
-  	  background-color: rgba(120, 170, 200, 0.15);
-  	  border: 1px solid rgba(120, 170, 200, 0.2);
-  	  border-radius: 5px;
-  	  
-  	  text-align: center;
-  	  font-weight: bold;
-  	  
-  	  /*border: 1px solid red; /* debug red */
-    }
-    
-    #mainTextBoxContainer table
-    {
-      width: 96%;
-      
-      margin: 0 2%;
-      padding: 0 0;   
-      
-      /*border: 1px solid red; /* debug red */ 
-    }
-    
-    #mainTextBoxContainer th
-    {
-      margin: 0 0;
-      padding: 1% 0; 
-       
-      
-      /*border: 1px solid red; /* debug red */ 
-    }
-    
-    #mainTextBoxContainer select
-    {            
-      font-size: 1.45em;
-      color: white;
-            
-      border: 1px solid rgba(0, 50, 80, 0.5);
-      border-radius: 5px;
-      background-color: rgba(125, 170, 180, 0.85);      
-    }
-    
-    .textBox
-    { 
-      width: 95%;
-      height: 165px;
-      margin: 0.5% 0 0 0; 
-      padding: 1% 2.5%;
-      
-      font-size: 1.2em;
-            
-      /*border: 1px solid red; /* debug red */
-    }
-    
-    #feed_feed_image
-    {     
-      width: 75%;
-      
-      font-size: 1.45em;
-      color: white;
-      
-      border: 1px solid rgba(0, 50, 80, 0.5);
-      border-radius: 5px;
-      background-color: rgba(125, 170, 180, 0.85);
-    }
-    
-    #user_profile_image
-    {
-      width: 75%;
-      
-      font-size: 1.45em;
-      color: white;
-      
-      border: 1px solid rgba(0, 50, 80, 0.5);
-      border-radius: 5px;
-      background-color: rgba(125, 170, 180, 0.85);
-    }
-    
-    #charCounterIta, #charCounterEng
-    {
-      color: green; 
-            
-      /* border: 1px solid red; */
-    }       
-      
+
+#mainTextBoxContainer
+{
+	width: 90%;
+	margin: 2% 5% 0 5%;
+	padding: 1% 0;
+
+	background-color: rgba(120, 170, 200, 0.15);
+	border: 1px solid rgba(120, 170, 200, 0.2);
+	border-radius: 5px;
+
+	text-align: center;
+	font-weight: bold;
+
+	/*border: 1px solid red; /* debug red */
+}
+
+#mainTextBoxContainer table
+{
+	width: 96%;
+
+	margin: 0 2%;
+	padding: 0 0;   
+
+	/*border: 1px solid red; /* debug red */ 
+}
+
+#mainTextBoxContainer th
+{
+	margin: 0 0;
+	padding: 1% 0; 
+
+	/*border: 1px solid red; /* debug red */ 
+}
+
+#mainTextBoxContainer select
+{            
+	font-size: 1.45em;
+	color: white;
+
+	border: 1px solid rgba(0, 50, 80, 0.5);
+	border-radius: 5px;
+	background-color: rgba(125, 170, 180, 0.85);      
+}
+
+.textBox
+{ 
+	width: 95%;
+	height: 165px;
+	margin: 0.5% 0 0 0; 
+	padding: 1% 2.5%;
+
+	font-size: 1.2em;
+
+	/*border: 1px solid red; /* debug red */
+}
+
+#feed_feed_image
+{     
+	width: 75%;
+
+	font-size: 1.45em;
+	color: white;
+
+	border: 1px solid rgba(0, 50, 80, 0.5);
+	border-radius: 5px;
+	background-color: rgba(125, 170, 180, 0.85);
+}
+
+#user_profile_image
+{
+	width: 75%;
+
+	font-size: 1.45em;
+	color: white;
+
+	border: 1px solid rgba(0, 50, 80, 0.5);
+	border-radius: 5px;
+	background-color: rgba(125, 170, 180, 0.85);
+}
+
+#charCounterIta, #charCounterEng
+{
+	color: green; 
+
+	/* border: 1px solid red; */
+}       
+
 /*-------------End-text-area-section----------*/ 
 /*-------------Start-main/feed-section--------*/
 
-    
-    .imageBox
-    {
-      margin-left: -2.5%;
-      margin-top: 0;
-      width: 60px;
-      height: 60px;
-      padding: 0 0;
-      
-      border: 1px solid #99CCCC;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-            
-      /*border: 1px solid red; /* debug red */
-    }
-    
-    .imageBox img
-    {
-      height: 100%;
-      width: 100%;
-    }
-    
-    .feedImage
-    {
-      margin: 2% 5% 0 5%;
-      height: 180px;
-      border: 1px solid #99CCCC;
-      
-      text-align:center;
-      
-      border-radius: 5px;
-      /*border: 1px solid red; /* debug red */
-    }   
-    
-    .feedImage img
-    {
-      height: 100%;
-      max-width: 100%;
-    }
-    
-    .postHead
-    {
-      margin-left: -2.5%;
-      margin-bottom: 0.5%;
-      padding: 1% 2%;
-      
-      height: 5%;
-      width: 42%; 
-      
-      border: 1px solid rgba(80, 60, 100, 0.25);
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border-bottom-left-radius: 4px;
-           
-      background-color: rgba(130, 165, 180, 1);
-      font-weight: bold;
-      font-size: 1.8em;
-      /*border: 1px solid red; /* debug red */ 
-    }
-    
-    .postDate
-    {
-      margin-top: 0.5%;
-      margin-left: 1%;
-      margin-bottom: 1%;
-                 
-      font-size: 0.4em;                 
-      /*border: 1px solid red; /* debug red */ 
-    }
-       
-    .postText
-    {
-      margin-top: 2%;
-      margin-left: 12%;
-      margin-right: -2.5%;
-      padding: 1% 2%;
-      
-      font-size: 1.3em;          
-      word-wrap: break-word;
-      
-      background-color: #8BCCDF;
-    
-      border: 1px solid rgba(80, 50, 100, 0.20);
-      border-radius: 5px;  
-      
-      /*border: 1px solid red; /* debug red */
-    }
-    
-    .engPostText
-    {
-      margin-top: 2%;
-      margin-left: -2.5%;
-      margin-right: 12%;
-      padding: 1% 2%;
-      
-      font-size: 1.3em;              
-      word-wrap: break-word;
-      
-      background-color: #8BCCDF;
-    
-      border: 1px solid rgba(80, 50, 100, 0.20);
-      border-radius: 5px;  
-      
-      /*border: 1px solid red;*/
-    }
-    
-    .bubble
-    {
-      margin-top: 2%;
-      margin-left: 2%;
-      padding: 1.5% 1.5%;
-      
-      display: inline-block;    
-      background-color: rgba(130, 165, 180, 1);
-      
-      font-size: 1.2em;                   
-      font-weight: bold;
-      text-align: center;
-      
-      border: 1px solid rgba(80, 50, 100, 0.25);
-      border-radius: 5px; 
-      
-      cursor: pointer;
-              
-      /*border: 1px solid red; /* debug red */
-    }
-     
+
+.imageBox
+{
+	margin-left: -2.5%;
+	margin-top: 0;
+	width: 60px;
+	height: 60px;
+	padding: 0 0;
+
+	border: 1px solid #99CCCC;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	/*border: 1px solid red; /* debug red */
+}
+
+.imageBox img
+{
+	height: 100%;
+	width: 100%;
+}
+
+.feedImage
+{
+	margin: 2% 5% 0 5%;
+	height: 180px;
+	border: 1px solid #99CCCC;
+
+	text-align:center;
+
+	border-radius: 5px;
+	/*border: 1px solid red; /* debug red */
+}   
+
+.feedImage img
+{
+	height: 100%;
+	max-width: 100%;
+}
+
+.postHead
+{
+	margin-left: -2.5%;
+	margin-bottom: 0.5%;
+	padding: 1% 2%;
+
+	height: 5%;
+	width: 42%; 
+
+	border: 1px solid rgba(80, 60, 100, 0.25);
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+
+	background-color: rgba(130, 165, 180, 1);
+	font-weight: bold;
+	font-size: 1.8em;
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.postDate
+{
+	margin-top: 0.5%;
+	margin-left: 1%;
+	margin-bottom: 1%;
+
+	font-size: 0.4em;                 
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.postText
+{
+	margin-top: 2%;
+	margin-left: 12%;
+	margin-right: -2.5%;
+	padding: 1% 2%;
+
+	font-size: 1.3em;          
+	word-wrap: break-word;
+
+	background-color: #8BCCDF;
+
+	border: 1px solid rgba(80, 50, 100, 0.20);
+	border-radius: 5px;  
+
+	/*border: 1px solid red; /* debug red */
+}
+
+.engPostText
+{
+	margin-top: 2%;
+	margin-left: -2.5%;
+	margin-right: 12%;
+	padding: 1% 2%;
+
+	font-size: 1.3em;              
+	word-wrap: break-word;
+
+	background-color: #8BCCDF;
+
+	border: 1px solid rgba(80, 50, 100, 0.20);
+	border-radius: 5px;  
+
+	/*border: 1px solid red;*/
+}
+
+.bubble
+{
+	margin-top: 2%;
+	margin-left: 2%;
+	padding: 1.5% 1.5%;
+
+	display: inline-block;    
+	background-color: rgba(130, 165, 180, 1);
+
+	font-size: 1.2em;                   
+	font-weight: bold;
+	text-align: center;
+
+	border: 1px solid rgba(80, 50, 100, 0.25);
+	border-radius: 5px; 
+
+	cursor: pointer;
+
+	/*border: 1px solid red; /* debug red */
+}
+
 /*-------------End-main/feed-section----------*/ 

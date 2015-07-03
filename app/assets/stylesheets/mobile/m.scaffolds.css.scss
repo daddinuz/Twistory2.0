@@ -24,94 +24,89 @@ body
 
 a:link
 {
-  text-decoration: none;
-  color: rgba(50, 50, 50, 0.65);
-  font-weight: bold;
+	text-decoration: none;
+	color: rgba(50, 50, 50, 0.65);
+	font-weight: bold;
 }
-    
+
 a:visited 
 {
-  text-decoration: none;
-  
-  color: rgba(50, 50, 50, 0.65);
-  font-weight: bold;
+	text-decoration: none;
+	color: rgba(50, 50, 50, 0.65);
+	font-weight: bold;
 }
-    
+
 a:hover
 {
-  text-decoration: none;
-  
-  color: rgba(50, 50, 50, 0.65);
-  font-weight: bold;
+	text-decoration: none;
+	color: rgba(50, 50, 50, 0.65);
+	font-weight: bold;
 }
-    
+
 a:active 
 {
-  text-decoration: none;
-  
-  color: rgba(50, 50, 50, 0.65);
-  font-weight: bold;
+	text-decoration: none;
+	color: rgba(50, 50, 50, 0.65);
+	font-weight: bold;
 }
 
 li
 {
-  list-style-type: none;
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+	list-style-type: none;
 }
 
 #notice 
 {
-  color: green;
+	color: green;
 }
 
 textarea 
 {
-    resize: none;
+	resize: none;
 }
 
 h2
 {
-  font-size: 0.85em;
+	font-size: 0.85em;
 }
 
 h4
 {
-  font-size: 0.35em;
+	font-size: 0.35em;
 }
 
 .field_with_errors 
 {
-  padding: 2px 2px;
-  background-color: red;
-  display: inline;
+	padding: 2px 2px;
+	background-color: red;
+	display: inline;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 1.2em;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
-  
-  ul li {
-    font-size: 0.9em;
-    list-style: square;
-  }
+#error_explanation
+{
+	width: 450px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
 }
+
+h2
+{
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 1.2em;
+	margin: -7px;
+	margin-bottom: 0px;
+	background-color: #c00;
+	color: #fff;
+}
+
+ul li
+{
+	font-size: 0.9em;
+	list-style: none;
+}
+
