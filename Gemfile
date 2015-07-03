@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#For Facebook
+gem "koala", "~> 2.0"
+
 # For internalization
 gem 'rails-i18n', '~> 4.0.0'
 
