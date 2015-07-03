@@ -1,158 +1,151 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.homeTitle
+{
+	margin: 0 -3.5%;
+	padding: 0.5% 0;
 
-  .homeTitle
-  {
-    margin: 0 -3.5%;
-    padding: 0.5% 0;
-           
-    font-size: 1.8em;     
-    font-family: Tahoma, Geneva, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    word-wrap: break-word;
-    
-    background-color: rgba(130, 165, 180, 1);
-    
-    border: 1px solid rgba(80, 60, 100, 0.25);
-    border-radius: 5px;  
-    /*border: 1px solid red; /* debug red */
-  }
-  
-  .homeTextRx
-  {
-    margin-top: 2%;
-    margin-left: 3.5%;
-    margin-right: -3.5%;
-    padding: 1% 2%;
-       
-    font-family: 1.2em;            
-    font-family: Arial, Courier, sans-serif;
-    font-weight: bold;
-    word-wrap: break-word;
-      
-    background-color: #8BCCDF;
-    
-    border: 1px solid rgba(80, 50, 100, 0.20);
-    border-radius: 5px;  
-    /*border: 1px solid red; /* debug red */ 
-  }
-  
-  .homeTextLx
-  {
-    margin-top: 2%;
-    margin-left: -3.5%;
-    margin-right: 3.5%;
-    padding: 1% 2%;
-                
-    font-family: 1.2em;            
-    font-family: Arial, Courier, sans-serif;
-    font-weight: bold;
-    word-wrap: break-word;
-      
-    background-color: #8BCCDF;
-    
-    border: 1px solid rgba(80, 50, 100, 0.20);
-    border-radius: 5px;  
-    /*border: 1px solid red; /* debug red */ 
-  }
-     
-  .homeImageRx
-  {
-    height: 100px;
-    width: 100px;
-    
-    margin-top: 2%;
-    margin-left: 60%;
-    
-    background-size: cover; 
-    repeat: no-repeat;
-    
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    /*border: 1px solid red; /* debug red */
-  }   
-    
-  .homeImageLx
-  {
-    height: 100px;
-    width: 100px;
-    
-    margin-top: 2%;
-    margin-left: -4%;
-    
-    background-size: cover; 
-    repeat: no-repeat;
-    
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    /*border: 1px solid red; /* debug red */
-  }   
-    
-  .homeHeadRx
-  {
-    max-width: 40%;
-    margin-left: 60%;
-    margin-right: -4%;
-     
-    padding: 2%;
-    
-    border: 1px solid rgba(80, 60, 100, 0.30); 
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-           
-    background-color: #8BCCDF;
-    
-    font-family: Tahoma, Geneva, sans-serif;   
-    /*border: 1px solid red; /* debug red */ 
-  }
+	font-size: 1.8em;     
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	word-wrap: break-word;
 
-  .homeHeadLx
-  {
-    max-width: 40%;
-    margin-left: -4%;
-     
-    padding: 2%;
-    
-    border: 1px solid rgba(80, 60, 100, 0.30); 
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-           
-    background-color: #8BCCDF;
-    
-    font-family: Tahoma, Geneva, sans-serif;
-      
-    /*border: 1px solid red; /* debug red */ 
-  }
-  
-  .homeGradeRx
-  {
-    margin-top: 0.5%;
-    margin-bottom: 1%;
-    margin-left: 60%;
-    
-    font-family: Tahoma, Geneva, sans-serif;
-    text-align: left;
-               
-    /*border: 1px solid red; /* debug red */ 
-  }
-    
-  .homeGradeLx
-  {
-    margin-top: 0.5%;
-    margin-bottom: 1%;
-    margin-left: 2%;
-    
-    font-family: Tahoma, Geneva, sans-serif;
-    text-align: left;
-               
-    /*border: 1px solid red; /* debug red */ 
-  }
-    
+	background-color: rgba(130, 165, 180, 1);
+
+	border: 1px solid rgba(80, 60, 100, 0.25);
+	border-radius: 5px;  
+	/*border: 1px solid red; /* debug red */
+}
+
+.homeTextRx
+{
+	margin-top: 2%;
+	margin-left: 3.5%;
+	margin-right: -3.5%;
+	padding: 1% 2%;
+
+	font-family: 1.2em;            
+	font-family: Arial, Courier, sans-serif;
+	font-weight: bold;
+	word-wrap: break-word;
+
+	background-color: #8BCCDF;
+
+	border: 1px solid rgba(80, 50, 100, 0.20);
+	border-radius: 5px;  
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.homeTextLx
+{
+	margin-top: 2%;
+	margin-left: -3.5%;
+	margin-right: 3.5%;
+	padding: 1% 2%;
+
+	font-family: 1.2em;            
+	font-family: Arial, Courier, sans-serif;
+	font-weight: bold;
+	word-wrap: break-word;
+
+	background-color: #8BCCDF;
+
+	border: 1px solid rgba(80, 50, 100, 0.20);
+	border-radius: 5px;  
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.homeImageRx
+{
+	height: 100px;
+	width: 100px;
+
+	margin-top: 2%;
+	margin-left: 60%;
+
+	background-size: cover; 
+	repeat: no-repeat;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/*border: 1px solid red; /* debug red */
+}   
+
+.homeImageLx
+{
+	height: 100px;
+	width: 100px;
+
+	margin-top: 2%;
+	margin-left: -4%;
+
+	background-size: cover; 
+	repeat: no-repeat;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/*border: 1px solid red; /* debug red */
+}   
+
+.homeHeadRx
+{
+	max-width: 40%;
+	margin-left: 60%;
+	margin-right: -4%;
+
+	padding: 2%;
+
+	border: 1px solid rgba(80, 60, 100, 0.30); 
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	background-color: #8BCCDF;
+
+	font-family: Tahoma, Geneva, sans-serif;   
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.homeHeadLx
+{
+	max-width: 40%;
+	margin-left: -4%;
+
+	padding: 2%;
+
+	border: 1px solid rgba(80, 60, 100, 0.30); 
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	background-color: #8BCCDF;
+
+	font-family: Tahoma, Geneva, sans-serif;
+
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.homeGradeRx
+{
+	margin-top: 0.5%;
+	margin-bottom: 1%;
+	margin-left: 60%;
+
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
+
+	/*border: 1px solid red; /* debug red */ 
+}
+
+.homeGradeLx
+{
+	margin-top: 0.5%;
+	margin-bottom: 1%;
+	margin-left: 2%;
+
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
+
+	/*border: 1px solid red; /* debug red */ 
+}
+
