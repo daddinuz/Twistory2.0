@@ -38,6 +38,14 @@ twitter:
     access_token:
     access_token_secret:
 
+facebook:
+  development:
+    app_secret:
+    page_token:
+  production:
+    app_secret:
+    page_token:
+
 google:
   production:
     application_name:
