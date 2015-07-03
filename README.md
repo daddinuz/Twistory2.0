@@ -1,6 +1,7 @@
 #Twistory2.0
 
-Day by day, exactly as happened 100 years ago, World War 1 described in real time as seen from Italy.  
+Day by day, exactly as happened 100 years ago, World War 1
+described in real time as seen from Italy.  
 
 ##New User Setup Steps
 
