@@ -24,13 +24,13 @@ described in real time as seen from Italy.
 
 **Git setup steps**  
 
-Clone the Twistory repository hosted on GitHub.  
+Clone the Twistory2.0 repository hosted on GitHub.  
 `git clone https://github.com/DavideDiCarlo/Twistory2.0.git`    
 
 **Rails setup steps**  
 
 1. Enter the base directory of the Rails app  
-`cd Twistory`  
+`cd Twistory2.0`  
 
 2. Install required gems, as per Gemfile  
 `sudo bundle install`  
