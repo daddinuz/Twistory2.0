@@ -18,7 +18,7 @@ class Mailer < ActionMailer::Base
 		if Rails.env.production?
 			mail(:to => 'info@ragazzidel99.it', :subject => error_message.to_s)
 		else
-			mail(:to => 'davide_di_carlo@yahoo.it', :subject => error_message.to_s)
+			mail(:to => 'twittwar95@gmail.com', :subject => error_message.to_s)
 		end
 	end
 end
