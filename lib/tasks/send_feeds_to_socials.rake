@@ -77,7 +77,7 @@ namespace :send_feeds_to_socials do
 							box[i].update_attribute(:has_been_published, -1)
 						end
 					else
-						# TODO: trigger an error email to info@ragazzidel99.it
+						Mailer.trigger_error_email("Pubblicazione sui social non riuscita in data: " + Time.now.strftime('%d-%m-%Y %H:%M:%S').to_s).deliver
 					end
 				# Case 2: pictures are posted
 				else
@@ -117,7 +117,7 @@ namespace :send_feeds_to_socials do
 							box[i].update_attribute(:has_been_published, -1)
 						end
 					else
-						# TODO: trigger an error email to info@ragazzidel99.it
+						Mailer.trigger_error_email("Pubblicazione sui social non riuscita in data: " + Time.now.strftime('%d-%m-%Y %H:%M:%S').to_s).deliver
 					end
 				end
 				
@@ -209,7 +209,7 @@ namespace :send_feeds_to_socials do
 							box[i].update_attribute(:has_been_published_english, -1)
 						end
 					else
-						# TODO: trigger an error email to info@ragazzidel99.it
+						Mailer.trigger_error_email("Pubblicazione sui social non riuscita in data: " + Time.now.strftime('%d-%m-%Y %H:%M:%S').to_s).deliver
 					end
 				# Case 2: pictures are posted
 				else
@@ -248,7 +248,7 @@ namespace :send_feeds_to_socials do
 							box[i].update_attribute(:has_been_published_english, -1)
 						end
 					else
-						# TODO: trigger an error email to info@ragazzidel99.it
+						Mailer.trigger_error_email("Pubblicazione sui social non riuscita in data: " + Time.now.strftime('%d-%m-%Y %H:%M:%S').to_s).deliver
 					end
 				end
 				
