@@ -16,11 +16,21 @@
 	</head>
 
 	<body>
-	
+		
+		<style>
+			#wrapper_x
+			{
+				margin-left:auto;
+				margin-right:auto;
+				min-width:1200px;
+				height:100%;
+			}
+		</style>
+		
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
 		
 		<!-- START main div -->
-		<div>
+		<div id="wrapper_x">
 			
 			<!-- START bar -->
 			<div id="home" class="bar">
@@ -105,14 +115,25 @@
 			<!-- SECTION chi siamo -->
 			<div class="who" id="team">
 				<h3>Chi Siamo</h3>
-				<div style="padding-left:7em;margin-left:8em">
-					<div class="member">
-						<img alt="Vincenzo Di Nicola" src="<%= asset_path 'vincenzo.jpg' %>">
-						<h2>Vincenzo Di Nicola</h2>
-						<h4>Coordinatore</h4>
-						<p>Teramo (TE) <br>Classe 1979</p>
+				<div id="first_who_section">
+					<div class="vincenzo">
+							<img alt="Vincenzo Di Nicola" src="<%= asset_path 'vincenzo.jpg' %>">
+							<h2>Vincenzo Di Nicola</h2>
+							<a href="https://twitter.com/vincenzo" class="twitter-follow-button" data-show-count="false">Follow @vincenzo</a>
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+							</script>
+							<h4>Coordinatore</h4>
+							<p>Teramo (TE) <br>Classe 1979</p>  
 					</div>
-					
+					<div class="liceoscientifico">
+						<!--<h1>Si ringrazia:</h1>-->
+						<img src="http://www.diregiovani.it/codimmagine/17154/einstein.jpg">
+						<h2>Il Liceo Scientifico Albert Einstein</h2>
+						<h2>(TE) Abruzzo</h2>
+					</div>
+				</div>
+				<div style="padding-left:7em;margin-left:8em">
 					<div class="member">
 						<img alt="Davide di carlo" src="<%= asset_path 'dadda_dc.jpg' %>">
 						<h2>Davide Di Carlo</h2>
@@ -142,6 +163,13 @@
 					</div>
 					
 					<div class="member">
+						<img alt="Alessia Coruzzi" src="<%= asset_path 'alessia_c.jpg' %>">
+						<h2>Alessia Coruzzi</h2>
+						<h4>Storica</h4>
+						<p>Teramo (TE)<br>Classe 1996</p>
+					</div>
+					
+					<div class="member">
 						<img alt="Davide Di Giacinto" src="<%= asset_path 'davide_dg.jpg' %>">
 						<h2>Davide Di Giacinto</h2>
 						<h4>Storico</h4>
@@ -153,6 +181,13 @@
 						<h2>Marco Matani</h2>
 						<h4>Storico</h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
+					</div>
+					
+					<div class="member">
+						<img alt="Lilith Taraschi" src="<%= asset_path 'lilith_t.jpg' %>">
+						<h2>Lilith Taraschi</h2>
+						<h4>Storica</h4>
+						<p>Teramo (TE)<br>Classe 1996</p>  
 					</div>
 					
 					<div class="member">
@@ -177,24 +212,11 @@
 					</div>
 					
 					<div class="member">
-						<img alt="Alessia Coruzzi" src="<%= asset_path 'alessia_c.jpg' %>">
-						<h2>Alessia Coruzzi</h2>
-						<h4>Storico</h4>
-						<p>Teramo (TE)<br>Classe 1996</p>
-					</div>
-					
-					<div class="member">
 						<img alt="Pietro Oreglia" src="<%= asset_path 'pietro_o.jpg' %>">
 						<h2>Pietro Oreglia</h2>
 						<h4>Storico</h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
-				</div>
-				
-				<div class="liceoscientifico">
-					<h1>Si ringrazia:</h1>
-					<h2>Il Liceo Scientifico Albert Einstein - (TE) Abruzzo</h2>
-					<img src="http://www.diregiovani.it/codimmagine/17154/einstein.jpg">
 				</div>
 			</div>
 			<!-- END chi siamo -->
