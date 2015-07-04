@@ -1,87 +1,85 @@
+		
+		<title>Iscriviti</title>
+		
+		<style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
+		
+		<% if mobile_device? %>
+		<meta name="viewport" content="user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
+		<% else %>
+		<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
+		<% end %>
+		
+		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+	</head>
 
-    <title>Iscriviti</title>
-    
-    <style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
-    
-    <% if mobile_device? %>
-	<meta name="viewport" content="user-scalable=no" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	
-	<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />        
-	<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
-   <% else %>
-	<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
-   <% end %>
-   
-   	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-  </head>
-  
-  <body>
-  
-    <table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" name="Hlink">Home</a>
-          <a href="<%= new_user_session_path %>">Accedi</a>
-          <a href="<%= new_user_registration_path %>" id="activeButton">Iscriviti</a>
-        </th>
-      </tr>
-    </table>
-    
-    <div class="container">
-	  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-	  	    
-	    <div class="loginForm">
-	      <div class="homeTitle">
-          Iscriviti
-        </div>
-        
-        <% if notice %>
-          <p align="center"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p align="center"><%= alert %></p>
-        <% end %>
-        
-	      <%= devise_error_messages! %>
-	      
-		    <ul>  
-		      <li>
-		        <%= f.text_field :user_name, autofocus: "true", :class => "field", :placeholder => " Nome Pubblico" %>
-		      </li>
-		      <li>
-		      <%= f.email_field :email, :class => "field", :placeholder => " Indirizzo e-mail"  %>
-		      </li>
-		      <li>
-		      <%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
-		      </li>
-		      <li>
-		      <%= f.password_field :password_confirmation, :class => "field", :placeholder => " Conferma password" , autocomplete: "off" %>
-		      </li> 
-		    </ul>
-
-		    <div class="footer">
-		      <%= f.submit "Procedi", :class => "button" %>
-		    	<p>
-		    	  <b>Ti invieremo una e-mail di conferma</b>
-		    	</p>
-		    </div>
-      </div> 
-         
-    <% end %>    
-    </div>
-  </body>
-  
+	<body>
+		
+		<table id="menu">
+			<tr>
+				<th id="logo">
+					<a href="<%= @current_host %>"></a>
+				</th>
+				<th align="right">
+					<a href="<%= @current_host %>" name="Hlink">Home</a>
+					<a href="<%= new_user_session_path %>">Accedi</a>
+					<a href="<%= new_user_registration_path %>" id="activeButton">Iscriviti</a>
+				</th>
+			</tr>
+		</table>
+		
+		<div class="container">
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			<div class="loginForm">
+				<div class="homeTitle">
+					Iscriviti
+				</div>
+				
+				<% if notice %>
+				<p align="center"><%= notice %></p>
+				<% end %>
+				<% if alert %>
+				<p align="center"><%= alert %></p>
+				<% end %>
+				
+				<%= devise_error_messages! %>
+				
+				<ul>
+					<li>
+						<%= f.text_field :user_name, autofocus: "true", :class => "field", :placeholder => " Nome Pubblico" %>
+					</li>
+					<li>
+						<%= f.email_field :email, :class => "field", :placeholder => " Indirizzo e-mail" %>
+					</li>
+					<li>
+						<%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
+					</li>
+					<li>
+						<%= f.password_field :password_confirmation, :class => "field", :placeholder => " Conferma password" , autocomplete: "off" %>
+					</li> 
+				</ul>
+				
+				<div class="footer">
+					<%= f.submit "Procedi", :class => "button" %>
+					<p>
+						<b>Ti invieremo una e-mail di conferma</b>
+					</p>
+				</div>
+			</div> 
+		<% end %>
+		</div>
+		
+	</body>
 </html>
