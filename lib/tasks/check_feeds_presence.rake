@@ -5,7 +5,7 @@ namespace :check_feeds_presence do
 	desc "Check if there are feeds to publish otherwise warn the admin"
 	task check_feeds: :environment do
 		
-		time = DateTime.now + 2.days
+		time = DateTime.now + 3.days
 		time = time.strftime('%Y-%m-%d %H:%M:%S')
 		feeds = Feed.where("has_been_published = ? and date > ?", '0', time)
 		

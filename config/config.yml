@@ -25,7 +25,7 @@ twitter:
     consumer_secret:
     access_token:
     access_token_secret:
-  production:
+  production_italian:
     channel: lagrandeguerra
     consumer_key:
     consumer_secret:
@@ -42,7 +42,10 @@ facebook:
   development:
     app_secret:
     page_token:
-  production:
+  production_italian:
+    app_secret:
+    page_token:
+  production_english:
     app_secret:
     page_token:
 
@@ -52,4 +55,5 @@ google:
     key:
 
 airbrake:
-  api_key:
+  production:
+    api_key:
