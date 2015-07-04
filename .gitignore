@@ -1,7 +1,18 @@
-*.[oa]
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
 *~
 *.log
 *.DS_Store
-log
 tmp
+
+# Ignore obj files
+*.[oa]
+
+# Ignore all uploads
 public/uploads
+public/assets
+
+# Ignore db/schema.rb
+db/schema.rb
