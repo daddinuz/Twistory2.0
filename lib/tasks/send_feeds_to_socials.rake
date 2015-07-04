@@ -99,8 +99,8 @@ namespace :send_feeds_to_socials do
 							# approach is unreliable so we are now posting directly to Facebook.
 							#facebook_consumer_key = APP_CONFIG['facebook']['production_english']['access_token']
 							if Rails.env.production?
-								facebook_app_secret = APP_CONFIG['facebook']['production_english']['app_secret']
-								facebook_page_token = APP_CONFIG['facebook']['production_english']['page_token']
+								facebook_app_secret = APP_CONFIG['facebook']['production_italian']['app_secret']
+								facebook_page_token = APP_CONFIG['facebook']['production_italian']['page_token']
 							else
 								facebook_app_secret = APP_CONFIG['facebook']['development']['app_secret']
 								facebook_page_token = APP_CONFIG['facebook']['development']['page_token']
@@ -185,6 +185,26 @@ namespace :send_feeds_to_socials do
 							
 							# If, by any chance, the twitter_response has issues, set the "has_been_published" attribute to a third undefined state
 							# TODO: we should also trigger an error email to info@ragazzidel99.it
+							
+							###################################################################################
+							# Sending the same feed to the Facebook channel.
+							# Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
+							# approach is unreliable so we are now posting directly to Facebook.
+							#facebook_consumer_key = APP_CONFIG['facebook']['production']['access_token']
+							if Rails.env.production?
+								facebook_app_secret = APP_CONFIG['facebook']['production_english']['app_secret']
+								facebook_page_token = APP_CONFIG['facebook']['production_english']['page_token']
+							else
+								facebook_app_secret = APP_CONFIG['facebook']['development']['app_secret']
+								facebook_page_token = APP_CONFIG['facebook']['development']['page_token']
+							end
+							
+							#graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
+							page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
+							
+							page_graph.put_connections("me", "feed", :message => feed_text)
+							#
+							###################################################################################
 						else
 							box[i].update_attribute(:has_been_published_english, -1)
 						end
@@ -204,6 +224,26 @@ namespace :send_feeds_to_socials do
 							
 							# If, by any chance, the twitter_response has issues, set the "has_been_published" attribute to a third undefined state
 							# TODO: we should also trigger an error email to info@ragazzidel99.it
+							
+							###################################################################################
+							# Sending the same feed to the Facebook channel.
+							# Initially we relied on Twitter to forward the feed to Facebook. However, we discovered this 
+							# approach is unreliable so we are now posting directly to Facebook.
+							#facebook_consumer_key = APP_CONFIG['facebook']['production_english']['access_token']
+							if Rails.env.production?
+								facebook_app_secret = APP_CONFIG['facebook']['production_english']['app_secret']
+								facebook_page_token = APP_CONFIG['facebook']['production_english']['page_token']
+							else
+								facebook_app_secret = APP_CONFIG['facebook']['development']['app_secret']
+								facebook_page_token = APP_CONFIG['facebook']['development']['page_token']
+							end
+							
+							#graph = Koala::Facebook::API.new(facebook_consumer_key, facebook_app_secret)
+							page_graph = Koala::Facebook::API.new(facebook_page_token, facebook_app_secret)
+							
+							page_graph.put_picture(box[i].feed_image.path, {:message => feed_text}, "me")
+							#
+							###################################################################################
 						else
 							box[i].update_attribute(:has_been_published_english, -1)
 						end
