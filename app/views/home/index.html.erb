@@ -5,7 +5,7 @@
 	<link href="/assets/normalize.css" rel="stylesheet" />
 	<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
 	<link href="/assets/index_style.css" rel="stylesheet" type="text/css">
-
+	
 	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
 	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
 	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
@@ -13,26 +13,10 @@
 	<script src="/assets/jquerycode.min.js"></script>  
 	<script src="/assets/jquery.bxslider.min.js"></script>
 	<script src="/assets/jquery_index.min.js"></script>
-	
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-53020835-1', 'auto');
-		ga('send', 'pageview');
-
-		function unhover(element) {
-		element.setAttribute('src',  '<%= asset_path 'arrow-minimal.png' %>');
-		}
-		function hover(element) {
-		element.setAttribute('src', '<%= asset_path 'arrow_hover.png' %>');
-		}
-	</script>  
   </head>
   <body>
     
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
     <!-- START main div -->
 	<div>
 	
@@ -134,61 +118,88 @@
 					<img alt="Davide di carlo" src="<%= asset_path 'dadda_dc.jpg' %>">
 					<h2>Davide Di Carlo</h2>
 					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1997</p>  
+					<p>Teramo (TE)<br>Classe 1997</p>  
 				</div>
   
 				<div class="member">
 					<img alt="Federico Pomponii" src="<%= asset_path 'pomponii.jpg' %>">
 					<h2>Federico Pomponii</h2>
 					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1997</p>  
+					<p>Teramo (TE)<br>Classe 1997</p>  
 				</div>
   
 				<div class="member">
 					<img alt="Davide Barbieri" src="<%= asset_path 'dadda_b.jpg' %>">
 					<h2>Davide Barbieri</h2>
 					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1997</p>  
-				</div>
-
-				<div class="member">
-					<img alt="Marco Mazzoni" src="<%= asset_path 'mazzoni.jpg' %>">
-					<h2>Marco Mazzoni</h2>
-					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1995</p>  
-				</div>
-
-				<div class="member">
-					<img alt="Simone Coccia" src="<%= asset_path 'coccia.jpg' %>">
-					<h2>Simone Coccia</h2>
-					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1995</p>  
-				</div>
-
-				<div class="member">
-					<img alt="Simone Coccia" src="<%= asset_path 'marco_mat.jpg' %>">
-					<h2>Marco Matani</h2>
-					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1995</p>  
-				</div>
-
-				<div class="member">
-					<img alt="Simone Coccia" src="<%= asset_path 'davide_dg.jpg' %>">
-					<h2>Davide di Giacinto</h2>
-					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1996</p>  
+					<p>Teramo (TE)<br>Classe 1997</p>  
 				</div>
 				
 				<div class="member">
-					<img alt="Giovanni Di Donato" src="<%= asset_path 'giovanni_dd.jpg' %>">
-					<h2>Giovanni Di Donato</h2>
+					<img alt="Lorenzo Camaione" src="<%= asset_path 'lorenzo_c.jpg' %>">
+					<h2>Lorenzo Camaione</h2>
 					<h4>Sviluppatore</h4>
-					<p>Teramo(TE)<br>Classe 1997</p>  
+					<p>Teramo (TE)<br>Classe 1996</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Davide Di Giacinto" src="<%= asset_path 'davide_dg.jpg' %>">
+					<h2>Davide Di Giacinto</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1995</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Marco Matani" src="<%= asset_path 'marco_mat.jpg' %>">
+					<h2>Marco Matani</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1995</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Domenico Mattiucci" src="<%= asset_path 'domenico_m.jpg' %>">
+					<h2>Domenico Mattiucci</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1997</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Michelangelo Ierace" src="<%= asset_path 'michelangelo_i.JPG' %>">
+					<h2>Michelangelo Ierace</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1997</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Federico Cioschi" src="<%= asset_path 'federico_c.jpg' %>">
+					<h2>Federico Cioschi</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1996</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Alessia Coruzzi" src="<%= asset_path 'alessia_c.jpg' %>">
+					<h2>Alessia Coruzzi</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1996</p>  
+				</div>
+				
+				<div class="member">
+					<img alt="Pietro Oreglia" src="<%= asset_path 'pietro_o.jpg' %>">
+					<h2>Pietro Oreglia</h2>
+					<h4>Storico</h4>
+					<p>Teramo (TE)<br>Classe 1995</p>  
 				</div>
 				
 			</div>
+			<div class="liceoscientifico">
+				<h1>Si ringrazia:</h1>
+				<h2>Il Liceo Scientifico Albert Einstein - (TE) Abruzzo</h2>
+				<img src="http://www.diregiovani.it/codimmagine/17154/einstein.jpg">
+			</div>
 		</div>
 		<!-- END chi siamo -->
+		 
 		
 		<!-- START credits -->
 		<div class="credits">
@@ -199,8 +210,7 @@
 					L'archivio digitale de "La Stampa"<br>
 					Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
 					2015 - Ragazzi del '99 <a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
-				</div>   
-        
+				</div>  
 				<div id="connect">
 					<div id="central_ftext"><b>CONNECT</b></div>
 					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
@@ -212,13 +222,15 @@
 					<a href="https://github.com/davide-di-carlo/Twistory2.0">
 						<img src="<%= asset_path 'github.png' %>">  
 					</a>
-					<img src="<%= asset_path 'Youtube-icon.png' %>">  
+					<a href="https://www.youtube.com/channel/UCoCqMnYaUqdHSel2e8Pr-_A">
+						<img src="<%= asset_path 'Youtube-icon.png' %>">  
+					</a>
 				</div>      
 			</div>
 			<img id="flogo" src="<%= asset_path 'ragazzidel99-logo.png' %>">  
 		</div>
 		<!-- END credits -->
-	
+		
 	</div>
   	<!-- END main div -->
   	
