@@ -1,131 +1,118 @@
-
-    <title>Profilo</title>
-    
-    <style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
-    
-    <% if mobile_device? %>
+		
+		<title>Profilo</title>
+		
+		<style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
+		
+		<% if mobile_device? %>
 		<meta name="viewport" content="user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		
-		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />        
+		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
-   <% else %>
+		<% else %>
 		<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
-   <% end %>
-   
-  	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>  
-  </head>
-    
-  <body>
-    
-    <table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/profile" id="activeButton" name="Hlink">Profilo</a>
-          <a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a>
-          <%= link_to 'Esci', destroy_user_session_path, method: :delete %>
-        </th>
-      </tr>
-    </table>
-    
-    <div class="container">
-    
-      <div class="groundSheet">
-        <div class="homeTitle">
-          Ciao <%= current_user.user_name %>!
-        </div>
-      
-          <% if notice %>
-            <p align="center"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p align="center"><%= alert %></p>
-          <% end %>
-        
-        <%= render 'form' %>
-      </div> 
-  
-      <% control_feed=0 %>
-      <% @feeds.reverse_each do |feed| %>
-        
-        <% if feed.user_id == current_user.id %> 
-          <% control_feed=1 %>
+		<% end %>
+		
+		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+	</head>
 
-          <div class="groundSheet">
-            
-            <div class="postHead">
-              <%= current_user.user_name %>
-            </div>
-                
-            <div class="postDate">
-              <% if feed.has_been_published == true %>
-                Pubblicato in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
-              <% else %>
-                Da pubblicare in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
-              <% end %>
-            </div>
-                
-            <% if feed.feed_image.present? %>
-              <div id="<%= feed.id %>" onclick="Expand_Image(<%= feed.id %>)" class="feedImage">
-                <%= image_tag(feed.feed_image_url) %>
-              </div>
-            <% end %>
-
-            <div class="postText">
-              <%= feed.feed_text %>
-            </div>
-            
-            <% if feed.feed_text_english.present? %>
-              <div class="engPostText">
-                <%= feed.feed_text_english %>
-              </div>
-            <% end %>
-           
-            <div class="bubble">
-              <%= link_to 'Mostra', feed %>
-              <% if feed.has_been_published == false %>
-                | <%= link_to 'Modifica', edit_feed_path(feed) %> |
-                <%= link_to 'Elimina', feed, method: :delete, data: { confirm: 'Sei sicuro?' } %>
-              <% end %>
-            </div>
-            
-        </div>
-
-        <% end %>
-      <% end %>
-  
-      <% if control_feed==0 %>
-      <div class="groundSheet">
-        <div class="homeTitle" align="center">
-          Benvenuto nel tuo profilo!
-        </div>
-        
-        <div class="homeTextRx">  
-          <p align="center">
-            Tutti gli uomini in fondo desiderano la guerra.<br><br>Essa porta con sé una semplificazione di tutto,<br> 
-            che gli uomini sentono come sollievo.<br><br>Tutti trovano che la vita è troppo complicata.
-          </p>
-          <h1 align="right">cit Pär Lagerkvist</h1>
-        </div>
-      </div>
-      <% end %> 
-    
-    </div>
-  </body>
-  
+	<body>
+		
+		<table id="menu">
+			<tr>
+				<th id="logo">
+					<a href="<%= @current_host %>"></a>
+				</th>
+				<th align="right">
+					<a href="<%= @current_host %>" name="Hlink">Home</a>
+					<a href="<%= @current_host %>/profile" id="activeButton" name="Hlink">Profilo</a>
+					<a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a>
+					<%= link_to 'Esci', destroy_user_session_path, method: :delete %>
+				</th>
+			</tr>
+		</table>
+		
+		<div class="container">
+			<div class="groundSheet">
+				<div class="homeTitle">
+					Ciao <%= current_user.user_name %>!
+				</div>
+				
+				<% if notice %>
+				<p align="center"><%= notice %></p>
+				<% end %>
+				<% if alert %>
+				<p align="center"><%= alert %></p>
+				<% end %>
+				
+				<%= render 'form' %>
+			</div> 
+			
+			<% control_feed=0 %>
+			<% @feeds.reverse_each do |feed| %>
+				<% if feed.user_id == current_user.id %> 
+				<% control_feed=1 %>
+				<div class="groundSheet">
+					<div class="postHead">
+						<%= current_user.user_name %>
+					</div>
+					<div class="postDate">
+						<% if feed.has_been_published == true %>
+						Pubblicato in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
+						<% else %>
+						Da pubblicare in data: <%= feed.date.strftime('%d/%m/%Y %H:%M') %>
+						<% end %>
+					</div>
+					<% if feed.feed_image.present? %>
+					<div id="<%= feed.id %>" onclick="Expand_Image(<%= feed.id %>)" class="feedImage">
+					<%= image_tag(feed.feed_image_url) %>
+					</div>
+					<% end %>
+					<div class="postText">
+					<%= feed.feed_text %>
+					</div>
+					<% if feed.feed_text_english.present? %>
+					<div class="engPostText">
+					<%= feed.feed_text_english %>
+					</div>
+					<% end %>
+					<div class="bubble">
+						<%= link_to 'Mostra', feed %>
+					<% if feed.has_been_published == false %>
+						| <%= link_to 'Modifica', edit_feed_path(feed) %> |
+						<%= link_to 'Elimina', feed, method: :delete, data: { confirm: 'Sei sicuro?' } %>
+					<% end %>
+					</div>
+				</div>
+				<% end %>
+			<% end %>
+			
+			<% if control_feed==0 %>
+			<div class="groundSheet">
+				<div class="homeTitle" align="center">
+					Benvenuto nel tuo profilo!
+				</div>
+				<div class="homeTextRx">
+					<p align="center">
+						Tutti gli uomini in fondo desiderano la guerra.<br><br>Essa porta con sé una semplificazione di tutto,<br> 
+						che gli uomini sentono come sollievo.<br><br>Tutti trovano che la vita è troppo complicata.
+					</p>
+					<h1 align="right">cit Pär Lagerkvist</h1>
+				</div>
+			</div>
+			<% end %> 
+			
+		</div>
+	</body>
 </html>
 

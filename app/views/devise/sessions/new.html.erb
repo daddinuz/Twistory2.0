@@ -1,83 +1,81 @@
+		
+		<title>Accedi</title>
+		
+		<style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
+		
+		<% if mobile_device? %>
+		<meta name="viewport" content="user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
+		<% else %>
+		<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
+		<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
+		<% end %>
+		
+		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+	</head>
 
-    <title>Accedi</title>
-    
-    <style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
-    
-    <% if mobile_device? %>
-	<meta name="viewport" content="user-scalable=no" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	
-	<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />        
-	<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
-   <% else %>
-	<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
-   <% end %>
-   
-   	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-  </head>
-  
-  <body>
-    
-    <table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" name="Hlink">Home</a>
-          <a href="<%= new_user_session_path %>" id="activeButton">Accedi</a>
-          <a href="<%= new_user_registration_path %>">Iscriviti</a>
-        </th>
-      </tr>
-    </table>
-    
-    <div class="container">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    
-	    <div class="loginForm">
-	      <div class="homeTitle">
-	        Accedi
-	      </div>
-        
-        <% if notice %>
-          <div align="center" style="margin: 1% 0 0.5% 0;"><%= notice %></div>
-        <% end %>
-        <% if alert %>
-          <div align="center" style="margin: 1% 0 0.5% 0;"><%= alert %></div>
-        <% end %>
-        	      
-		    <ul>  
-		      <li>
-		      <%= f.email_field :email, autofocus: "true", :class => "field", :placeholder => " Indirizzo e-mail" %>
-		      </li>
-		      <li>
-		      <%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
-		      </li>
-		    </ul>
-		    
-		    <p align="center">
-		      <% if devise_mapping.rememberable? %>
-            <%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
-          <% end %>
-        </p>
-		    
-		    <div class="footer">
-		      <div><%= f.submit "Accedi", :class => "button" %></div>
-		      <p style="text-decoration: underline;"><%= link_to "Dimenticato la password?", new_password_path(resource_name) %></p>
-		    </div>
-		  </div>
-                
-    <% end %>  
-    </div>    
-  </body>
-	
+	<body>
+		
+		<table id="menu">
+			<tr>
+				<th id="logo">
+					<a href="<%= @current_host %>"></a>
+				</th>
+				<th align="right">
+					<a href="<%= @current_host %>" name="Hlink">Home</a>
+					<a href="<%= new_user_session_path %>" id="activeButton">Accedi</a>
+					<a href="<%= new_user_registration_path %>">Iscriviti</a>
+				</th>
+		</tr>
+		</table>
+		
+		<div class="container">
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+			<div class="loginForm">
+				<div class="homeTitle">
+					Accedi
+				</div>
+				
+				<% if notice %>
+				<div align="center" style="margin: 1% 0 0.5% 0;"><%= notice %></div>
+				<% end %>
+				<% if alert %>
+				<div align="center" style="margin: 1% 0 0.5% 0;"><%= alert %></div>
+				<% end %>
+				
+				<ul>
+					<li>
+						<%= f.email_field :email, autofocus: "true", :class => "field", :placeholder => " Indirizzo e-mail" %>
+					</li>
+					<li>
+						<%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
+					</li>
+				</ul>
+				
+				<p align="center">
+				<% if devise_mapping.rememberable? %>
+					<%= f.check_box :remember_me, :style => "cursor: pointer;" %><b>Rimani collegato</b>
+				<% end %>
+				</p>
+				
+				<div class="footer">
+					<div><%= f.submit "Accedi", :class => "button" %></div>
+					<p style="text-decoration: underline;"><%= link_to "Dimenticato la password?", new_password_path(resource_name) %></p>
+				</div>
+			</div>
+			<% end %>
+		</div>
+		
+	</body>
 </html>

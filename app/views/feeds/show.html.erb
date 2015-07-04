@@ -1,107 +1,104 @@
-
-    <title>Visualizza Feed</title>
-    
-    <style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
-    
-    <% if mobile_device? %>
+		
+		<title>Visualizza Feed</title>
+		
+		<style>body{background-image: url("<%= asset_path 'background.jpg' %>");}</style>
+		
+		<% if mobile_device? %>
 		<meta name="viewport" content="user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		
-		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />        
+		<link data-turbolinks-track="true" href="/assets/mobile/m.scaffolds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.home.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.feeds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.login.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/mobile/m.style.css" media="all" rel="stylesheet" />
-   <% else %>
+		<% else %>
 		<link data-turbolinks-track="true" href="/assets/desktop/scaffolds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/home.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/feeds.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/login.css.scss" media="all" rel="stylesheet" />
 		<link data-turbolinks-track="true" href="/assets/desktop/style.css" media="all" rel="stylesheet" />
-   <% end %>
-   
-  	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
-  </head>
-  
-  <body>
-  
-    <table id="menu">
-      </tr>
-        <th id="logo">
-          <a href="<%= @current_host %>"></a>
-        </th>
-        <th align="right">
-          <a href="<%= @current_host %>" id="activeButton" name="Hlink">Home</a>
-          <a href="<%= @current_host %>/profile" name="Hlink">Profilo</a>
-          <a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a>
-          <%= link_to 'Esci', destroy_user_session_path, method: :delete %>
-        </th>
-      </tr>
-    </table>
-    
-    <div class="container">
-      
-      <div class="groundSheet">
-        <div class="homeTitle" style="margin-bottom: 2%;">
-          Visualizza Feed:
-        </div>
-      
-        <% if notice %>
-          <p align="center"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p align="center"><%= alert %></p>
-        <% end %>
-      
-        <% read_usr = User.find(@feed.user_id) %>
-      
-        <% if read_usr.profile_image.present? %>
-          <div class="imageBox">
-            <%= image_tag(read_usr.profile_image_url, :width => 75 , :height => 75) %>
-          </div>
-        <% end %>
+		<% end %>
+		
+		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+		<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+	</head>
 
-        <div class="postHead">
-          <%= read_usr.user_name %>
-        </div>
-                
-        <div class="postDate">
-          <% if @feed.has_been_published == true %>
-            Pubblicato in data: <%= @feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
-          <% else %>
-            Da pubblicare in data: <%= @feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
-          <% end %>
-        </div>
-                
-        <% if @feed.feed_image.present? %>
-          <div id="<%= @feed.id %>" onclick="Expand_Image(<%= @feed.id %>)" class="feedImage">
-            <%= image_tag(@feed.feed_image_url) %>
-          </div>
-        <% end %>
-
-        <div class="postText">
-          <%= @feed.feed_text %>
-        </div>
-        
-        <% if @feed.feed_text_english.present? %>
-          <div class="engPostText">
-            <%= @feed.feed_text_english %>
-          </div>
-        <% end %>
-        
-        <div class="bubble">
-          <% if ((@feed.user_id == current_user.id or current_user.permission_level == 0) and @feed.has_been_published == false) %>
-            <%= link_to 'Modifica', edit_feed_path(@feed) %> |
-          <% end %>       
-        
-          <%= link_to 'Indietro', :back %>
-        </div>
-      </div>
-    
-    </div>
-  </body>
-  
+	<body>
+		
+		<table id="menu">
+			<tr>
+				<th id="logo">
+					<a href="<%= @current_host %>"></a>
+				</th>
+				<th align="right">
+					<a href="<%= @current_host %>" id="activeButton" name="Hlink">Home</a>
+					<a href="<%= @current_host %>/profile" name="Hlink">Profilo</a>
+					<a href="<%= edit_user_registration_path %>" name="Hlink">Impostazioni</a>
+					<%= link_to 'Esci', destroy_user_session_path, method: :delete %>
+				</th>
+			</tr>
+		</table>
+		
+		<div class="container">
+			<div class="groundSheet">
+				<div class="homeTitle" style="margin-bottom: 2%;">
+					Visualizza Feed:
+				</div>
+				
+				<% if notice %>
+				<p align="center"><%= notice %></p>
+				<% end %>
+				<% if alert %>
+				<p align="center"><%= alert %></p>
+				<% end %>
+				
+				<% read_usr = User.find(@feed.user_id) %>
+				
+				<% if read_usr.profile_image.present? %>
+				<div class="imageBox">
+					<%= image_tag(read_usr.profile_image_url, :width => 75 , :height => 75) %>
+				</div>
+				<% end %>
+				
+				<div class="postHead">
+					<%= read_usr.user_name %>
+				</div>
+				
+				<div class="postDate">
+				<% if @feed.has_been_published == true %>
+					Pubblicato in data: <%= @feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
+				<% else %>
+					Da pubblicare in data: <%= @feed.date.in_time_zone("CET").strftime('%d/%m/%Y %H:%M') %>
+				<% end %>
+				</div>
+				
+				<% if @feed.feed_image.present? %>
+				<div id="<%= @feed.id %>" onclick="Expand_Image(<%= @feed.id %>)" class="feedImage">
+					<%= image_tag(@feed.feed_image_url) %>
+				</div>
+				<% end %>
+				
+				<div class="postText">
+					<%= @feed.feed_text %>
+				</div>
+				
+				<% if @feed.feed_text_english.present? %>
+				<div class="engPostText">
+					<%= @feed.feed_text_english %>
+				</div>
+				<% end %>
+				
+				<div class="bubble">
+				<% if ((@feed.user_id == current_user.id or current_user.permission_level == 0) and @feed.has_been_published == false) %>
+					<%= link_to 'Modifica', edit_feed_path(@feed) %> |
+				<% end %> 
+					<%= link_to 'Indietro', :back %>
+				</div>
+			</div>
+		</div>
+		
+	</body>
 </html>
