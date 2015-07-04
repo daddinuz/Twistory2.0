@@ -5,8 +5,7 @@ namespace :send_feeds_to_socials do
 	desc "Send Feeds to LaGrandeGuerra Twitter channel and Facebook Italian page"
 	task send_feeds_italian: :environment do
 		
-		# Remember that the server time is UTC
-		time_now = DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
+		time_now = DateTime.now
 		
 		box = Feed.where("has_been_published = ? and date < ?", '0', time_now)
 		ctrl = box.length
@@ -138,8 +137,7 @@ namespace :send_feeds_to_socials do
 	desc "Send Feeds to WW1fromItaly Twitter Channel and Facebook English page"
 	task send_feeds_english: :environment do
 		
-		# Remember that the server time is UTC
-		time_now = DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
+		time_now = DateTime.now
 		
 		box = Feed.where("has_been_published_english = ? and date < ?", '0', time_now)
 		ctrl = box.length
