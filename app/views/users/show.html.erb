@@ -1,0 +1,16 @@
+<head>
+<title> Portal </title>
+</head>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>user_name:</strong>
+  <strong>email:</strong>
+ <strong>permission_level:</strong>
+  <%= @user.user_name %>
+  <%= @user.email %>
+  <%= @user.permission_level %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
