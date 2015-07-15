@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @feeds = Feed.all
   end
 
   # GET /users/1

@@ -1,7 +1,10 @@
 <head>
 <title> Portal </title>
+<link href="/assets/portal.css.erb" rel="stylesheet" type="text/css">
 </head>
+<body>
 <h1> I nostri users </h1>
+<a id = "link"><%= link_to 'Torna al sito', home_index_path %></a>
 
 <table>
   <thead>
@@ -10,6 +13,7 @@
       <th>Email</th>
       <th>Permission_level</th>
       <th></th>
+      <th>N° feeds</th>
     </tr>
   </thead>
 
@@ -19,12 +23,13 @@
         <td><%= user.user_name %></td>
 	<td><%= user.email %></td>
 	<td><%= user.permission_level %></td>
+	<td></td>
+	<td><%= @feeds.where("user_id = ?", user.id).count %></td>
         <td><%= link_to 'Modifica', edit_user_path(user) %></td>
       </tr>
     <% end %>
   <p> # Ricorda che puoi modificare solo il campo 'Permission_level' </p>
   </tbody>
 </table>
-
-<br>
+</body>
 
