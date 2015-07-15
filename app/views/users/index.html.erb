@@ -1,7 +1,7 @@
 <head>
 <title> Portal </title>
 </head>
-<h1>Listing users</h1>
+<h1> I nostri users </h1>
 
 <table>
   <thead>
@@ -19,9 +19,10 @@
         <td><%= user.user_name %></td>
 	<td><%= user.email %></td>
 	<td><%= user.permission_level %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Modifica', edit_user_path(user) %></td>
       </tr>
     <% end %>
+  <p> # Ricorda che puoi modificare solo il campo 'Permission_level' </p>
   </tbody>
 </table>
 

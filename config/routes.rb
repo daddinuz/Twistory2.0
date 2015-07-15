@@ -9,7 +9,7 @@ TwittwarApp::Application.routes.draw do
 
 	get "/index"		=> 'home#index'
 	get "/profile"	=> 'feeds#profile'
-	resources :users, path: '/portal/users'
+	resources :users, path: '/portal'
 	# You can have the root of your site routed with "root"
 	devise_scope :user do
 		authenticated :user do
