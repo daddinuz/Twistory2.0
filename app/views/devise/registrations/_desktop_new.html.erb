@@ -1,0 +1,52 @@
+<!-- START bar -->
+		<div id="home" class="bar">
+			<div id="link">
+				<ul>
+					<li><a href="<%= @current_host %>">Home</a></li>
+					<li><a href="<%= new_user_session_path %>">Accedi</a></li>
+				</ul>
+			</div>
+			<h2>LA GRANDE GUERRA</h2>
+		</div>
+		<!-- END bar -->
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			<div class="form_bg">
+				<div class="form">
+					<ul>  
+						<li>
+							<%= f.text_field :user_name, autofocus: "true", :class => "field", :placeholder => " Nome Pubblico" %>
+						</li>
+						<li>
+							<%= f.email_field :email, :class => "field", :placeholder => " Indirizzo e-mail"  %>
+						</li>
+						<li>
+							<%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
+						</li>
+						<li>
+							<%= f.password_field :password_confirmation, :class => "field", :placeholder => " Conferma password" , autocomplete: "off" %>
+						</li> 
+					</ul>
+					<%= f.submit "Procedi", :class => "button" %>
+					<%= devise_error_messages! %>
+					<% if notice %>
+						<%= notice %>
+					<% end %>
+					<% if alert %>
+						<%= alert %>
+					<% end %>
+				</div>
+			
+				<div class="right_text">
+					<div class="title">
+						Iscriviti
+					</div>
+					<p style="color:#696666;">
+						Ti invieremo una e-mail di conferma
+					</p>
+					<p style="color:#698888;">
+						Hai gia' un account? Allora
+						<%= link_to "effettua l'accesso", new_user_session_path, :class => "register"%>
+					</p>
+				</div>
+			</div>
+		<% end %> 
