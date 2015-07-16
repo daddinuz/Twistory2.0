@@ -13,13 +13,10 @@
 		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
 		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
 		
-		<script src="/assets/jquerycode.min.js"></script>
-		<script src="/assets/jquery.bxslider.min.js"></script>
 		<script src="/assets/jquery_index.min.js"></script>
 	</head>
 
 	<body>
-		
 		<style>
 			#wrapper_x
 			{
@@ -30,10 +27,22 @@
 			}
 		</style>
 		
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-		
 		<!-- START main div -->
 		<div id="wrapper_x">
+			<!-- START bar -->
+			<div id="home" class="bar">
+				<div id="link">
+					<ul>
+						<li><a href="#team">Chi Siamo</a></li>
+						<li><a href="#feed">Feed</a></li>
+						<li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
+						<li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
+					</ul>
+				</div>
+				<span id="bar_text">LA GRANDE GUERRA</span>
+			</div>
+			<!-- END bar -->
+			
 			<section id="first">
 				<div class="table">
 					<div class="table">
@@ -43,8 +52,8 @@
 						<div id="first_left_text_und">
 							La Grande Guerra
 						</div>
-					</div>
-				
+						</div>
+					
 					<div id="first_left_text_exp">
 						100 anni fa aveva inizio una delle piu' grandi tragedie della Storia. Allo stesso tempo iniziava il processo che porto' alla completa liberazione dell'Italia dalle potenze straniere e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.
 					</div>
@@ -53,7 +62,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="second">
+			<section id="feed">
 				<div id="second_image_position_test">
 					<%= image_tag("collage.png") %>
 				</div>
@@ -86,81 +95,6 @@
 					</a>
 				</div>
 			</section>
-			
-			<!-- START bar -->
-			<!--<div id="home" class="bar">
-				<div id="link">
-					<ul>
-						<li><a href="#team">Chi Siamo</a></li>
-						<li><a href="#about">Tecnologia</a></li>
-						<li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-						<li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-					</ul>
-				</div>
-				<h2>LA GRANDE GUERRA</h2>
-			</div>
-			<!-- END bar -->
-			
-			<!--<div class="central">
-				<div class="csizer">
-					<div id="content1">
-						<div id="first">
-							<p>
-								Quando un popolo non ha più senso vitale del suo passato si spegne.<br>
-								La vitalità creatrice è fatta di una riserva di passato.<br>
-								Si diventa creatori anche noi, quando si ha un passato.<br>
-								La giovinezza dei popoli è una ricca vecchiaia!
-							</p>
-							<h3 style="text-align:right;">-cit Cesare Pavese</h3>
-						</div>
-						<div id="second">
-							<p>
-								Le battaglie si vincono e si perdono con identico cuore.<br>
-								Io faccio rullare i tamburi per tutti i morti,<br>
-								Per essi faccio squillare le trombe in tono alto e lieto,<br>
-								Vivan coloro che caddero, viva chi perde in mare i propri vascelli.<br> 
-								Vivan coloro che affondano con essi.<br>
-								Vivan tutti i generali sconfitti e tutti gli eroi schiacciati<br>e gli innumerevoli eroi sconosciuti,<br>
-								uguali ai più grandi e conosciuti eroi
-							</p>
-							<h3 style="text-align:right;">-cit Walt Whitman</h3>
-						</div>
-						<img alt="arrow" src="<%= asset_path 'arrow-minimal.png' %>" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
-						<p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
-					</div>
-					
-					<% @LastFeeds = @feeds.last(3).reverse %>
-					<div id="content2">
-						<ul class="feed_slider">
-						<% if !@LastFeeds[0].blank? %>
-							<li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[0].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						<% if !@LastFeeds[1].blank? %>
-							<li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[1].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						<% if !@LastFeeds[2].blank? %>
-							<li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[2].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						</ul>
-					</div>
-					
-				</div>
-			</div>
-			-->
-			<!-- SECTION tecnologia -->
-			<!--
-			<div class="tecnologia" id="about">
-				<img id="technotext" src="<%= asset_path 'technology-text.png' %>"/>
-			</div>
-			
-			<div class="italy">
-				<img alt="story" id="italytext" src="<%= asset_path 'storia-text.png' %>"/>
-			</div> 
-			
-			<div class="italy-2">
-				<img alt="story" id="italytext2" src="<%= asset_path 'storia-2-text.png' %>"/>
-			</div>
-			<!-- END tecnologia -->
 			
 			<!-- SECTION chi siamo -->
 			<div class="who" id="team">
