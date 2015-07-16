@@ -4,6 +4,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<link href="/assets/normalize.css" rel="stylesheet" />
 		<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+		
 		<link href="/assets/index_style.css" rel="stylesheet" type="text/css">
 		
 		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
@@ -31,9 +34,61 @@
 		
 		<!-- START main div -->
 		<div id="wrapper_x">
+			<section id="first">
+				<div class="table">
+					<div class="table">
+						<div id="first_left_text">
+							benvenuti su Ragazzidel99.it
+						</div>
+						<div id="first_left_text_und">
+							La Grande Guerra
+						</div>
+					</div>
+				
+					<div id="first_left_text_exp">
+						100 anni fa aveva inizio una delle piu' grandi tragedie della Storia. Allo stesso tempo iniziava il processo che porto' alla completa liberazione dell'Italia dalle potenze straniere e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.
+					</div>
+					<div class="button_b_w">
+						SCOPRI DI PIU'
+					</div>
+				</div>
+			</section>
+			<section id="second">
+				<div id="second_image_position_test">
+					<%= image_tag("collage.png") %>
+				</div>
+				<div id="feed_preview">
+					<%= image_tag("collage_feed.png") %>
+				</div>
+				<div id="second_text">
+					La Grande Guerra raccontata giorno per giorno, con notizie e foto.<br>In contemporanea su Twitter e Facebook
+				</div>
+				<div class="second_social">
+					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">
+						<div class="second_single_social">
+							<div style="float:left;" class="table">
+								<%= image_tag("facebook-icon-128.png") %>
+								<span id="second_text_fb">
+									/lagrandeguerraintemporeale
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="https://twitter.com/lagrandeguerra">
+						<div class="second_single_social">
+							<div style="float:right;" class="table second_single_social">
+								<%= image_tag("twitter-icon-128.png") %>
+								<span id="second_text_twitter">
+									@lagrandeguerra
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
 			
 			<!-- START bar -->
-			<div id="home" class="bar">
+			<!--<div id="home" class="bar">
 				<div id="link">
 					<ul>
 						<li><a href="#team">Chi Siamo</a></li>
@@ -46,11 +101,8 @@
 			</div>
 			<!-- END bar -->
 			
-			<!-- START central -->
-			<div class="central">
-				<!-- START csizer -->
+			<!--<div class="central">
 				<div class="csizer">
-					<!-- START content1 -->
 					<div id="content1">
 						<div id="first">
 							<p>
@@ -76,8 +128,7 @@
 						<img alt="arrow" src="<%= asset_path 'arrow-minimal.png' %>" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
 						<p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
 					</div>
-					<!-- END content1 -->
-					<!-- START content2 -->
+					
 					<% @LastFeeds = @feeds.last(3).reverse %>
 					<div id="content2">
 						<ul class="feed_slider">
@@ -92,13 +143,12 @@
 						<% end %>
 						</ul>
 					</div>
-					<!-- END content2 -->
+					
 				</div>
-				<!-- END csizer -->
 			</div>
-			<!-- END central -->
-			
+			-->
 			<!-- SECTION tecnologia -->
+			<!--
 			<div class="tecnologia" id="about">
 				<img id="technotext" src="<%= asset_path 'technology-text.png' %>"/>
 			</div>
