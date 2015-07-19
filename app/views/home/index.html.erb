@@ -6,7 +6,7 @@
 		<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-		
+		<link href="/assets/modal.css" rel="stylesheet" type="text/css">
 		<link href="/assets/index_style.css" rel="stylesheet" type="text/css">
 		
 		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
@@ -17,18 +17,29 @@
 	</head>
 
 	<body>
-		<style>
-			#wrapper_x
-			{
-				margin-left:auto;
-				margin-right:auto;
-				min-width:1200px;
-				height:100%;
-			}
-		</style>
-		
-		<!-- START main div -->
 		<div id="wrapper_x">
+			<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+			<div class="md-modal md-effect-1" id="modal-1">
+				<div class="md-content">
+					<h3>Anteprima feed</h3>
+					<div>
+						<ul>
+							<li>
+								<strong>Davide Di Giacinto</strong>: Successi dell'offensiva in Polonia annunciati da Berlino. Numeri impressionanti: catturati oltre 28 mila russi #LaGrandeGuerra (22/04/2015)
+							</li>
+						
+							<li>
+								<strong>Davide Di Giacinto</strong>: Conclusa la sottoscrizione del Prestito nazionale rimborsabile a 25 anni. 1.145 milioni di lire la cifra raggiunta #LaGrandeGuerra (22/04/2015)
+							</li>
+						
+							<li>
+								<strong>Davide Di Giacinto</strong>: Gli accordi franco-italiani: da ora in poi ci sarà più coordinamento nelle operazioni di attacco #LaGrandeGuerra (22/04/2015)
+							</li>
+						</ul>
+						<button class="md-close">Chiudi</button>
+					</div>
+				</div>
+			</div>
 			<!-- START bar -->
 			<div id="home" class="bar">
 				<div id="link">
@@ -65,34 +76,41 @@
 				</div>
 			</section>
 			<section id="feed">
-				<div id="second_image_position_test">
-					<%= image_tag("collage.png") %>
-				</div>
-				<div id="feed_preview">
-					<%= image_tag("collage_feed.png") %>
-				</div>
-				<div id="second_text">
-					La Grande Guerra raccontata giorno per giorno, con notizie e foto.<br>In contemporanea su Twitter e Facebook
+				<div id="feed_collage_section">
+					<div id="second_image_position_test">
+						<%= image_tag("collage.png") %>
+					</div>
+					<div id="feed_preview">
+						<%= image_tag("collage_feed.png") %>
+					</div>
+					<div id="second_text">
+						La Grande Guerra raccontata giorno per giorno, con notizie e foto.<br>In contemporanea su Twitter e Facebook
+					</div>
 				</div>
 				<div class="second_social">
+					<div class="second_single_social" style="padding-right:100px;">
+						<div id="second_feed_preview_text">
+							Per un'anteprima dei feed:
+						</div>
+						<!--<div class="button_b_w" style="margin:10px auto 0 auto;">
+							CLICCA QUI
+						</div>-->
+						<button class="md-trigger" data-modal="modal-1">Clicca qui</button>
+					</div>
 					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">
-						<div class="second_single_social">
-							<div style="float:left;" class="table">
-								<%= image_tag("facebook-icon-128.png") %>
-								<span id="second_text_fb">
-									/lagrandeguerraintemporeale
-								</span>
-							</div>
+						<div class="second_single_social" style="padding-right:100px;">
+							<%= image_tag("facebook-icon-128.png") %>
+							<span id="second_text_fb">
+								/lagrandeguerraintemporeale
+							</span>
 						</div>
 					</a>
 					<a href="https://twitter.com/lagrandeguerra">
 						<div class="second_single_social">
-							<div style="float:right;" class="table second_single_social">
 								<%= image_tag("twitter-icon-128.png") %>
 								<span id="second_text_twitter">
 									@lagrandeguerra
 								</span>
-							</div>
 						</div>
 					</a>
 				</div>
@@ -241,6 +259,8 @@
 			
 		</div>
 		<!-- END main div -->
+		<script src="assets/classie.js"></script>
+		<script src="assets/modalEffects.js"></script>
 	</body>
 </html>
 

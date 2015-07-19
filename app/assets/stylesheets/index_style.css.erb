@@ -1,4 +1,15 @@
 
+#wrapper_x
+{
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1200px;
+	max-width:2200px;
+	height:100%;
+	border-right:1px solid #efefef;
+	border-left:1px solid #efefef;
+}
+
 p.center
 {
 	margin-left:auto;
@@ -63,6 +74,23 @@ a:after
 
 
 /* BAR */
+
+@media screen and (min-device-width:800px){
+	.bar
+	{
+		min-width:800px;	
+	}
+}
+
+@media screen and (max-device-width:800px){
+
+	.bar
+	{
+		min-width:1200px;	
+	}
+	
+}
+
 .bar
 {
 	background:#fff;
@@ -144,11 +172,26 @@ a:after
 
 /* FIRST HOMEPAGE SECTION */
 
+@media screen and (min-device-width:800px){
+	#first
+	{
+		height:100%;
+	}	
+}
+
+@media screen and (max-device-width:800px){
+	#first
+	{
+		height:50%;
+	}	
+}
+
+
 #first
 {
 	width:100%;
-	min-height:100%;
 	display:table;
+	max-height:800px;
 	background:url(<%= asset_path 'bg_typewriter.jpg' %>) no-repeat;
 }
 
@@ -203,13 +246,28 @@ a:after
 
 /* START SECOND HOMEPAGE SECTION */
 
+@media screen and (min-device-width:800px){
+	#feed
+	{
+		height:100%;
+	}	
+}
+
+@media screen and (max-device-width:800px){
+	#feed
+	{
+		min-height:50%;
+	}
+}
+
+
 #feed
 {
 	width:100%;
-	min-height:100%;
+	max-height:800px;
 	display:table;
 	background:#fff;
-	margin:0;
+	margin:0 auto 0 auto;
 	padding:0;
 }
 
@@ -223,7 +281,6 @@ a:after
 #feed_preview
 {
 	display:inline-table;
-	max-width:60%;
 }
 
 #second_text
@@ -237,9 +294,25 @@ a:after
 	font-family:'Raleway', sans-serif;
 }
 
+#second_feed_preview_text
+{
+	font-size:2.5em;
+	font-family:'Raleway', sans-serif;
+	color:#698888;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+
+#feed_collage_section
+{
+	max-width:1500px;
+	margin:0 auto 0 auto;
+}
+
+
 .second_social
 {
-	width:40%;
 	display:table;
 	margin:40px auto 0 auto;
 }
@@ -259,6 +332,7 @@ a:after
 	font-family:'Open Sans', sans-serif;
 	display:table;
 	color:#30538C;
+	margin:0 auto 0 auto;
 }
 
 #second_text_twitter
@@ -274,6 +348,8 @@ a:after
 .second_single_social
 {
 	cursor:pointer;
+	vertical-align:top;
+	display:inline-table;
 }
 
 .second_single_social:hover span
