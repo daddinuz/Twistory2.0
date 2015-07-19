@@ -22,7 +22,7 @@
 			<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
 			<div class="md-modal md-effect-1" id="modal-1">
 				<div class="md-content">
-					<h3>Anteprima feed</h3>
+					<h3>#Lagrandeguerra</h3>
 					<div>
 						<ul>
 							<% if !@LastFeeds[0].blank? %>
@@ -35,6 +35,10 @@
 							<li>"<%= @LastFeeds[2].feed_text %>"<% if user = User.find_by(id: params[@LastFeeds[2].user_id]) %><%= user.user_name %><% end %>(<%= @LastFeeds[2].date.strftime('%d/%m/%Y') %>)</li>
 						<% end %>
 						</ul>
+						
+						<div class="popup_social_text">
+							Segui la lista completa delle notizie su <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">Facebook</a> o <a href="https://twitter.com/lagrandeguerra">Twitter</a>
+						</div>
 						<button class="md-close">Chiudi</button>
 					</div>
 				</div>
