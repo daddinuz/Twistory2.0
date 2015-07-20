@@ -1,5 +1,21 @@
 
-img,p.center
+#wrapper_x
+{
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1200px;
+	max-width:2200px;
+	height:100%;
+	border-right:1px solid #efefef;
+	border-left:1px solid #efefef;
+}
+
+* {
+
+	font-weight:400 !important;
+}
+
+p.center
 {
 	margin-left:auto;
 	margin-right:auto;
@@ -23,6 +39,8 @@ body
 	background-color:white;
 	font-family: verdana, arial, helvetica, sans-serif;
 }
+
+.table{display:table;}
 
 .navigation
 {
@@ -58,21 +76,80 @@ a:after
 	text-decoration:none;
 }
 
+
+
+/* BAR */
+
+@media screen and (min-device-width:800px){
+	.bar
+	{
+		min-width:800px;
+		max-width:2200px;
+	}
+}
+
+@media screen and (max-device-width:800px){
+
+	.bar
+	{
+		min-width:1200px;	
+	}
+	
+}
+
+.bar
+{
+	background:#fff;
+	width:100%;
+	position:fixed;
+	display:table;
+	opacity:0;
+	border-bottom:1px solid #f1f1f1;
+	top:0;
+}
+
+.bar img
+{
+	margin:1em 5em 0em 0.6em;
+	float:right;
+	max-width:6.4em;
+}
+
+.no-pointer
+{
+	pointer-events: none;
+}
+
+.bar #bar_text
+{
+	float:left;
+	margin:15px auto 15px 1em;
+	font-size:3em;
+	font-weight:400;
+	color: #000;
+	font-family:'Raleway', sans-serif;
+}
+
 .bar #link
 {
-	position:relative;
 	float:right;
-	right:0%;
-	padding:2.2em 0em 0 0;
-	opacity: 1;
+	padding:1.5em 3em 0 0;
 	font-size:1.6em;
 	color:#696666;
+}
+
+.bar li img
+{
+	vertical-align:top;
+	margin:3px 0 0 0;
+	padding:0 10px 0 0;
 }
 
 #link a 
 {
 	text-decoration:none !important;
 	color:#696666 !important;
+	font-weight:400;
 }
 
 #link ul
@@ -105,141 +182,199 @@ a:after
 	color:#D5DBD6 !important;
 }
 
-/* BAR */
-.bar
-{
-	background:#fff;
-	width:100%;
+/* END NAV BAR */
+
+/* FIRST HOMEPAGE SECTION */
+
+@media screen and (min-device-width:800px){
+	#first
+	{
+		height:100%;
+	}	
 }
 
-.bar img
-{
-	margin:1em 5em 0.6em 0.6em;
-	float:right;
-	max-width:6.4em;
+@media screen and (max-device-width:800px){
+	#first
+	{
+		height:50%;
+	}	
 }
 
-.no-pointer
-{
-	pointer-events: none;
-}
 
-.bar h2
-{
-	float:left;
-	position:relative;
-	margin-left:1em;
-	margin-right:auto;
-	font-size:3em;
-	font-weight:300;
-	color: #000;
-	font-family:'Open Sans', sans-serif;
-}
-
-/* CENTRAL IMAGE */
-
-.central
+#first
 {
 	width:100%;
-	height:70em;
-	display:inline-block;
-	background: #fff url("<%= asset_path 'img154.jpg' %>") no-repeat;
-	background-size:100% 100%;
-
+	display:table;
+	max-height:800px;
+	background:url(<%= asset_path 'bg_typewriter.jpg' %>) no-repeat;
 }
 
-.csizer
+#first_left_text
 {
-	height:100%;
+	font-size:7em;
+	font-family:'Tangerine', cursive;
+	font-weight:400;
+	color:#696666;
+	padding:100px 0 0 50px;
 }
 
-.central img
+#first_left_text_und
 {
-	opacity:1;
-	max-width:10em;
-	cursor:pointer;
-	position:relative;
-	display:block;
-}
-
-.central #first
-{
-	margin-top: 1em;
-	left: 48%;
-	opacity:1;
-	position: relative;
-	max-width: 50%;
-}
-
-#text6
-{
-	opacity:1;
-	position:relative;
-	color:#fff;
-	font-size:1.2em;
-	text-align:center;
-	padding:1em 0 5em 0;
-}
-
-.central #second
-{
-	padding: 1em 1em;
-	position: relative;  
-	left: 0;
-	opacity: 1;
-	display: block;  
-	max-width: 48%;
-}
-
-#content1
-{
-	padding-top:7em;
-	position:relative;
-}
-
-#first p, h3
-{
-	color:#fff;
-	font-size:1.8em;
-	font-weight:100;
-	text-align:center;
-}
-
-#second p, h3
-{
-	color:#fff;
-	font-size:1.8em;
-	font-weight:100;
-	text-align:center;
-}
-
-/* LATEST FEEDS */
-#content2
-{
-	position:absolute;
-	float:left;
-	left:-125em;
-	opacity:0;
-	width:90%;
-	margin-top:-40em;
-}
-
-#content2 h2
-{
-	font-size:1.5em;
-	color:#fff;
-	text-align:right;
-	margin-right:10%;
-}
-
-#content2 p
-{
-	width:60%;
 	font-size:2em;
-	color:#fff;
-	margin: 0 auto 0 auto;
-	text-align:center;
+	font-family:'Raleway', sans-serif;
+	text-transform:uppercase;
+	font-weight:300;
+	text-align:right;
+	color:#696666;
 }
+
+#first_left_text_exp
+{
+	font-size:3.3em;
+	font-family:'Tangerine', cursive;
+	font-weight:400;
+	color:#666;
+	width:600px;
+	padding:100px 0 0 70px;
+}
+
+.button_b_w
+{
+	color:#696666;
+	border:1px solid black;
+	font-family:'Raleway', sans-serif;
+	font-size:2.5em;
+	padding:10px;
+	display:table;
+	font-weight:400;
+	margin:50px auto 50px auto;
+}
+
+.button_b_w:hover
+{
+	background:#000;
+	color:white;
+	cursor:pointer;
+}
+
+/* END FIRST HOMEPAGE SECTION
+
+/* START SECOND HOMEPAGE SECTION */
+
+@media screen and (min-device-width:800px){
+	#feed
+	{
+		height:100%;
+	}	
+}
+
+@media screen and (max-device-width:800px){
+	#feed
+	{
+		min-height:50%;
+	}
+}
+
+
+#feed
+{
+	width:100%;
+	max-height:800px;
+	display:table;
+	background:#fff;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+#second_image_position_test
+{
+	width:20%;
+	display:inline-table;
+	padding:60px 10% 0 7%;
+}
+
+#feed_preview
+{
+	display:inline-table;
+}
+
+#second_text
+{
+	font-size:3em;
+	padding:40px 0 0 0;
+	margin:0 auto 0 auto;
+	display:table;
+	font-weight:400;
+	color:#698888;
+	text-align:center;
+	font-family:'Raleway', sans-serif;
+}
+
+#second_feed_preview_text
+{
+	font-size:2.5em;
+	font-family:'Raleway', sans-serif;
+	color:#698888;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+
+#feed_collage_section
+{
+	max-width:1500px;
+	margin:0 auto 0 auto;
+}
+
+
+.second_social
+{
+	display:table;
+	margin:40px auto 0 auto;
+}
+
+.second_social img
+{
+	width:128px;
+	margin:0 auto 0 auto;
+	display:block;
+	height:128px;
+}
+
+#second_text_fb
+{
+	font-size:14px;
+	padding-top:5px;
+	font-family:'Open Sans', sans-serif;
+	display:table;
+	color:#30538C;
+	margin:0 auto 0 auto;
+}
+
+#second_text_twitter
+{
+	font-size:14px;
+	padding-top:5px;
+	color:#1996C3;
+	margin:0 auto 0 auto;
+	font-family:'Open Sans', sans-serif;
+	display:table;
+}
+
+.second_single_social
+{
+	cursor:pointer;
+	vertical-align:top;
+	display:inline-table;
+}
+
+.second_single_social:hover span
+{
+	text-decoration:underline;
+}
+
+/* END SECOND HOMEPAGE SECTION */
+
 
 /* INFORMATION */
 /* TECH */
@@ -409,6 +544,7 @@ a:after
 {
 	width:3.2em;
 	height:3.2em;
+	border-bottom:1px solid #E0E0E0;
 }
 
 #connect img:hover
@@ -418,11 +554,17 @@ a:after
 
 #flogo
 {
+	float:right;
+	position:relative;
+	top:-20px;
+	right:40px;
+}
+
+#flogo img
+{
+	display:block;
 	width:26.3em;
 	height:15em;
-	position:absolute;
-	margin-top:-13em;
-	right:10%;
 }
 
 .liceoscientifico
