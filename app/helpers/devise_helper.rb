@@ -14,8 +14,10 @@ module DeviseHelper
 			resource: resource.class.model_name.human.downcase)
 		
 		html = <<-HTML
-		<h2 align="center">#{sentence}</h2>
-		<b><h4 align="center">#{messages}</h4></b>
+		<div id="error_explanation">
+			<div id="first_sentence">#{sentence}</div>
+			<div id="error_list">#{messages}</div>
+		</div>
 		HTML
 		
 		html.html_safe
