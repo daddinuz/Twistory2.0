@@ -46,14 +46,24 @@
 			<!-- START bar -->
 			<div id="home" class="bar">
 				<div id="link">
-					<ul>
-						<li><a href="#team">Chi Siamo</a></li>
-						<li><a href="#feed">Feed</a></li>
-						<li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-						<li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-					</ul>
+						<ul>
+							<li><a href="#team"><%= @ln[@current_language]["home_link_1"] %></a></li>
+							<li><a href="#feed"><%= @ln[@current_language]["home_link_2"] %></a></li>
+							<li><a href="<%= new_user_session_path %>" name="Hlink"><%= @ln[@current_language]["home_link_3"] %></a></li>
+							<li><a href="<%= new_user_registration_path %>" name="Hlink"><%= @ln[@current_language]["home_link_4"] %></a></li>
+							<li>
+								<%= link_to(home_index_path(:l => "it")) do %>
+									<%= image_tag("IT_flag.png") %> 
+								<% end %>
+								<%= link_to(home_index_path(:l => "en")) do %>
+									<%= image_tag("UK_flag.png") %>
+								<% end %>
+							</li>
+						</ul>
 				</div>
-				<span id="bar_text">LA GRANDE GUERRA</span>
+				<span id="bar_text">
+					<%= @ln[@current_language]["bar_text"] %>
+				</span>
 			</div>
 			<!-- END bar -->
 			
@@ -61,19 +71,19 @@
 				<div class="table">
 					<div class="table">
 						<div id="first_left_text">
-							benvenuti su Ragazzidel99.it
+							<%= @ln[@current_language]["first_left_text"] %>
 						</div>
 						<div id="first_left_text_und">
-							La Grande Guerra
+							<%= @ln[@current_language]["first_left_text_und"] %>
 						</div>
 						</div>
 					
 					<div id="first_left_text_exp">
-						100 anni fa aveva inizio una delle piu' grandi tragedie della Storia. Allo stesso tempo iniziava il processo che porto' alla completa liberazione dell'Italia dalle potenze straniere e che avvenne grazie al sacrificio di una generazione di ragazzi appena maggiorenni.
+							<%= @ln[@current_language]["first_left_text_exp"] %>
 					</div>
 					<a href="#feed">
 						<div class="button_b_w">
-							SCOPRI DI PIU'
+							<%= @ln[@current_language]["first_left_text_more"] %>
 						</div>
 					</a>
 				</div>
@@ -87,18 +97,19 @@
 						<%= image_tag("collage_feed.png") %>
 					</div>
 					<div id="second_text">
-						La Grande Guerra raccontata giorno per giorno, con notizie e foto.<br>In contemporanea su Twitter e Facebook
+						<%= @ln[@current_language]["second_text_1"] %><br>
+						<%= @ln[@current_language]["second_text_2"] %>
 					</div>
 				</div>
 				<div class="second_social">
 					<div class="second_single_social" style="padding-right:100px;">
 						<div id="second_feed_preview_text">
-							Per un'anteprima dei feed:
+							<%= @ln[@current_language]["second_feed_preview_text"] %>
 						</div>
 						<!--<div class="button_b_w" style="margin:10px auto 0 auto;">
 							CLICCA QUI
 						</div>-->
-						<button class="md-trigger" data-modal="modal-1">Clicca qui</button>
+						<button class="md-trigger" data-modal="modal-1"><%= @ln[@current_language]["md-trigger"] %></button>
 					</div>
 					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">
 						<div class="second_single_social" style="padding-right:100px;">
@@ -121,7 +132,7 @@
 			
 			<!-- SECTION chi siamo -->
 			<div class="who" id="team">
-				<h3>Chi Siamo</h3>
+				<h3><%= @ln[@current_language]["who"] %></h3>
 				<div id="first_who_section">
 					
 					<div class="vincenzo">
@@ -131,7 +142,7 @@
 							<script>
 								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 							</script>
-							<h4>Coordinatore</h4>
+							<h4><%= @ln[@current_language]["coordinator"] %></h4>
 							<p>Teramo (TE) <br>Classe 1979</p>  
 					</div>
 					
@@ -146,84 +157,84 @@
 					<div class="member">
 						<img alt="Davide Di Carlo" src="<%= asset_path 'dadda_dc.jpg' %>">
 						<h2>Davide Di Carlo</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Federico Pomponii" src="<%= asset_path 'pomponii.jpg' %>">
 						<h2>Federico Pomponii</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Canzano (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Davide Barbieri" src="<%= asset_path 'dadda_b.jpg' %>">
 						<h2>Davide Barbieri</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Lorenzo Camaione" src="<%= asset_path 'lorenzo_c.jpg' %>">
 						<h2>Lorenzo Camaione</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Lilith Taraschi" src="<%= asset_path 'lilith_t.jpg' %>">
 						<h2>Lilith Taraschi</h2>
-						<h4>Storica</h4>
+						<h4><%= @ln[@current_language]["sto_f"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>  
 					</div>
 					
 					<div class="member">
 						<img alt="Davide Di Giacinto" src="<%= asset_path 'davide_dg.jpg' %>">
 						<h2>Davide Di Giacinto</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Marco Matani" src="<%= asset_path 'marco_mat.jpg' %>">
 						<h2>Marco Matani</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Alessia Coruzzi" src="<%= asset_path 'alessia_c.jpg' %>">
 						<h2>Alessia Coruzzi</h2>
-						<h4>Storica</h4>
+						<h4><%= @ln[@current_language]["sto_f"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Domenico Mattiucci" src="<%= asset_path 'domenico_m.jpg' %>">
 						<h2>Domenico Mattiucci</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Bellante (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Michelangelo Ierace" src="<%= asset_path 'michelangelo_i.JPG' %>">
 						<h2>Michelangelo Ierace</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Campli (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Federico Cioschi" src="<%= asset_path 'federico_c.jpg' %>">
 						<h2>Federico Cioschi</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Pietro Oreglia" src="<%= asset_path 'pietro_o.jpg' %>">
 						<h2>Pietro Oreglia</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 				</div>
@@ -233,11 +244,12 @@
 			<!-- START credits -->
 			<div class="credits">
 				<div id="left_ftext">
-					<b style="font-size: 1.35em;">Ringraziamo:</b><br>
-					La Biblioteca Provinciale "Melchiorre Dèlfico"<br>
-					L'archivio digitale de "La Stampa"<br>
-					Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
-					2015 - Ragazzi del '99 <a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
+					<b style="font-size: 1.35em;"><%= @ln[@current_language]["left_ftext_1"] %></b><br>
+					<%= @ln[@current_language]["left_ftext_2"] %><br>
+					<%= @ln[@current_language]["left_ftext_3"] %><br>
+					<%= @ln[@current_language]["left_ftext_4"] %><br>
+					<%= @ln[@current_language]["left_ftext_5"] %>
+					<a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
 				</div>
 				<div id="connect">
 					<div id="central_ftext"><b>CONNECT</b></div>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 	# Prevent CSRF attacks by raising an exception.
 	# For APIs, you may want to use :null_session instead.
-
+	
 	protect_from_forgery #with: :exception
 
 	before_action :prepare_for_mobile
@@ -13,7 +13,8 @@ class ApplicationController < ActionController::Base
   
 	def mobile_device?  
 		request.user_agent =~ /Mobile|webOS/  
-	end  
+	end	
+	
 	helper_method :mobile_device?
   
 	def prepare_for_mobile  
