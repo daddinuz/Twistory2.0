@@ -3,6 +3,7 @@ require 'fog'
 namespace :periodic_dump_database do
   desc "dump database and then store it in AWS S3"
   task :dump_database => :environment do
+
 	exec "mysqldump -u username -ppassword twistory_db | gzip -v > dump_name.gz"
 
 # create a connection
@@ -14,7 +15,7 @@ namespace :periodic_dump_database do
 
  # First, a place to contain the glorious details
  directory = connection.directories.create(
-	:key		=> "bucket_name", # globally unique name
+	:key		=> "bucket_name#{Time.now.to_i}", # globally unique name
 	:public 	=> true
 )
 
