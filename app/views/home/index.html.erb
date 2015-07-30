@@ -4,117 +4,135 @@
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<link href="/assets/normalize.css" rel="stylesheet" />
 		<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+		<link href="/assets/modal.css" rel="stylesheet" type="text/css">
 		<link href="/assets/index_style.css" rel="stylesheet" type="text/css">
 		
 		<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
 		<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
 		<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
 		
-		<script src="/assets/jquerycode.min.js"></script>
-		<script src="/assets/jquery.bxslider.min.js"></script>
 		<script src="/assets/jquery_index.min.js"></script>
 	</head>
 
 	<body>
-		
-		<style>
-			#wrapper_x
-			{
-				margin-left:auto;
-				margin-right:auto;
-				min-width:1200px;
-				height:100%;
-			}
-		</style>
-		
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-		
-		<!-- START main div -->
 		<div id="wrapper_x">
-			
+			<% @LastFeeds = @feeds.last(3).reverse %>
+			<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+			<div class="md-modal md-effect-1" id="modal-1">
+				<div class="md-content">
+					<h3>#Lagrandeguerra</h3>
+					<div>
+						<ul>
+							<% if !@LastFeeds[0].blank? %>
+							<li>"<%= @LastFeeds[0].feed_text %>"<% if user = User.find_by(id: params[@LastFeeds[0].user_id]) %><%= user.user_name %><% end %>(<%= @LastFeeds[0].date.strftime('%d/%m/%Y') %>)</li>
+						<% end %>
+						<% if !@LastFeeds[1].blank? %>
+							<li>"<%= @LastFeeds[1].feed_text %>"<% if user = User.find_by(id: params[@LastFeeds[1].user_id]) %><%= user.user_name %><% end %>(<%= @LastFeeds[1].date.strftime('%d/%m/%Y') %>)</li>
+						<% end %>
+						<% if !@LastFeeds[2].blank? %>
+							<li>"<%= @LastFeeds[2].feed_text %>"<% if user = User.find_by(id: params[@LastFeeds[2].user_id]) %><%= user.user_name %><% end %>(<%= @LastFeeds[2].date.strftime('%d/%m/%Y') %>)</li>
+						<% end %>
+						</ul>
+						
+						<div class="popup_social_text">
+							Segui la lista completa delle notizie su <a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">Facebook</a> o <a href="https://twitter.com/lagrandeguerra">Twitter</a>
+						</div>
+						<button class="md-close">Chiudi</button>
+					</div>
+				</div>
+			</div>
 			<!-- START bar -->
 			<div id="home" class="bar">
 				<div id="link">
-					<ul>
-						<li><a href="#team">Chi Siamo</a></li>
-						<li><a href="#about">Tecnologia</a></li>
-						<li><a href="<%= new_user_session_path %>" name="Hlink">Accedi</a></li>
-						<li><a href="<%= new_user_registration_path %>" name="Hlink">Iscriviti</a></li>
-					</ul>
+						<ul>
+							<li><a href="#team"><%= @ln[@current_language]["home_link_1"] %></a></li>
+							<li><a href="#feed"><%= @ln[@current_language]["home_link_2"] %></a></li>
+							<li><a href="<%= new_user_session_path %>" name="Hlink"><%= @ln[@current_language]["home_link_3"] %></a></li>
+							<li><a href="<%= new_user_registration_path %>" name="Hlink"><%= @ln[@current_language]["home_link_4"] %></a></li>
+							<li>
+								<%= link_to(home_index_path(:l => "it")) do %>
+									<%= image_tag("IT_flag.png") %> 
+								<% end %>
+								<%= link_to(home_index_path(:l => "en")) do %>
+									<%= image_tag("UK_flag.png") %>
+								<% end %>
+							</li>
+						</ul>
 				</div>
-				<h2>LA GRANDE GUERRA</h2>
+				<span id="bar_text">
+					<%= @ln[@current_language]["bar_text"] %>
+				</span>
 			</div>
 			<!-- END bar -->
 			
-			<!-- START central -->
-			<div class="central">
-				<!-- START csizer -->
-				<div class="csizer">
-					<!-- START content1 -->
-					<div id="content1">
-						<div id="first">
-							<p>
-								Quando un popolo non ha più senso vitale del suo passato si spegne.<br>
-								La vitalità creatrice è fatta di una riserva di passato.<br>
-								Si diventa creatori anche noi, quando si ha un passato.<br>
-								La giovinezza dei popoli è una ricca vecchiaia!
-							</p>
-							<h3 style="text-align:right;">-cit Cesare Pavese</h3>
+			<section id="first">
+				<div class="table">
+					<div class="table">
+						<div id="first_left_text">
+							<%= @ln[@current_language]["first_left_text"] %>
 						</div>
-						<div id="second">
-							<p>
-								Le battaglie si vincono e si perdono con identico cuore.<br>
-								Io faccio rullare i tamburi per tutti i morti,<br>
-								Per essi faccio squillare le trombe in tono alto e lieto,<br>
-								Vivan coloro che caddero, viva chi perde in mare i propri vascelli.<br> 
-								Vivan coloro che affondano con essi.<br>
-								Vivan tutti i generali sconfitti e tutti gli eroi schiacciati<br>e gli innumerevoli eroi sconosciuti,<br>
-								uguali ai più grandi e conosciuti eroi
-							</p>
-							<h3 style="text-align:right;">-cit Walt Whitman</h3>
+						<div id="first_left_text_und">
+							<%= @ln[@current_language]["first_left_text_und"] %>
 						</div>
-						<img alt="arrow" src="<%= asset_path 'arrow-minimal.png' %>" onmouseover="hover(this);" onmouseout="unhover(this);" class="center" id="arrow">
-						<p id="text6" class="center">(Clicca per visualizzare le ultime notizie)</p>
+						</div>
+					
+					<div id="first_left_text_exp">
+							<%= @ln[@current_language]["first_left_text_exp"] %>
 					</div>
-					<!-- END content1 -->
-					<!-- START content2 -->
-					<% @LastFeeds = @feeds.last(3).reverse %>
-					<div id="content2">
-						<ul class="feed_slider">
-						<% if !@LastFeeds[0].blank? %>
-							<li><p>"<%= @LastFeeds[0].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[0].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[0].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						<% if !@LastFeeds[1].blank? %>
-							<li><p>"<%= @LastFeeds[1].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[1].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[1].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						<% if !@LastFeeds[2].blank? %>
-							<li><p>"<%= @LastFeeds[2].feed_text %>"</p><h2><% if user = User.find_by(id: params[@LastFeeds[2].user_id]) %><%= user.user_name %><% end %><br><%= @LastFeeds[2].date.strftime('%d/%m/%Y') %></h2></li>
-						<% end %>
-						</ul>
-					</div>
-					<!-- END content2 -->
+					<a href="#feed">
+						<div class="button_b_w">
+							<%= @ln[@current_language]["first_left_text_more"] %>
+						</div>
+					</a>
 				</div>
-				<!-- END csizer -->
-			</div>
-			<!-- END central -->
-			
-			<!-- SECTION tecnologia -->
-			<div class="tecnologia" id="about">
-				<img id="technotext" src="<%= asset_path 'technology-text.png' %>"/>
-			</div>
-			
-			<div class="italy">
-				<img alt="story" id="italytext" src="<%= asset_path 'storia-text.png' %>"/>
-			</div> 
-			
-			<div class="italy-2">
-				<img alt="story" id="italytext2" src="<%= asset_path 'storia-2-text.png' %>"/>
-			</div>
-			<!-- END tecnologia -->
+			</section>
+			<section id="feed">
+				<div id="feed_collage_section">
+					<div id="second_image_position_test">
+						<%= image_tag("collage.png") %>
+					</div>
+					<div id="feed_preview">
+						<%= image_tag("collage_feed.png") %>
+					</div>
+					<div id="second_text">
+						<%= @ln[@current_language]["second_text_1"] %><br>
+						<%= @ln[@current_language]["second_text_2"] %>
+					</div>
+				</div>
+				<div class="second_social">
+					<div class="second_single_social" style="padding-right:100px;">
+						<div id="second_feed_preview_text">
+							<%= @ln[@current_language]["second_feed_preview_text"] %>
+						</div>
+						<!--<div class="button_b_w" style="margin:10px auto 0 auto;">
+							CLICCA QUI
+						</div>-->
+						<button class="md-trigger" data-modal="modal-1"><%= @ln[@current_language]["md-trigger"] %></button>
+					</div>
+					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617">
+						<div class="second_single_social" style="padding-right:100px;">
+							<%= image_tag("facebook-icon-128.png") %>
+							<span id="second_text_fb">
+								/lagrandeguerraintemporeale
+							</span>
+						</div>
+					</a>
+					<a href="https://twitter.com/lagrandeguerra">
+						<div class="second_single_social">
+								<%= image_tag("twitter-icon-128.png") %>
+								<span id="second_text_twitter">
+									@lagrandeguerra
+								</span>
+						</div>
+					</a>
+				</div>
+			</section>
 			
 			<!-- SECTION chi siamo -->
 			<div class="who" id="team">
-				<h3>Chi Siamo</h3>
+				<h3><%= @ln[@current_language]["who"] %></h3>
 				<div id="first_who_section">
 					
 					<div class="vincenzo">
@@ -124,7 +142,7 @@
 							<script>
 								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 							</script>
-							<h4>Coordinatore</h4>
+							<h4><%= @ln[@current_language]["coordinator"] %></h4>
 							<p>Teramo (TE) <br>Classe 1979</p>  
 					</div>
 					
@@ -139,84 +157,84 @@
 					<div class="member">
 						<img alt="Davide Di Carlo" src="<%= asset_path 'dadda_dc.jpg' %>">
 						<h2>Davide Di Carlo</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Federico Pomponii" src="<%= asset_path 'pomponii.jpg' %>">
 						<h2>Federico Pomponii</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Canzano (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Davide Barbieri" src="<%= asset_path 'dadda_b.jpg' %>">
 						<h2>Davide Barbieri</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Lorenzo Camaione" src="<%= asset_path 'lorenzo_c.jpg' %>">
 						<h2>Lorenzo Camaione</h2>
-						<h4>Sviluppatore</h4>
+						<h4><%= @ln[@current_language]["dev"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Lilith Taraschi" src="<%= asset_path 'lilith_t.jpg' %>">
 						<h2>Lilith Taraschi</h2>
-						<h4>Storica</h4>
+						<h4><%= @ln[@current_language]["sto_f"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>  
 					</div>
 					
 					<div class="member">
 						<img alt="Davide Di Giacinto" src="<%= asset_path 'davide_dg.jpg' %>">
 						<h2>Davide Di Giacinto</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Marco Matani" src="<%= asset_path 'marco_mat.jpg' %>">
 						<h2>Marco Matani</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Alessia Coruzzi" src="<%= asset_path 'alessia_c.jpg' %>">
 						<h2>Alessia Coruzzi</h2>
-						<h4>Storica</h4>
+						<h4><%= @ln[@current_language]["sto_f"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Domenico Mattiucci" src="<%= asset_path 'domenico_m.jpg' %>">
 						<h2>Domenico Mattiucci</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Bellante (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Michelangelo Ierace" src="<%= asset_path 'michelangelo_i.JPG' %>">
 						<h2>Michelangelo Ierace</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Campli (TE)<br>Classe 1997</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Federico Cioschi" src="<%= asset_path 'federico_c.jpg' %>">
 						<h2>Federico Cioschi</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1996</p>
 					</div>
 					
 					<div class="member">
 						<img alt="Pietro Oreglia" src="<%= asset_path 'pietro_o.jpg' %>">
 						<h2>Pietro Oreglia</h2>
-						<h4>Storico</h4>
+						<h4><%= @ln[@current_language]["sto_m"] %></h4>
 						<p>Teramo (TE)<br>Classe 1995</p>
 					</div>
 				</div>
@@ -225,36 +243,39 @@
 			
 			<!-- START credits -->
 			<div class="credits">
-				<div>
-					<div id="left_ftext">
-						<b style="font-size: 1.35em;">Ringraziamo:</b><br>
-						La Biblioteca Provinciale "Melchiorre Dèlfico"<br>
-						L'archivio digitale de "La Stampa"<br>
-						Il Liceo Scientifico Albert Einstein - (TE) Abruzzo<br>
-						2015 - Ragazzi del '99 <a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
-					</div>
-					<div id="connect">
-						<div id="central_ftext"><b>CONNECT</b></div>
-						<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
-							<img src="<%= asset_path 'Facebook-icon.png' %>">
-						</a>
-						<a href="https://twitter.com/lagrandeguerra">
-							<img style="left:5%;" src="<%= asset_path 'Twitter-icon.png' %>">
-						</a>
-						<a href="https://github.com/davide-di-carlo/Twistory2.0">
-							<img src="<%= asset_path 'github.png' %>">
-						</a>
-						<a href="https://www.youtube.com/channel/UCoCqMnYaUqdHSel2e8Pr-_A">
-							<img src="<%= asset_path 'Youtube-icon.png' %>">
-						</a>
-					</div>
+				<div id="left_ftext">
+					<b style="font-size: 1.35em;"><%= @ln[@current_language]["left_ftext_1"] %></b><br>
+					<%= @ln[@current_language]["left_ftext_2"] %><br>
+					<%= @ln[@current_language]["left_ftext_3"] %><br>
+					<%= @ln[@current_language]["left_ftext_4"] %><br>
+					<%= @ln[@current_language]["left_ftext_5"] %>
+					<a href="mailto:info@ragazzidel99.it" style="color: #698888;">info@ragazzidel99.it</a>
 				</div>
-				<img id="flogo" src="<%= asset_path 'ragazzidel99-logo.png' %>">
+				<div id="connect">
+					<div id="central_ftext"><b>CONNECT</b></div>
+					<a href="https://www.facebook.com/pages/La-Grande-Guerra-in-tempo-reale/311104819049617?ref=ts&fref=ts">
+						<img src="<%= asset_path 'Facebook-icon.png' %>">
+					</a>
+					<a href="https://twitter.com/lagrandeguerra">
+						<img style="left:5%;" src="<%= asset_path 'Twitter-icon.png' %>">
+					</a>
+					<a href="https://github.com/davide-di-carlo/Twistory2.0">
+						<img src="<%= asset_path 'github.png' %>">
+					</a>
+					<a href="https://www.youtube.com/channel/UCoCqMnYaUqdHSel2e8Pr-_A">
+						<img src="<%= asset_path 'Youtube-icon.png' %>">
+					</a>
+				</div>
+				<div id="flogo">
+					<img src="<%= asset_path 'ragazzidel99-logo.png' %>">
+				</div>
 			</div>
 			<!-- END credits -->
 			
 		</div>
 		<!-- END main div -->
+		<script src="/assets/classie.js"></script>
+		<script src="/assets/modalEffects.js"></script>
 	</body>
 </html>
 

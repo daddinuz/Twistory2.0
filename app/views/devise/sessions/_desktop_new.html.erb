@@ -1,0 +1,56 @@
+<!-- START bar -->
+<div id="home" class="bar">
+	<div id="link">
+		<ul>
+			<li><a href="<%= @current_host %>">Home</a></li>
+			<li><a href="<%= new_user_registration_path %>">Iscriviti</a></li>
+		</ul>
+	</div>
+	<h2>LA GRANDE GUERRA</h2>
+</div>
+<!-- END bar -->
+   
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+	<div class="form_bg"> 
+		<div class="form">  
+			<ul>  
+				<li>
+					<%= f.email_field :email, autofocus: "true", :class => "field", :placeholder => " Indirizzo e-mail" %>
+				</li>
+		
+				<li>
+					<%= f.password_field :password, :class => "field", :placeholder => " Password" , autocomplete: "off" %>
+				</li>
+			</ul>   
+			<%= f.submit "Accedi", :class => "button" %>
+
+			<p align="left">
+				<% if devise_mapping.rememberable? %>
+					<%= f.check_box :remember_me, :style => "cursor: pointer;" %>
+					<b style="color:#698888;">
+						Rimani collegato
+					</b>
+				<% end %>
+			</p>
+			
+			<div style="color:#ED4F0C;font-size:1em;">
+				<% if notice %>
+					<%= notice %>
+				<% end %>
+				<% if alert %>
+					<%= alert %>
+				<% end %>
+			</div>
+		</div>
+		
+		<div class="right_text">
+			<div class="title">
+				Accedi
+			</div>
+			<p>Hai 
+				<%= link_to "dimenticato la password?", new_password_path(resource_name), :class => "forgotpsw"%> o non hai un account? 
+				<%= link_to "Iscriviti", new_user_registration_path, :class => "register"%>
+			</p>
+		</div>
+	</div>
+<% end %>

@@ -1,0 +1,151 @@
+body
+{
+	background-color:black;
+	background-image:url('http://wallpaper-download.net/wallpapers/random-wallpapers-black-background-pattern-wallpaper-34346.jpg');
+}
+
+
+.form_bg
+{
+	border-radius:2px;
+	border:1px color #696666;
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10em;
+	display:table;
+	background:#efefef;
+}
+
+.form
+{
+	display:inline;
+	float:left;
+	margin-left:10em;
+	position:relative;
+	width:auto;
+	height:10em;
+	display:table;
+	padding-top:4em;
+	padding-bottom:2em;
+	margin-bottom:10em;
+	padding-right:4em;
+	top:4em;
+	border-right:1px solid #CFCACA;
+}
+
+
+#error_explanation
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	font-family: 'Open sans', sans-serif;
+}
+
+#error_explanation #first_sentence {
+	color:#ED4F0C;
+	font-size:1.2em;
+	text-align:center;
+}
+#error_explanation #error_list {
+	color:#696666;
+	font-size:1em;
+}
+
+#error_explanation ul {
+	padding:0;
+}
+#error_explanation li {
+	font-size:1em;
+	padding:0;
+	text-align:left;
+}
+
+.form ul
+{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.form li
+{
+	cursor: pointer;
+	padding-bottom:1.2em;
+}
+
+.form .field
+{
+	cursor: pointer;
+}
+
+.button
+{
+	position:relative;
+	left:3.5em;
+	background:none;
+	padding:0.5em 2em 0.5em 2em;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	border:2px solid #696666;
+}
+
+.button:hover
+{
+	border-color:#698888;
+}
+
+.right_text
+{
+	display:table;
+	position:relative;
+	width:25em;
+	top:4em;
+	margin-left:2em;
+	font-size:1.5em;
+	float:right;
+}
+
+.title
+{
+	font-size:2em;
+	padding-bottom:1em;
+}
+
+.forgotpsw
+{
+	color:#698888;
+	text-decoration:none;
+}
+
+.forgotpsw:hover
+{
+	color:#696666;
+	text-decoration:underline;
+}
+
+.forgotpsw:active
+{
+	color:#BFBABA;
+}
+
+.register
+{
+	color:#D17E5A;
+	text-decoration:none;
+}
+
+.register:hover
+{
+	color:#ED4F0C;
+	text-decoration:underline;
+}
+
+.register:active
+{
+	color:#BFBABA;
+  	text-decoration:underline;
+}
