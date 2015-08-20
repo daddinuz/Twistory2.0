@@ -6,6 +6,9 @@ gem "koala", "~> 2.0"
 # For internalization
 gem 'rails-i18n', '~> 4.0.0'
 
+# Use fog gem to store your database in a safe place.
+gem 'fog'
+
 # For twitter
 gem 'twurl' 
 

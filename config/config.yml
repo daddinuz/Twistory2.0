@@ -56,4 +56,11 @@ google:
 
 airbrake:
   production:
-    api_key:
+    api_key:### Fog ###
+# Active in production and test mode
+
+###
+fog:
+  keys:
+    aws_access_key_id:
+    aws_secret_access_key:
